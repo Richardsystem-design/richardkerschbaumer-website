@@ -385,7 +385,6 @@
 
     .text-italic { font-style: italic; }
     .hero-lead strong { font-style: italic; font-weight: 600; }
-    .review-card blockquote { font-style: italic; }
 
     /* PRODUCTS */
     .products { background: #111; padding: var(--section-pad) clamp(20px, 5vw, 80px); }
@@ -495,30 +494,14 @@
     .btn-red-small:hover { background: var(--red-dark); }
 
     /* SOCIAL PROOF */
-    .social-proof { padding: var(--section-pad) clamp(20px, 5vw, 80px); background: var(--white); }
 
-    .social-proof-header { margin-bottom: 48px; }
 
-    .social-proof-header h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      text-transform: uppercase;
-      line-height: 1;
-    }
 
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-    .review-card { background: var(--black); color: var(--white); padding: 36px; border-radius: 2px; }
 
-    .review-stars { color: var(--red); font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
 
-    .review-card blockquote { font-size: 1rem; line-height: 1.7; color: rgba(245,243,239,0.85); font-style: italic; margin-bottom: 20px; }
 
-    .review-meta { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,239,0.4); }
 
-    .reviews-source { margin-top: 24px; font-size: 0.85rem; color: var(--gray); text-align: center; }
-    .reviews-source a { color: var(--gray); }
 
     /* WHATSAPP */
     .whatsapp-section {
@@ -564,17 +547,6 @@
     }
     .btn-whatsapp:hover { background: #1da851; transform: translateY(-1px); }
 
-    .btn-library {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(245,243,239,0.5);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-      align-self: flex-start;
-    }
-    .btn-library:hover { color: var(--white); }
 
     .whatsapp-visual { display: flex; flex-direction: column; gap: 12px; }
 
@@ -737,6 +709,22 @@
       .hero-image { animation: fadeUp 0.8s 0.15s ease both; }
     }
 
+
+    /* Bad Day Teaser */
+    .bad-day-teaser { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .bad-day-teaser-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center; }
+    .bad-day-teaser-text { max-width: 560px; }
+    .bad-day-teaser-text h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 0.95; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .bad-day-teaser-text h2 span { color: var(--red); }
+    .bad-day-teaser-text p { color: rgba(245,243,239,0.7); font-size: 1.05rem; line-height: 1.75; margin-bottom: 24px; }
+    .bad-day-teaser-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .bad-day-teaser-cta { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .bad-day-teaser-visual img { width: 240px; height: auto; box-shadow: -16px 16px 48px rgba(0,0,0,0.6); display: block; }
+    @media (max-width: 900px) {
+      .bad-day-teaser-inner { grid-template-columns: 1fr; gap: 36px; }
+      .bad-day-teaser-visual { display: flex; justify-content: center; }
+      .bad-day-teaser-visual img { width: 180px; }
+    }
   </style>
 </head>
 <body>
@@ -866,29 +854,27 @@
     </section>
 
     <div class="section-divider-mid" aria-hidden="true"></div>
-    <section class="social-proof" id="stimmen" aria-labelledby="reviews-heading">
-      <div class="social-proof-header">
-        <span class="red-rule" aria-hidden="true"></span><span class="section-label">Was Leser sagen</span>
-        <h2 id="reviews-heading">Echte Meinungen.<br>Keine Hochglanz-Zitate.</h2>
+    <section class="bad-day-teaser" aria-labelledby="bad-day-teaser-heading">
+      <div class="bad-day-teaser-inner">
+        <div class="bad-day-teaser-text">
+          <span class="red-rule" aria-hidden="true"></span>
+          <span class="section-label">Digitales System · PDF</span>
+          <h2 id="bad-day-teaser-heading">Wenn nichts geht.<br><span>Trotzdem weitermachen.</span></h2>
+          <p>25 konkrete Systeme für den Tag an dem du keinen Bock hast, der Kopf voll ist und Motivation das letzte ist was du spürst. Geordnet nach Zustand – nicht nach Motivation.</p>
+          <div class="bad-day-teaser-tags">
+            <span class="product-tag">25 Systeme</span>
+            <span class="product-tag">5 Kategorien</span>
+            <span class="product-tag">Sofort nutzbar</span>
+          </div>
+          <div class="bad-day-teaser-cta">
+            <a href="/bad-day.html" class="btn-primary">Mehr erfahren</a>
+            <a href="https://payhip.com/b/6EaOK" class="btn-secondary" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+          </div>
+        </div>
+        <div class="bad-day-teaser-visual" aria-hidden="true">
+          <img src="bad-day-cover.webp" alt="Bad Day Starter-Edition Cover" width="280" height="373" loading="lazy" decoding="async">
+        </div>
       </div>
-      <div class="reviews-grid">
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote class="review-text">„Habe die erste Woche direkt 1kg abgenommen."</blockquote>
-          <footer class="review-meta"><cite>Verifizierter Kauf · Juli 2025</cite></footer>
-        </article>
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote class="review-text">„Ein humorvoller Umgang mit einer sensiblen Thematik – locker und amüsant geschrieben. Absolut empfehlenswert!"</blockquote>
-          <footer class="review-meta"><cite>Verifizierter Kauf · Juni 2025</cite></footer>
-        </article>
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote class="review-text">„Tolles Buch, sehr humorvoll und gut geschrieben."</blockquote>
-          <footer class="review-meta"><cite>Verifizierter Kauf · Juni 2025</cite></footer>
-        </article>
-      </div>
-      <p class="reviews-source">Alle Rezensionen stammen von <a href="https://www.amazon.de" target="_blank" rel="noopener noreferrer">Amazon.de</a></p>
     </section>
 
     <div class="section-divider-light" aria-hidden="true"></div>
