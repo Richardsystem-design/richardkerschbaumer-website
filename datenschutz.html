@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutz – Richard Kerschbaumer</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/datenschutz.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
+    nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+    .page-hero { background: var(--black); padding: 140px clamp(20px,5vw,80px) 80px; }
+    .page-hero-inner { max-width: 720px; }
+    .red-rule { display: block; width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3rem,6vw,5rem); line-height: 0.95; color: var(--white); text-transform: uppercase; }
+
+    .content-section { padding: clamp(60px,8vw,120px) clamp(20px,5vw,80px); }
+    .content-inner { max-width: 720px; }
+    .content-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.4rem,2.5vw,2rem); text-transform: uppercase; color: var(--black); margin: 48px 0 16px; padding-top: 48px; border-top: 2px solid rgba(13,13,13,0.08); }
+    .content-inner h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+    .content-inner h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; color: var(--black); margin: 32px 0 12px; }
+    .content-inner p { color: #333; font-size: 1.05rem; line-height: 1.85; margin-bottom: 16px; }
+    .content-inner ul { margin: 0 0 20px 0; padding: 0; list-style: none; }
+    .content-inner ul li { color: #333; font-size: 1.05rem; line-height: 1.8; padding: 6px 0 6px 24px; position: relative; }
+    .content-inner ul li::before { content: '—'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+    .content-inner a { color: var(--red); text-decoration: none; border-bottom: 1px solid rgba(200,16,46,0.3); transition: border-color 0.2s; word-break: break-all; }
+    .content-inner a:hover { border-color: var(--red); }
+    .uppercase-block { text-transform: uppercase; font-size: 0.95rem !important; line-height: 1.7 !important; background: rgba(13,13,13,0.04); padding: 20px 24px; border-left: 3px solid var(--red); margin: 20px 0; }
+
+    footer { background: #080808; padding: 48px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(245,243,239,0.4); letter-spacing: 0.05em; text-transform: uppercase; }
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+    .footer-affiliate { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
+
+    @media (max-width: 900px) {
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/friss-nicht-weniger.html">Bücher</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/friss-nicht-weniger.html">Bücher</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
+
+  <main id="main-content">
+    <header class="page-hero">
+      <div class="page-hero-inner">
+        <span class="red-rule"></span>
+        <span class="section-label">Rechtliches</span>
+        <h1>Datenschutz­erklärung</h1>
+      </div>
+    </header>
+
+    <section class="content-section">
+      <div class="content-inner">
+
+        <h2>1. Datenschutz auf einen Blick</h2>
+
+        <h3>Allgemeine Hinweise</h3>
+        <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+
+        <h3>Datenerfassung auf dieser Website</h3>
+        <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten entnehmen Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle" in dieser Datenschutzerklärung.</p>
+        <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen (z. B. per E-Mail). Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst – das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem, Uhrzeit des Seitenaufrufs).</p>
+
+        <h3>Ihre Rechte</h3>
+        <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.</p>
+
+        <h2>2. Hosting</h2>
+
+        <h3>Cloudflare Pages</h3>
+        <p>Diese Website wird über Cloudflare Pages gehostet. Anbieter ist die Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA.</p>
+        <p>Beim Besuch dieser Website erfasst Cloudflare technische Daten wie IP-Adressen, Browsertyp, Betriebssystem und aufgerufene Seiten. Diese Daten werden zur Bereitstellung und Sicherung des Dienstes verarbeitet.</p>
+        <p>Das Hosting erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO). Cloudflare hat seinen Sitz in den USA; die Datenübertragung erfolgt auf Grundlage der EU-Standardvertragsklauseln.</p>
+        <p>Weitere Informationen: <a href="https://www.cloudflare.com/de-de/privacypolicy/" target="_blank" rel="noopener noreferrer">cloudflare.com/privacypolicy</a></p>
+
+        <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+        <h3>Hinweis zur verantwortlichen Stelle</h3>
+        <p>
+          Richard Kerschbaumer<br>
+          Mauracherstraße 3<br>
+          5020 Salzburg<br>
+          E-Mail: <a href="mailto:kontakt@richardkerschbaumer.at">kontakt@richardkerschbaumer.at</a>
+        </p>
+
+        <h3>Speicherdauer</h3>
+        <p>Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung widerrufen, werden Ihre Daten gelöscht, sofern keine anderen rechtlich zulässigen Gründe für die Speicherung bestehen.</p>
+
+        <h3>Widerruf Ihrer Einwilligung</h3>
+        <p>Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt unberührt.</p>
+
+        <h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
+        <p class="uppercase-block">Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen Ihrer besonderen Situation Widerspruch gegen die Verarbeitung einzulegen. Die jeweilige Rechtsgrundlage entnehmen Sie dieser Datenschutzerklärung.</p>
+
+        <h3>Beschwerderecht bei der Aufsichtsbehörde</h3>
+        <p>Im Falle von Verstößen gegen die DSGVO steht Ihnen ein Beschwerderecht bei der Datenschutzbehörde zu. Zuständige Aufsichtsbehörde in Österreich ist die <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">Datenschutzbehörde (dsb.gv.at)</a>.</p>
+
+        <h3>SSL-Verschlüsselung</h3>
+        <p>Diese Seite nutzt aus Sicherheitsgründen SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile und dem Schloss-Symbol im Browser.</p>
+
+        <h2>4. Datenerfassung auf dieser Website</h2>
+
+        <h3>Cookies</h3>
+        <p>Diese Website verwendet technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind. Es werden keine Tracking- oder Marketing-Cookies ohne Ihre Einwilligung gesetzt.</p>
+
+        <h3>Kontaktaufnahme per E-Mail</h3>
+        <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen mitgeteilten Kontaktdaten zur Bearbeitung der Anfrage gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen).</p>
+
+        <h3>Affiliate-Links (Amazon)</h3>
+        <p>Diese Website enthält Affiliate-Links zum Amazon-Partnerprogramm. Wenn Sie über diese Links (gekennzeichnet mit *) einkaufen, erhält der Betreiber eine Provision. Amazon erfasst dabei Daten gemäß seiner eigenen Datenschutzerklärung: <a href="https://www.amazon.de/gp/help/customer/display.html?nodeId=201909010" target="_blank" rel="noopener noreferrer">amazon.de/datenschutz</a>.</p>
+
+        <h3>WhatsApp-Kanal</h3>
+        <p>Auf dieser Website wird auf den WhatsApp-Kanal des Betreibers verlinkt. Beim Aufruf des Links gelten die Datenschutzbestimmungen von WhatsApp / Meta. Der Kanal dient ausschließlich zur einseitigen Kommunikation (kein Chat, keine Datenerhebung durch den Betreiber).</p>
+
+        <h2>5. Soziale Medien</h2>
+
+        <h3>Instagram und LinkedIn</h3>
+        <p>Auf dieser Website befinden sich Links zu Instagram (Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland) und LinkedIn (LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland). Es handelt sich um einfache Verlinkungen – keine eingebetteten Plugins. Eine Datenübertragung an die jeweiligen Plattformen findet erst statt, wenn Sie aktiv auf den Link klicken.</p>
+
+        <h2>6. Analyse-Tools</h2>
+
+        <h3>Google Analytics</h3>
+        <p>Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics erfasst Nutzungsdaten wie Seitenaufrufe, Verweildauer und Herkunft der Besucher. Die Nutzung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die jederzeit widerrufbar ist.</p>
+        <p>Die Datenübertragung in die USA erfolgt auf Grundlage der EU-Standardvertragsklauseln. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <nav aria-label="Footer-Navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html" aria-current="page">Datenschutz</a></li>
+        <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="footer-affiliate">&copy; 2026 Richard Kerschbaumer</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
+</body>
+</html>

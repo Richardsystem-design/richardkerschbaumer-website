@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Über mich – Richard Kerschbaumer</title>
+  <meta name="description" content="Handwerker, seit 15 Jahren selbstständig, schreibt Bücher über Alltagssysteme. Kein Coach, kein Kurs, kein Tschakka. Systeme die auch dann funktionieren wenn du keine Lust hast.">
+  <meta name="author" content="Richard Kerschbaumer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/ueber-mich">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/ueber-mich">
+  <meta property="og:title" content="Über mich – Richard Kerschbaumer">
+  <meta property="og:description" content="Handwerker, seit 15 Jahren selbstständig, schreibt Bücher über Alltagssysteme. Kein Coach, kein Kurs, kein Tschakka.">
+  <meta property="og:image" content="https://www.richardkerschbaumer.at/richard-foto.webp">
+  <meta property="og:locale" content="de_AT">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://www.richardkerschbaumer.at/ueber-mich",
+    "name": "Über Richard Kerschbaumer",
+    "description": "Richard Kerschbaumer ist Handwerker und Autor. Er schreibt über Alltagssysteme, Mikro-Gewohnheiten und Ernährung.",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://www.richardkerschbaumer.at/#author",
+      "name": "Richard Kerschbaumer",
+      "url": "https://www.richardkerschbaumer.at",
+      "image": "https://www.richardkerschbaumer.at/richard-foto.webp",
+      "jobTitle": "Autor"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0d;
+      --white: #f5f3ef;
+      --red: #c8102e;
+      --red-dark: #a00d24;
+      --gray: #888;
+      --section-pad: clamp(60px, 8vw, 120px);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      font-size: 18px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+
+    .skip-link {
+      position: absolute;
+      top: -100%; left: 16px;
+      background: var(--red);
+      color: var(--white);
+      padding: 12px 20px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 16px; }
+
+    /* NAV */
+    nav.main-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px clamp(20px, 5vw, 80px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(13,13,13,0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      color: rgba(245,243,239,0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a[aria-current="page"] { color: var(--white); border-bottom: 2px solid var(--red); padding-bottom: 2px; }
+
+    .nav-cta {
+      background: var(--red) !important;
+      color: var(--white) !important;
+      padding: 8px 20px;
+      border-radius: 2px;
+    }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+
+    /* TEXT HERO – kein Foto */
+    .page-hero {
+      background: var(--black);
+      padding: 160px clamp(20px, 5vw, 80px) 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,16,46,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-hero-inner {
+      max-width: 900px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .red-rule {
+      display: block;
+      width: 48px; height: 3px;
+      background: var(--red);
+      margin-bottom: 20px;
+    }
+
+    .page-hero-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .page-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.92;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .page-hero h1 span { color: var(--red); }
+
+    .page-hero-lead {
+      color: rgba(245,243,239,0.7);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      line-height: 1.75;
+      max-width: 620px;
+    }
+
+    /* DIVIDERS */
+    .divider-dark-to-light {
+      height: 60px;
+      background: var(--white);
+      clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+      margin-top: -2px;
+    }
+
+    .divider-light-to-dark {
+      height: 60px;
+      background: #111;
+      clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+      margin-top: -2px;
+    }
+
+    .divider-dark-to-white {
+      height: 60px;
+      background: var(--white);
+      clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -2px;
+    }
+
+    /* STORY */
+    .story {
+      background: var(--white);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-sidebar { position: sticky; top: 100px; }
+
+    .story-sidebar-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .story-sidebar h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .story-content p {
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    .story-content p:last-child { margin-bottom: 0; }
+    .story-content p strong { color: var(--black); font-weight: 600; }
+
+    .story-content p:first-child::first-letter {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 3.5rem;
+      line-height: 0.8;
+      color: var(--red);
+      float: left;
+      margin-right: 8px;
+      margin-top: 6px;
+    }
+
+    /* TURNING POINT */
+    .turning-point {
+      background: #111;
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .turning-point-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .turning-point-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .turning-point blockquote {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 32px;
+    }
+    .turning-point blockquote span { color: var(--red); }
+
+    .turning-point p {
+      color: rgba(245,243,239,0.7);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* HEUTE */
+    .heute {
+      background: var(--white);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .heute-header { margin-bottom: 48px; }
+
+    .heute-header-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .heute-header h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .heute-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .heute-card {
+      background: var(--black);
+      padding: 40px 32px;
+      border-radius: 2px;
+    }
+
+    .heute-card-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--red);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .heute-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .heute-card p {
+      color: rgba(245,243,239,0.65);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* CTA */
+    .about-cta {
+      background: var(--black);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .about-cta h2 span { color: var(--red); }
+
+    .about-cta p {
+      color: rgba(245,243,239,0.65);
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: rgba(245,243,239,0.7);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border: 1px solid rgba(245,243,239,0.2);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(245,243,239,0.6); color: var(--white); }
+
+    /* FOOTER */
+    footer {
+      background: #080808;
+      padding: 48px clamp(20px, 5vw, 80px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: rgba(245,243,239,0.4);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+
+    .footer-affiliate {
+      width: 100%;
+      color: rgba(245,243,239,0.3);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(245,243,239,0.08);
+      padding-top: 24px;
+      margin-top: 8px;
+    }
+
+
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .story-grid { grid-template-columns: 1fr; gap: 40px; }
+      .story-sidebar { position: static; }
+      .heute-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .page-hero h1 { animation: fadeUp 0.6s ease both; }
+      .page-hero-lead { animation: fadeUp 0.6s 0.15s ease both; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo" aria-label="Richard Kerschbaumer – zur Startseite">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/ueber-mich.html" aria-current="page">Über mich</a></li>
+      <li><a href="/#buecher">Bücher</a></li>
+      <li><a href="/#stimmen">Stimmen</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Kanal beitreten, öffnet neues Fenster">WhatsApp</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/#buecher">Bücher</a>
+    <a href="/blog.html">Blog</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- TEXT HERO -->
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="page-hero-inner">
+        <span class="red-rule" aria-hidden="true"></span>
+        <span class="page-hero-label">Über mich</span>
+        <h1 id="page-heading">Ich sage dir<br>was funktioniert.<br>Nicht was du<br><span>hören willst.</span></h1>
+        <p class="page-hero-lead">Handwerker. Seit 15 Jahren selbstständig. Ich komme täglich bei echten Leuten rein, höre zu, und schreibe auf was ich dabei lerne. Kein Büro. Kein Podcast. Kein Netzwerk aus Leuten die sich gegenseitig Experten nennen.</p>
+      </div>
+    </section>
+
+    <div class="divider-dark-to-light" aria-hidden="true"></div>
+
+    <!-- GESCHICHTE -->
+    <section class="story" aria-labelledby="story-heading">
+      <div class="story-grid">
+        <div class="story-sidebar">
+          <span class="red-rule" aria-hidden="true"></span>
+          <span class="story-sidebar-label">Die Geschichte</span>
+          <h2 id="story-heading">Wie es<br>wirklich<br>anfing.</h2>
+        </div>
+        <div class="story-content">
+          <p>Irgendwann stand ich auf der Waage und sah zum ersten Mal in meinem Leben eine dreistellige Zahl. Hab kurz geschaut. Dann nochmal. Dann die Waage beschuldigt. War sie aber nicht.</p>
+          <p>Selbstständig, Dauerstress, schlecht gegessen, zu viel geraucht. Kein dramatisches Schicksal – das ist einfach was passiert, wenn du selbstständig bist und niemand dir sagt wann Feierabend ist. Du frisst was geht, schläfst zu wenig, und redest dir ein dass das temporär ist. <strong>Ist es nicht.</strong></p>
+          <p>Also hab ich gemacht was alle machen: Bücher gekauft, alles auf einmal umgestellt. Richtiges Essen, Fitnessstudio, rauchen aufhören, keine Schokolade – am besten noch diese Woche. Ein paar Wochen später lag das in Trümmern. Und ich war deprimierter als vorher. Nicht nur weil ich gescheitert war, sondern weil ich mir selbst bewiesen hatte dass ich es nicht kann.</p>
+          <p>Der Fehler war nicht die Disziplin. <strong>Der Fehler war der Plan.</strong> Ein Plan der nur funktioniert wenn alles perfekt läuft, ist kein Plan. Das ist Wunschdenken mit Schriftart.</p>
+          <p>Also hab ich klein angefangen. Wirklich klein. Fast peinlich klein. Ein System. Dann irgendwann ein zweites. Wenn es schwierig wird, fliegt eines raus – aber nie alles. Weil ich dann nicht wieder bei null anfange. Und null ist das Teuerste was es gibt.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-light-to-dark" aria-hidden="true"></div>
+
+    <!-- WENDEPUNKT -->
+    <section class="turning-point" aria-label="Kernbotschaft">
+      <div class="turning-point-inner">
+        <span class="turning-point-label">Die kurze Version</span>
+        <blockquote>
+          Du brauchst keinen Coach.<br>
+          Du brauchst einen Plan<br>
+          <span>für schlechte Tage.</span>
+        </blockquote>
+        <p>Ich tracke Kalorien. Nicht, weil ich ein Kontrollfreak bin, sondern weil ich gern weiß, was ich da eigentlich mache. Ohne Zahlen ist das oft nur „ich ess eh normal" – und normal heißt bei den meisten: komplett daneben, nur halt gewohnt.</p>
+        <p>Ich mache Krafttraining und ein bisschen Ausdauer. Nicht, weil ich heimlich auf Bodybuilder mache, sondern weil mehr Muskelmasse schlicht gesünder ist. Mehr Kraft, weniger Wehwehchen, besserer Stoffwechsel – und im Alltag bist du nicht nach zwei Stiegen fertig wie ein Drucker im Jahr 2009.</p>
+        <p>Und ich habe aufgehört zu rauchen. Nicht mit einem großen Vorsatz und dramatischer Musik. Mit einem System, das irgendwann einfacher war als das Rauchen selbst. Weil genau so funktionieren echte Veränderungen: nicht heroisch, sondern logisch.</p>
+      </div>
+    </section>
+
+    <div class="divider-dark-to-white" aria-hidden="true"></div>
+
+    <!-- HEUTE -->
+    <section class="heute" aria-labelledby="heute-heading">
+      <div class="heute-header">
+        <span class="red-rule" aria-hidden="true"></span>
+        <span class="heute-header-label">Heute</span>
+        <h2 id="heute-heading">Was ich mache.<br>Und warum.</h2>
+      </div>
+      <div class="heute-grid">
+        <div class="heute-card">
+          <span class="heute-card-number" aria-hidden="true">01</span>
+          <h3>Handwerk</h3>
+          <p>Ich komme täglich bei Leuten rein. Höre zu. Die meisten reden nicht über großes Scheitern – sie reden über den Mittwochabend wo wieder nichts geklappt hat. Das ist das Material aus dem meine Bücher bestehen.</p>
+        </div>
+        <div class="heute-card">
+          <span class="heute-card-number" aria-hidden="true">02</span>
+          <h3>Bücher & Systeme</h3>
+          <p>Ich schreibe nur über was ich selbst benutze. Wenn ich etwas nicht selbst getestet habe, schreib ich nicht drüber. Keine Studien die du nie liest, keine Theorien die in der Praxis zerfallen. Was zählt: funktioniert das auch am Donnerstag um 19 Uhr wenn du keinen Bock hast.</p>
+        </div>
+        <div class="heute-card">
+          <span class="heute-card-number" aria-hidden="true">03</span>
+          <h3>Klartext</h3>
+          <p>Ich tätschle niemandem den Kopf und erzähle dir, dass „eh alles gut wird". Wird's nicht automatisch. Entweder du änderst was – oder du bleibst da stehen, wo du gerade bist.</p>
+          <p>Ich kann dir zeigen, wie's geht. Klar, konkret, ohne Theater. Aber gehen musst du selbst. Niemand macht's für dich.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Genug gelesen.<br><span>Mach was.</span></h2>
+      <p>Kein Opt-in, kein Funnel, kein „kostenloser Minikurs der dich in einen Bezahlkurs führt". Schau einfach rein.</p>
+      <div class="cta-buttons">
+        <a href="/#buecher" class="btn-primary">Zu den Büchern</a>
+        <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Kanal beitreten, öffnet neues Fenster">WhatsApp-Kanal</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <nav aria-label="Footer-Navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+        <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, öffnet neues Fenster">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, öffnet neues Fenster">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="footer-affiliate">&copy; 2026 Richard Kerschbaumer</p>
+  </footer>
+
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
+
+</body>
+</html>

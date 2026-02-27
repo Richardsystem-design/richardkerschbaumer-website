@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mach's einfach – Richard Kerschbaumer</title>
+  <meta name="description" content="Das Buch über Mikro-Gewohnheiten die auch am Dienstagabend nach einem beschissenen Tag funktionieren. Kein Selbsthilfe-Kitsch. Systeme, die halten.">
+  <meta name="author" content="Richard Kerschbaumer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/machs-einfach">
+
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/machs-einfach">
+  <meta property="og:title" content="Mach's einfach – Richard Kerschbaumer">
+  <meta property="og:description" content="Mikro-Gewohnheiten die auch am Dienstagabend nach einem beschissenen Tag funktionieren.">
+  <meta property="og:image" content="https://www.richardkerschbaumer.at/machs-einfach.webp">
+  <meta property="og:locale" content="de_AT">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Mach's einfach",
+    "author": {
+      "@type": "Person",
+      "name": "Richard Kerschbaumer",
+      "url": "https://www.richardkerschbaumer.at"
+    },
+    "url": "https://amzn.to/478dH7C",
+    "image": "https://www.richardkerschbaumer.at/machs-einfach.webp",
+    "description": "Mikro-Gewohnheiten die auch am Dienstagabend nach einem beschissenen Tag funktionieren.",
+    "inLanguage": "de",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://amzn.to/478dH7C"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0d;
+      --white: #f5f3ef;
+      --red: #c8102e;
+      --red-dark: #a00d24;
+      --gray: #888;
+      --section-pad: clamp(60px, 8vw, 120px);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      font-size: 18px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+
+    .skip-link {
+      position: absolute;
+      top: -100%; left: 16px;
+      background: var(--red);
+      color: var(--white);
+      padding: 12px 20px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 16px; }
+
+    /* NAV */
+    nav.main-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 20px clamp(20px, 5vw, 80px);
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(13,13,13,0.95); backdrop-filter: blur(8px);
+    }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+
+    /* HAMBURGER */
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MOBILE MENU */
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px, 5vw, 80px) 32px; flex-direction: column; gap: 0; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+
+    /* HERO */
+    .book-hero {
+      background: var(--black);
+      padding: 140px clamp(20px, 5vw, 80px) 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,16,46,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .book-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(200,16,46,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .book-hero-text { position: relative; z-index: 1; }
+
+    .book-hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .book-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 7vw, 6.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 32px;
+    }
+    .book-hero h1 span { color: var(--red); }
+
+    .book-hero-lead {
+      color: rgba(245,243,239,0.72);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.75;
+      margin-bottom: 48px;
+      max-width: 480px;
+    }
+
+    .hero-cta-group { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+    .btn-secondary-dark {
+      display: inline-block;
+      background: transparent;
+      color: rgba(245,243,239,0.6);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 1px solid rgba(245,243,239,0.18);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-secondary-dark:hover { border-color: rgba(245,243,239,0.55); color: var(--white); }
+
+    .affiliate-note {
+      font-size: 0.8rem;
+      color: rgba(245,243,239,0.3);
+      margin-top: 4px;
+    }
+
+    /* BOOK COVER VISUAL */
+    .book-hero-visual {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .book-cover-wrapper {
+      position: relative;
+    }
+
+    .book-cover-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle at center, rgba(200,16,46,0.2) 0%, transparent 65%);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+
+    .book-cover-main {
+      width: 260px;
+      height: 390px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 2px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.7), 0 4px 16px rgba(200,16,46,0.15);
+      display: block;
+    }
+
+    /* DIVIDERS */
+    .divider-dark-to-light {
+      height: 60px;
+      background: var(--white);
+      clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+      margin-top: -2px;
+    }
+
+    .divider-light-to-dark {
+      height: 60px;
+      background: #111;
+      clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+      margin-top: -2px;
+    }
+
+    .divider-dark-to-white {
+      height: 60px;
+      background: var(--white);
+      clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -2px;
+    }
+
+    .divider-mid {
+      height: 60px;
+      background: #111;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+      margin-bottom: -2px;
+    }
+
+    /* HONEST SECTION */
+    .honest {
+      background: var(--white);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .honest-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .honest-left {}
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .honest h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 32px;
+    }
+
+    .honest p {
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .honest p strong { color: var(--black); font-weight: 600; }
+
+    /* NOT LIST / IS LIST */
+    .split-lists {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .list-box {
+      background: var(--black);
+      padding: 32px;
+      border-radius: 2px;
+    }
+
+    .list-box-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .list-box.not .list-box-label { color: rgba(245,243,239,0.35); }
+    .list-box.is .list-box-label { color: var(--red); }
+
+    .list-box ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+    .list-box li {
+      color: rgba(245,243,239,0.7);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .list-box.not li::before {
+      content: '×';
+      position: absolute;
+      left: 0;
+      color: rgba(245,243,239,0.25);
+      font-weight: 700;
+    }
+
+    .list-box.is li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* CHAPTERS */
+    .chapters {
+      background: #111;
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .chapters-header { margin-bottom: 56px; }
+
+    .chapters-header h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    .chapter-item {
+      background: #1a1a1a;
+      padding: 32px 36px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      transition: background 0.2s;
+    }
+    .chapter-item:hover { background: #212121; }
+
+    .chapter-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--red);
+      flex-shrink: 0;
+      width: 48px;
+    }
+
+    .chapter-text h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .chapter-text p {
+      color: rgba(245,243,239,0.55);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* QUOTE BREAK */
+    .quote-break {
+      background: var(--red);
+      padding: 80px clamp(20px, 5vw, 80px);
+      text-align: center;
+    }
+
+    .quote-break blockquote {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--white);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* FOR WHO */
+    .for-who {
+      background: var(--white);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .for-who-header { margin-bottom: 48px; }
+
+    .for-who-header h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .for-who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .for-who-card {
+      background: var(--black);
+      padding: 36px;
+      border-radius: 2px;
+    }
+
+    .for-who-card-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .for-who-card p {
+      color: rgba(245,243,239,0.75);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      background: #111;
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .reviews-header { margin-bottom: 48px; }
+
+    .reviews-header h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+
+    .review-card {
+      background: #1a1a1a;
+      padding: 36px;
+    }
+
+    .review-stars {
+      color: var(--red);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .review-card blockquote {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(245,243,239,0.82);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .review-meta {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245,243,239,0.3);
+    }
+
+    .reviews-source {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: var(--gray);
+      text-align: center;
+    }
+    .reviews-source a { color: var(--gray); }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--black);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+      text-align: center;
+    }
+
+    .final-cta-inner { max-width: 680px; margin: 0 auto; }
+
+    .final-cta h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .final-cta h2 span { color: var(--red); }
+
+    .final-cta p {
+      color: rgba(245,243,239,0.65);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    .final-cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-outline-light {
+      display: inline-block;
+      background: transparent;
+      color: rgba(245,243,239,0.6);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border: 1px solid rgba(245,243,239,0.18);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-outline-light:hover { border-color: rgba(245,243,239,0.5); color: var(--white); }
+
+    /* ALSO AVAILABLE */
+    .also {
+      background: var(--white);
+      padding: 60px clamp(20px, 5vw, 80px);
+      border-top: 1px solid rgba(13,13,13,0.08);
+    }
+
+    .also-inner {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 700px;
+    }
+
+    .also img {
+      width: 70px;
+      height: 105px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
+    .also-text {}
+
+    .also-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .also h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .also p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .btn-small-red {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-small-red:hover { background: var(--red-dark); }
+
+    /* FOOTER */
+    footer {
+      background: #080808;
+      padding: 48px clamp(20px, 5vw, 80px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: rgba(245,243,239,0.4);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+
+    .footer-affiliate {
+      width: 100%;
+      color: rgba(245,243,239,0.3);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(245,243,239,0.08);
+      padding-top: 24px;
+      margin-top: 8px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .book-hero { grid-template-columns: 1fr; padding-top: 110px; text-align: center; }
+      .book-hero-visual { order: -1; }
+      .book-cover-main { width: 180px; height: 270px; }
+      .hero-cta-group { align-items: center; }
+      .honest-grid { grid-template-columns: 1fr; gap: 40px; }
+      .split-lists { grid-template-columns: 1fr; }
+      .chapters-grid { grid-template-columns: 1fr; }
+      .for-who-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .also-inner { flex-direction: column; gap: 24px; text-align: center; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .book-hero-eyebrow { animation: fadeUp 0.5s ease both; }
+      .book-hero h1 { animation: fadeUp 0.5s 0.1s ease both; }
+      .book-hero-lead { animation: fadeUp 0.5s 0.2s ease both; }
+      .hero-cta-group { animation: fadeUp 0.5s 0.3s ease both; }
+      .book-hero-visual { animation: fadeUp 0.7s 0.15s ease both; }
+    }
+
+    /* HAMBURGER */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MOBILE MENU */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: rgba(13,13,13,0.98);
+      backdrop-filter: blur(12px);
+      z-index: 99;
+      padding: 24px clamp(20px, 5vw, 80px) 32px;
+      flex-direction: column;
+      gap: 4px;
+      border-top: 1px solid rgba(245,243,239,0.08);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: rgba(245,243,239,0.75);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(245,243,239,0.07);
+      transition: color 0.2s;
+    }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile .nav-cta-mobile {
+      margin-top: 12px;
+      background: var(--red);
+      color: var(--white) !important;
+      padding: 14px 24px;
+      border-radius: 2px;
+      text-align: center;
+      border-bottom: none !important;
+    }
+    .nav-mobile .nav-cta-mobile:hover { background: var(--red-dark); }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+        <ul class="nav-links" role="list">
+      <li><a href="/bucher.html" aria-current="page">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+    <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html" aria-current="page">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="book-hero" aria-labelledby="book-heading">
+      <div class="book-hero-text">
+        <span class="red-rule" aria-hidden="true"></span>
+        <span class="book-hero-eyebrow">Gewohnheiten &amp; Alltag</span>
+        <h1 id="book-heading">Mach's<br><span>einfach.</span></h1>
+        <p class="book-hero-lead">Du weißt bereits was du tun solltest. Das Problem ist nicht das Wissen. Das Problem ist der Dienstagabend um 19 Uhr wenn du keinen Bock hast und trotzdem irgendwie weitermachen musst.</p>
+        <div class="hero-cta-group">
+          <a href="https://amzn.to/478dH7C" class="btn-primary" target="_blank" rel="noopener noreferrer sponsored" aria-label="Mach's einfach bei Amazon kaufen, Affiliate-Link, öffnet neues Fenster">Bei Amazon kaufen *</a>
+          <span class="affiliate-note">* Affiliate-Link. Kostet dich nichts extra.</span>
+        </div>
+      </div>
+      <div class="book-hero-visual" aria-hidden="true">
+        <div class="book-cover-wrapper">
+          <img src="machs-einfach.webp" alt="Buchcover Mach's einfach von Richard Kerschbaumer" class="book-cover-main" width="260" height="390" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-dark-to-light" aria-hidden="true"></div>
+
+    <!-- HONEST DESCRIPTION -->
+    <section class="honest" aria-labelledby="honest-heading">
+      <div class="honest-grid">
+        <div class="honest-left">
+          <span class="red-rule" aria-hidden="true"></span>
+          <span class="section-label">Was ist das eigentlich?</span>
+          <h2 id="honest-heading">Kein Selbsthilfe-Kitsch.<br>Kein Tschakka.<br>Kein Bullshit.</h2>
+          <p>Die meisten Ratgeber über Gewohnheiten funktionieren auf dem Papier perfekt. Das Problem: du lebst nicht auf Papier.</p>
+          <p>Dieses Buch ist für Leute, die schon drei „perfekte Systeme" ausprobiert und alle drei abgebrochen haben. Nicht weil sie schwach sind – sondern weil die Systeme zu groß, zu komplex und zu abhängig von guter Laune waren.</p>
+          <p><strong>Der Kern: Ein Mindeststandard, den du auch dann hältst, wenn alles andere gerade schiefläuft.</strong> Nicht der beste Tag. Der schlechteste.</p>
+        </div>
+        <div>
+          <div class="split-lists">
+            <div class="list-box not" role="list" aria-label="Was das Buch nicht ist">
+              <span class="list-box-label">Nicht das hier</span>
+              <ul>
+                <li>90-Tage-Transformationsprogramm</li>
+                <li>„Glaub an dich"-Motivationssprüche</li>
+                <li>Wissenschaftskram den du nie umsetzt</li>
+                <li>Morgenroutinen mit 11 Punkten</li>
+                <li>Tipps die nur mit viel Freizeit klappen</li>
+              </ul>
+            </div>
+            <div class="list-box is" role="list" aria-label="Was das Buch ist">
+              <span class="list-box-label">Das bekommst du</span>
+              <ul>
+                <li>Mikro-Systeme die an miesen Tagen halten</li>
+                <li>Einen Mindeststandard statt Perfektion</li>
+                <li>Klartext über warum Vorsätze scheitern</li>
+                <li>Konkrete Einstiege ohne Anlaufphase</li>
+                <li>Systeme die du wirklich benutzt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-light-to-dark" aria-hidden="true"></div>
+
+    <!-- CHAPTERS / INHALT -->
+    <section class="chapters" aria-labelledby="chapters-heading">
+      <div class="chapters-header">
+        <span class="red-rule" aria-hidden="true"></span>
+        <span class="section-label">Worüber reden wir hier eigentlich</span>
+        <h2 id="chapters-heading">Was drin steht.<br>Ohne Verklärung.</h2>
+      </div>
+      <div class="chapters-grid">
+        <div class="chapter-item">
+          <span class="chapter-num" aria-hidden="true">01</span>
+          <div class="chapter-text">
+            <h3>Warum Vorsätze scheitern</h3>
+            <p>Nicht weil du zu wenig Disziplin hast. Sondern weil der Plan zu fragil war. Der Unterschied zwischen einem System und einem Vorsatz.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-num" aria-hidden="true">02</span>
+          <div class="chapter-text">
+            <h3>Der Mindeststandard</h3>
+            <p>Was ist das kleinste, das du auch dann noch machst, wenn alles gerade beschissen ist? Das ist dein Fundament – nicht dein Ziel.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-num" aria-hidden="true">03</span>
+          <div class="chapter-text">
+            <h3>Mikro-Gewohnheiten richtig bauen</h3>
+            <p>Nicht kleiner denken als nötig, aber auch nicht größer als möglich. Wie du Einstiegspunkte findest, die wirklich funktionieren.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-num" aria-hidden="true">04</span>
+          <div class="chapter-text">
+            <h3>Was tun wenn du rückfällst</h3>
+            <p>Rückfälle gehören dazu. Die Frage ist nicht ob – sondern wie schnell du wieder einsteigst. Ein Prozess, kein Drama.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-num" aria-hidden="true">05</span>
+          <div class="chapter-text">
+            <h3>Gewohnheiten stapeln</h3>
+            <p>Wie du neue Dinge an bestehende Abläufe hängst, statt sie irgendwo in den Tag zu stopfen – und warum das der eigentliche Trick ist.</p>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-num" aria-hidden="true">06</span>
+          <div class="chapter-text">
+            <h3>Systeme statt Motivation</h3>
+            <p>Motivation ist unzuverlässig. Systeme nicht. Wie du aufhörst auf gute Laune zu warten und trotzdem vorankommst.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE BREAK -->
+    <section class="quote-break" aria-label="Kernzitat">
+      <blockquote>
+        Motivation ist das Wetter.<br>Dein System ist die Jacke.
+      </blockquote>
+    </section>
+
+    <!-- FOR WHO -->
+    <section class="for-who" aria-labelledby="forwho-heading">
+      <div class="for-who-header">
+        <span class="red-rule" aria-hidden="true"></span>
+        <span class="section-label">Für wen ist das?</span>
+        <h2 id="forwho-heading">Lies es wenn<br>du dich wiedererkennst.</h2>
+      </div>
+      <div class="for-who-grid">
+        <div class="for-who-card">
+          <span class="for-who-card-label">Erkennst du das?</span>
+          <p>Du startest montags mit Vollgas, Dienstag läuft's noch, Mittwoch wird's wackelig – und Donnerstag ist alles wieder beim Alten. Seit Jahren. Mit unterschiedlichen Themen, aber gleichem Muster.</p>
+        </div>
+        <div class="for-who-card">
+          <span class="for-who-card-label">Oder das?</span>
+          <p>Du hast schon genug Bücher gelesen. Du weißt wie Gewohnheiten theoretisch funktionieren. Aber zwischen „wissen" und „tun" liegt bei dir meistens ein ziemlich tiefer Graben.</p>
+        </div>
+        <div class="for-who-card">
+          <span class="for-who-card-label">Oder vielleicht das?</span>
+          <p>Dein Leben ist zu vollgepackt für große Programme. Kinder, Job, Selbstständigkeit – irgendetwas stört immer. Du brauchst was, das auch dann noch hält wenn das Leben nicht mitspielt.</p>
+        </div>
+        <div class="for-who-card">
+          <span class="for-who-card-label">Kein Buch für dich wenn…</span>
+          <p>Du einen Motivationsredner suchst der dir sagt, dass du großartig bist. Oder ein 30-Tage-Programm mit Tagespunkten. Dafür gibt's genug andere Bücher. Die helfen dann halt meistens auch nicht – aber die sind wenigstens nett.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-mid" aria-hidden="true"></div>
+
+    <!-- REVIEWS -->
+    <section class="reviews" aria-labelledby="reviews-heading">
+      <div class="reviews-header">
+        <span class="red-rule" aria-hidden="true"></span>
+        <span class="section-label">Was Leser sagen</span>
+        <h2 id="reviews-heading">Meinungen.<br>Ungefiltert.</h2>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>„Tolles Buch, sehr humorvoll und gut geschrieben."</blockquote>
+          <footer class="review-meta"><cite>Verifizierter Kauf · Juni 2025</cite></footer>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>„Ein humorvoller Umgang mit einer sensiblen Thematik – locker und amüsant geschrieben. Absolut empfehlenswert!"</blockquote>
+          <footer class="review-meta"><cite>Verifizierter Kauf · Juni 2025</cite></footer>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <blockquote>„Endlich mal ein Buch das nicht mit 90-Tage-Programmen anfängt."</blockquote>
+          <footer class="review-meta"><cite>Verifizierter Kauf · Juli 2025</cite></footer>
+        </article>
+      </div>
+      <p class="reviews-source">Alle Rezensionen von <a href="https://www.amazon.de" target="_blank" rel="noopener noreferrer">Amazon.de</a></p>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" aria-labelledby="final-cta-heading">
+      <div class="final-cta-inner">
+        <span class="red-rule" style="margin: 0 auto 20px;" aria-hidden="true"></span>
+        <h2 id="final-cta-heading">Genug gelesen.<br><span>Jetzt kaufen.</span></h2>
+        <p>Kein Upsell. Kein Kurs. Kein Coaching-Programm das danach kommt. Nur ein Buch das tut was es verspricht – oder nicht. Das entscheidest du.</p>
+        <div class="final-cta-buttons">
+          <a href="https://amzn.to/478dH7C" class="btn-primary" target="_blank" rel="noopener noreferrer sponsored" aria-label="Mach's einfach bei Amazon kaufen, Affiliate-Link, öffnet neues Fenster">Bei Amazon kaufen *</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALSO AVAILABLE -->
+    <section class="also" aria-label="Zweites Buch">
+      <div class="also-inner">
+        <img src="friss-nicht-weniger.webp" alt="Buchcover Friss nicht weniger" width="70" height="105" loading="lazy" decoding="async">
+        <div class="also-text">
+          <span class="also-eyebrow">Auch von Richard</span>
+          <h3>Friss nicht weniger.</h3>
+          <p>Abnehmen ohne die nächste Diät die du in vier Wochen abbrichst. Warum weniger essen das falsche Ziel ist – und was stattdessen funktioniert.</p>
+          <a href="/friss-nicht-weniger.html" class="btn-small-red">Zur Buchseite</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <nav aria-label="Footer-Navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+        <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, öffnet neues Fenster">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, öffnet neues Fenster">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="footer-affiliate">Links mit * sind Affiliate-Links. Wenn du darüber etwas kaufst, verdiene ich eine kleine Provision. &copy; 2026 Richard Kerschbaumer</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
+
+</body>

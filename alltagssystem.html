@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der 4-Wochen-Alltagstest – Richard Kerschbaumer</title>
+  <meta name="description" content="4 Mini-Experimente gegen Aufschieberitis, Handy-Autopilot und Kopfchaos. Kein neuer Lebensplan. Ein Test. Am Ende bleibt ein Werkzeug, das deinen Alltag leichter macht.">
+  <meta name="author" content="Richard Kerschbaumer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/alltagssystem.html">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/alltagssystem.html">
+  <meta property="og:title" content="Der 4-Wochen-Alltagstest – Richard Kerschbaumer">
+  <meta property="og:description" content="4 Mini-Experimente. Kein Lebensplan. Am Ende bleibt ein Werkzeug das funktioniert.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; --section-pad: clamp(60px,8vw,120px); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+    nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+    .red-rule { display: block; width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
+
+    /* HERO */
+    .hero { background: var(--black); padding: 130px clamp(20px,5vw,80px) 80px; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: center; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+    .hero-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); background: rgba(200,16,46,0.12); padding: 6px 14px; border-radius: 2px; border: 1px solid rgba(200,16,46,0.2); }
+    .hero-price-tag { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.9rem; color: rgba(245,243,239,0.4); letter-spacing: 0.1em; }
+    h1.hero-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3rem,6vw,6.5rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 32px; }
+    h1.hero-title em { color: var(--red); font-style: normal; }
+    .hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.4vw,1.2rem); line-height: 1.85; max-width: 520px; margin-bottom: 48px; }
+    .btn-buy { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 18px 36px; border-radius: 2px; transition: background 0.2s; }
+    .btn-buy:hover { background: var(--red-dark); }
+    .hero-visual { display: flex; justify-content: center; }
+    .pdf-mockup { width: 100%; max-width: 280px; background: var(--white); position: relative; box-shadow: -16px 16px 40px rgba(0,0,0,0.5); }
+    .pdf-mockup-top { background: var(--black); padding: 28px 24px 20px; border-bottom: 3px solid var(--red); }
+    .pdf-mockup-overline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,243,239,0.35); display: block; margin-bottom: 10px; }
+    .pdf-mockup-tagline { font-family: 'Barlow', sans-serif; font-size: 0.78rem; color: rgba(245,243,239,0.4); margin-bottom: 16px; font-style: italic; }
+    .pdf-mockup-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; line-height: 0.9; text-transform: uppercase; color: var(--white); }
+    .pdf-mockup-body { padding: 20px 24px; }
+    .pdf-mockup-desc { font-size: 0.8rem; color: #555; line-height: 1.6; margin-bottom: 16px; }
+    .pdf-mockup-items { list-style: none; }
+    .pdf-mockup-items li { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); padding: 7px 0; border-bottom: 1px solid rgba(13,13,13,0.07); display: flex; gap: 10px; align-items: center; }
+    .pdf-mockup-items li:last-child { border-bottom: none; }
+    .pdf-mockup-items li::before { content: ''; display: block; width: 5px; height: 5px; background: var(--red); flex-shrink: 0; }
+    .pdf-mockup-footer { background: #f0ede7; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .pdf-mockup-meta { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
+    .pdf-mockup-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--black); }
+
+    /* STATS */
+    .stats-bar { background: var(--red); padding: 0 clamp(20px,5vw,80px); }
+    .stats-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; }
+    .stat-item { flex: 1; padding: 28px 0; border-right: 1px solid rgba(245,243,239,0.15); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--white); line-height: 1; }
+    .stat-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,239,0.6); text-align: center; }
+
+    /* KONZEPT */
+    .konzept-section { padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .konzept-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .konzept-content h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.5rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 28px; }
+    .konzept-content p { color: #444; font-size: 1.05rem; line-height: 1.85; margin-bottom: 20px; }
+    .konzept-quote { background: var(--black); padding: 40px 36px; }
+    .konzept-quote blockquote { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.8rem,2.8vw,2.4rem); line-height: 1.1; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .konzept-quote cite { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.3); font-style: normal; }
+    .rule-box { border-top: 3px solid var(--red); margin-top: 28px; padding-top: 28px; }
+    .rule-box p { font-size: 0.95rem; color: rgba(245,243,239,0.5); line-height: 1.7; }
+    .rule-box strong { color: var(--white); }
+
+    /* EXPERIMENTE */
+    .experiments-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .experiments-inner { max-width: 1200px; margin: 0 auto; }
+    .experiments-header { margin-bottom: 56px; }
+    .experiments-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+    .experiments-header p { color: rgba(245,243,239,0.45); font-size: 1.05rem; max-width: 540px; }
+    .experiments-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .experiment-card { background: rgba(245,243,239,0.03); border: 1px solid rgba(245,243,239,0.06); padding: 36px 28px; }
+    .experiment-card.accent { border-top: 3px solid var(--red); }
+    .exp-week { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,243,239,0.25); margin-bottom: 20px; display: block; }
+    .exp-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: rgba(245,243,239,0.04); line-height: 1; margin-bottom: 8px; }
+    .exp-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; text-transform: uppercase; color: var(--white); margin-bottom: 6px; line-height: 1.1; }
+    .exp-subtitle { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; }
+    .exp-desc { font-size: 0.88rem; color: rgba(245,243,239,0.4); line-height: 1.75; margin-bottom: 20px; }
+    .exp-tag { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,239,0.2); border: 1px solid rgba(245,243,239,0.08); padding: 4px 10px; display: inline-block; }
+
+    /* PRINZIP */
+    .prinzip-section { padding: var(--section-pad) clamp(20px,5vw,80px); background: #f0ede7; }
+    .prinzip-inner { max-width: 1200px; margin: 0 auto; }
+    .prinzip-header { margin-bottom: 56px; }
+    .prinzip-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .prinzip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .prinzip-item { background: var(--white); padding: 36px 32px; }
+    .prinzip-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.5rem; color: rgba(13,13,13,0.05); line-height: 1; margin-bottom: 16px; }
+    .prinzip-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; color: var(--black); margin-bottom: 12px; }
+    .prinzip-desc { font-size: 0.92rem; color: #555; line-height: 1.75; }
+
+    /* PURCHASE */
+    .purchase-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .purchase-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .purchase-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.5rem,5vw,4.5rem); line-height: 0.95; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .purchase-inner > p { color: rgba(245,243,239,0.5); font-size: 1.05rem; line-height: 1.8; margin-bottom: 48px; }
+    .purchase-box { background: rgba(245,243,239,0.03); border: 1px solid rgba(245,243,239,0.1); padding: 48px; border-radius: 2px; }
+    .purchase-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 5rem; color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .purchase-price-note { font-size: 0.9rem; color: rgba(245,243,239,0.3); margin-bottom: 36px; }
+    .purchase-includes { list-style: none; text-align: left; margin-bottom: 40px; }
+    .purchase-includes li { padding: 12px 0; color: rgba(245,243,239,0.6); font-size: 0.95rem; border-bottom: 1px solid rgba(245,243,239,0.07); display: flex; gap: 14px; align-items: center; }
+    .purchase-includes li:last-child { border-bottom: none; }
+    .purchase-includes li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; }
+    .btn-buy-large { display: block; width: 100%; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 22px 36px; border-radius: 2px; transition: background 0.2s; text-align: center; }
+    .btn-buy-large:hover { background: var(--red-dark); }
+
+    footer { background: #080808; padding: 48px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(245,243,239,0.4); letter-spacing: 0.05em; text-transform: uppercase; }
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+    .footer-copy { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
+
+    @media (max-width: 900px) {
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .stats-bar-inner { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(245,243,239,0.1); }
+      .konzept-inner { grid-template-columns: 1fr; gap: 40px; }
+      .experiments-grid { grid-template-columns: 1fr 1fr; }
+      .prinzip-grid { grid-template-columns: 1fr; }
+      .purchase-box { padding: 36px 24px; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 540px) {
+      .experiments-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/friss-nicht-weniger.html">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/friss-nicht-weniger.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
+
+  <main id="main-content">
+
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="hero-badge">PDF · 13 Seiten</span>
+            <span class="hero-price-tag">4,90 €</span>
+          </div>
+          <h1 class="hero-title">Der<br>4-Wochen-<br><em>Alltags</em>test.</h1>
+          <p class="hero-lead">Kein neuer Lebensplan den du wieder abbrichst. Du testest 4 konkrete Werkzeuge – je eine Woche lang. Am Ende behältst du das eine das wirklich funktioniert. Nicht mehr. Das reicht.</p>
+          <a href="https://payhip.com/b/KqQ4M" class="btn-buy" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 4,90 €</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="pdf-mockup">
+            <div class="pdf-mockup-top">
+              <span class="pdf-mockup-overline">Richard Kerschbaumer</span>
+              <p class="pdf-mockup-tagline">Mini-System für echte Tage,<br>nicht für perfekte.</p>
+              <div class="pdf-mockup-title">Der 4-Wochen-<br>Alltags-<br>test</div>
+            </div>
+            <div class="pdf-mockup-body">
+              <p class="pdf-mockup-desc">4 Mini-Experimente gegen Aufschieberitis, Handy-Autopilot und Kopfchaos.</p>
+              <ul class="pdf-mockup-items" role="list">
+                <li>Der Start-Knopf</li>
+                <li>Der Flugmodus</li>
+                <li>Der Fokus-Laser</li>
+                <li>Die Erfolgs-Brille</li>
+              </ul>
+            </div>
+            <div class="pdf-mockup-footer">
+              <span class="pdf-mockup-meta">13 Seiten · PDF</span>
+              <span class="pdf-mockup-price">4,90 €</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="stats-bar" role="region" aria-label="Kennzahlen">
+      <div class="stats-bar-inner">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Werkzeuge</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Das du behältst</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">PDF</span>
+          <span class="stat-label">Sofort-Download</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4,90</span>
+          <span class="stat-label">Euro einmalig</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="konzept-section" aria-labelledby="konzept-heading">
+      <div class="konzept-inner">
+        <div class="konzept-content">
+          <span class="red-rule"></span>
+          <span class="section-label">Das Konzept</span>
+          <h2 id="konzept-heading">Vergiss<br>Disziplin.</h2>
+          <p>Das Problem mit Veränderungen: Du nimmst dir zu viel auf einmal vor. Drei Wochen läuft es, dann kommt der erste schlechte Tag – und alles bricht wieder zusammen.</p>
+          <p>Der 4-Wochen-Alltagstest funktioniert anders. Du testest vier konkrete Werkzeuge – je eines pro Woche, in deinem echten Leben. Nicht im Ferienmodus, nicht wenn alles perfekt läuft.</p>
+          <p>Wenn etwas nervt: raus. Wenn etwas hilft: bleibt. Am Ende weißt du was wirklich zu dir passt.</p>
+        </div>
+        <div class="konzept-quote">
+          <blockquote>„Es ist ein Test,<br>kein Vertrag."</blockquote>
+          <cite>Aus dem 4-Wochen-Alltagstest</cite>
+          <div class="rule-box">
+            <p>Das Ziel: Am Ende bleibt genau <strong>EIN Werkzeug</strong> übrig, das deinen Alltag leichter macht. Nicht mehr. Das reicht.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiments-section" aria-labelledby="experiments-heading">
+      <div class="experiments-inner">
+        <div class="experiments-header">
+          <span class="red-rule"></span>
+          <span class="section-label">Die 4 Werkzeuge</span>
+          <h2 id="experiments-heading">Eine Woche.<br>Ein Experiment.</h2>
+          <p>Jede Woche ein Werkzeug, 7 Tage testen, ehrlich bewerten. Behalten oder rauswerfen.</p>
+        </div>
+        <div class="experiments-grid">
+          <div class="experiment-card accent">
+            <span class="exp-week">Woche 01</span>
+            <div class="exp-num">1</div>
+            <div class="exp-title">Der Start-Knopf</div>
+            <div class="exp-subtitle">Die 5-Minuten-Lüge</div>
+            <p class="exp-desc">Das Problem ist selten die Aufgabe – es ist der Start. Du versprichst dir nur 5 Minuten. Danach darfst du aufhören. Dein Gehirn akzeptiert das. Der Berg schrumpft.</p>
+            <span class="exp-tag">Gegen Aufschieberitis</span>
+          </div>
+          <div class="experiment-card">
+            <span class="exp-week">Woche 02</span>
+            <div class="exp-num">2</div>
+            <div class="exp-title">Der Flugmodus</div>
+            <div class="exp-subtitle">Dein Morgen gehört dir</div>
+            <p class="exp-desc">Wenn du als Erstes aufs Handy schaust, gehört dein Kopf sofort allen anderen. Der Flugmodus schützt den Start in den Tag – bis eine Sache erledigt ist.</p>
+            <span class="exp-tag">Gegen Handy-Autopilot</span>
+          </div>
+          <div class="experiment-card">
+            <span class="exp-week">Woche 03</span>
+            <div class="exp-num">3</div>
+            <div class="exp-title">Der Fokus-Laser</div>
+            <div class="exp-subtitle">Die EINE Sache</div>
+            <p class="exp-desc">Wenn alles wichtig ist, passiert am Ende nichts Richtiges. Jeden Tag eine einzige Hauptaufgabe festlegen. Wenn die erledigt ist: Tag bestanden.</p>
+            <span class="exp-tag">Gegen Kopfchaos</span>
+          </div>
+          <div class="experiment-card">
+            <span class="exp-week">Woche 04</span>
+            <div class="exp-num">4</div>
+            <div class="exp-title">Die Erfolgs-Brille</div>
+            <div class="exp-subtitle">Habe-ich-erledigt-Liste</div>
+            <p class="exp-desc">Dein Kopf sieht immer nur was fehlt. Jeden Abend 3 Dinge aufschreiben die du erledigt hast. Alles zählt. Schwarz auf weiß.</p>
+            <span class="exp-tag">Gegen das „zu wenig"-Gefühl</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prinzip-section" aria-labelledby="prinzip-heading">
+      <div class="prinzip-inner">
+        <div class="prinzip-header">
+          <span class="red-rule"></span>
+          <span class="section-label">So funktioniert der Test</span>
+          <h2 id="prinzip-heading">Kein Drama.<br>Einfach machen.</h2>
+        </div>
+        <div class="prinzip-grid">
+          <div class="prinzip-item">
+            <div class="prinzip-num">01</div>
+            <div class="prinzip-title">Testen, nicht committen</div>
+            <p class="prinzip-desc">Jede Woche ein Werkzeug. Du schaust ob es in deinem echten Leben funktioniert – nicht im Idealfall. Wenn es nervt: raus.</p>
+          </div>
+          <div class="prinzip-item">
+            <div class="prinzip-num">02</div>
+            <div class="prinzip-title">Leer lassen ist erlaubt</div>
+            <p class="prinzip-desc">Jeder Wochenbogen hat Platz für Haken. Nicht jeden Tag zu schaffen ist kein Scheitern. Es ist ein Test, kein Vertrag.</p>
+          </div>
+          <div class="prinzip-item">
+            <div class="prinzip-num">03</div>
+            <div class="prinzip-title">Am Ende eins wählen</div>
+            <p class="prinzip-desc">Nach 4 Wochen weißt du welches Werkzeug dir wirklich geholfen hat. Das bleibt. Der Rest fliegt raus. Das reicht.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="purchase-section" id="kaufen" aria-labelledby="purchase-heading">
+      <div class="purchase-inner">
+        <span class="red-rule" style="margin: 0 auto 20px;"></span>
+        <h2 id="purchase-heading">4,90 Euro.<br>Einmalig.</h2>
+        <p>Kein Kurs. Kein Abo. Kein Coaching. PDF runterladen, nächste Woche mit Experiment 1 anfangen.</p>
+        <div class="purchase-box">
+          <div class="purchase-price">4,90 €</div>
+          <p class="purchase-price-note">Einmaliger Kauf · Sofort-Download · PDF</p>
+          <ul class="purchase-includes" role="list">
+            <li>13 Seiten PDF</li>
+            <li>4 Mini-Experimente mit je 7-Tage-Testbogen</li>
+            <li>Auswertungsseite am Ende</li>
+            <li>Sofort nutzbar – kein Vorbereiten nötig</li>
+            <li>Einmaliger Kauf, keine weiteren Kosten</li>
+          </ul>
+          <a href="https://payhip.com/b/KqQ4M" class="btn-buy-large" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 4,90 €</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <nav aria-label="Footer-Navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+        <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Richard Kerschbaumer</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
+</body>
+</html>

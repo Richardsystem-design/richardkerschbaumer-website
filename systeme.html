@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systeme – Richard Kerschbaumer</title>
+  <meta name="description" content="Praktische Systeme für Alltag, schlechte Tage und Gewohnheiten. Keine Motivation nötig – nur ein System das funktioniert.">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/systeme.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
+    nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+    /* HERO */
+    .page-hero { background: var(--black); padding: 140px clamp(20px,5vw,80px) 100px; }
+    .page-hero-inner { max-width: 800px; }
+    .red-rule { display: block; width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3.5rem,7vw,6.5rem); line-height: 0.92; color: var(--white); text-transform: uppercase; margin-bottom: 28px; }
+    .page-hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.5vw,1.2rem); line-height: 1.75; max-width: 560px; }
+
+    /* PRODUCTS GRID */
+    .products-section { padding: clamp(60px,8vw,120px) clamp(20px,5vw,80px); }
+    .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; max-width: 1100px; }
+
+    .product-card { background: var(--white); border: 1px solid rgba(13,13,13,0.1); padding: 56px 48px; display: flex; flex-direction: column; transition: border-color 0.2s; position: relative; }
+    .product-card:hover { border-color: rgba(13,13,13,0.3); }
+    .product-card.dark { background: var(--black); border-color: var(--black); }
+
+    .product-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 24px; display: block; }
+    .product-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem,3.5vw,3rem); line-height: 0.95; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+    .product-card.dark .product-title { color: var(--white); }
+    .product-subtitle { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(13,13,13,0.35); margin-bottom: 28px; }
+    .product-card.dark .product-subtitle { color: rgba(245,243,239,0.3); }
+
+    .product-desc { color: #444; font-size: 1rem; line-height: 1.8; margin-bottom: 32px; flex: 1; }
+    .product-card.dark .product-desc { color: rgba(245,243,239,0.55); }
+
+    .product-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+    .product-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border: 1px solid rgba(13,13,13,0.15); color: #555; }
+    .product-card.dark .product-tag { border-color: rgba(245,243,239,0.12); color: rgba(245,243,239,0.45); }
+
+    .product-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: auto; }
+    .product-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; color: var(--black); line-height: 1; }
+    .product-card.dark .product-price { color: var(--white); }
+    .product-price span { font-size: 1rem; font-weight: 600; opacity: 0.5; margin-left: 4px; }
+
+    .btn-primary { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; }
+    .btn-primary:hover { background: var(--red-dark); }
+    .btn-secondary { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; background: transparent; color: var(--black); text-decoration: none; padding: 16px 32px; border: 2px solid rgba(13,13,13,0.2); border-radius: 2px; transition: border-color 0.2s; white-space: nowrap; }
+    .btn-secondary:hover { border-color: var(--black); }
+    .btn-detail { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(13,13,13,0.4); text-decoration: none; margin-top: 12px; transition: color 0.2s; }
+    .product-card.dark .btn-detail { color: rgba(245,243,239,0.3); }
+    .btn-detail:hover { color: var(--black); }
+    .product-card.dark .btn-detail:hover { color: var(--white); }
+
+    .coming-soon-overlay { position: absolute; top: 24px; right: 24px; background: var(--red); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; }
+
+    /* FUTURE EDITIONS */
+    .editions-section { background: #f0ede7; padding: clamp(60px,6vw,100px) clamp(20px,5vw,80px); }
+    .editions-inner { max-width: 1100px; }
+    .editions-header { margin-bottom: 48px; }
+    .editions-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem,4vw,3.5rem); text-transform: uppercase; color: var(--black); line-height: 1; margin-bottom: 12px; }
+    .editions-header p { color: #666; font-size: 1rem; }
+    .editions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .edition-placeholder { background: rgba(13,13,13,0.04); border: 1px dashed rgba(13,13,13,0.15); padding: 36px 32px; display: flex; flex-direction: column; gap: 12px; }
+    .edition-placeholder-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(13,13,13,0.3); }
+    .edition-placeholder-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; text-transform: uppercase; color: rgba(13,13,13,0.2); }
+    .edition-placeholder-note { font-size: 0.85rem; color: rgba(13,13,13,0.3); }
+
+    footer { background: #080808; padding: 48px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(245,243,239,0.4); letter-spacing: 0.05em; text-transform: uppercase; }
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+    .footer-copy { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
+
+    @media (max-width: 900px) {
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .products-grid { grid-template-columns: 1fr; }
+      .editions-grid { grid-template-columns: 1fr; }
+      .product-card { padding: 40px 28px; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/friss-nicht-weniger.html">Bücher</a></li>
+      <li><a href="/systeme.html" style="color: var(--white);">Systeme</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/friss-nicht-weniger.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
+
+  <main id="main-content">
+
+    <header class="page-hero">
+      <div class="page-hero-inner">
+        <span class="red-rule"></span>
+        <span class="section-label">Digitale Produkte</span>
+        <h1>Systeme<br>die funktionieren.</h1>
+        <p class="page-hero-lead">Keine Kurse. Keine Coachings. Keine Theorie die du erstmal verstehen musst. Konkrete Systeme – direkt anwendbar, auch wenn der Tag schon gelaufen ist.</p>
+      </div>
+    </header>
+
+    <section class="products-section" id="produkte" aria-labelledby="products-heading">
+      <h2 id="products-heading" class="sr-only">Alle Systeme</h2>
+      <div class="products-grid">
+
+        <!-- 4-Wochen-Alltagssystem -->
+        <div class="product-card">
+          <span class="product-badge">System 01 · PDF</span>
+          <h2 class="product-title">4-Wochen-<br>Alltagssystem</h2>
+          <p class="product-subtitle">Struktur für den normalen Tag</p>
+          <p class="product-desc">4 Mini-Experimente gegen Aufschieberitis, Handy-Autopilot und Kopfchaos. Kein neuer Lebensplan. Jede Woche ein Werkzeug testen – am Ende behältst du das eine das wirklich funktioniert.</p>
+          <div class="product-tags">
+            <span class="product-tag">Gewohnheiten</span>
+            <span class="product-tag">Struktur</span>
+            <span class="product-tag">4 Wochen</span>
+            <span class="product-tag">Sofort nutzbar</span>
+          </div>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">4,90 €</div>
+              <a href="/alltagssystem.html" class="btn-detail">Mehr erfahren →</a>
+            </div>
+            <a href="https://payhip.com/b/KqQ4M" class="btn-primary" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
+          </div>
+        </div>
+
+        <!-- Bad Day Starter-Edition -->
+        <div class="product-card dark">
+          <span class="product-badge">System 02 · PDF</span>
+          <h2 class="product-title">Bad Day<br>Starter-Edition</h2>
+          <p class="product-subtitle">25 Systeme für schlechte Tage</p>
+          <p class="product-desc">Wenn nichts geht und du trotzdem irgendwie weitermachen musst. 25 konkrete Systeme für Start, Fokus, Stress, Essen und Energie – geordnet nach Zustand, nicht nach Motivation.</p>
+          <div class="product-tags">
+            <span class="product-tag">25 Systeme</span>
+            <span class="product-tag">5 Kategorien</span>
+            <span class="product-tag">Sofort nutzbar</span>
+            <span class="product-tag">Schlechte Tage</span>
+          </div>
+          <div class="product-footer">
+            <div>
+              <div class="product-price">9,90 €</div>
+              <a href="/bad-day.html" class="btn-detail">Mehr erfahren →</a>
+            </div>
+            <!-- Payhip-Link kommt noch -->
+            <a href="/bad-day.html" class="btn-primary">Mehr erfahren</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Placeholder für zukünftige Editionen -->
+    <section class="editions-section" aria-labelledby="editions-heading">
+      <div class="editions-inner">
+        <div class="editions-header">
+          <h2 id="editions-heading">Bad Day –<br>weitere Editionen</h2>
+          <p>Die Starter-Edition ist der Anfang. Weitere Editionen kommen – spezifischer, tiefer, für konkrete Situationen.</p>
+        </div>
+        <div class="editions-grid">
+          <div class="edition-placeholder">
+            <span class="edition-placeholder-label">In Arbeit</span>
+            <span class="edition-placeholder-title">Bad Day<br>Work-Edition</span>
+            <span class="edition-placeholder-note">Systeme für Meetings, Deadlines, Prokrastination im Job</span>
+          </div>
+          <div class="edition-placeholder">
+            <span class="edition-placeholder-label">Geplant</span>
+            <span class="edition-placeholder-title">Bad Day<br>Training-Edition</span>
+            <span class="edition-placeholder-note">Wenn du nicht trainieren willst – aber trotzdem gehst</span>
+          </div>
+          <div class="edition-placeholder">
+            <span class="edition-placeholder-label">Geplant</span>
+            <span class="edition-placeholder-title">Bad Day<br>Essen-Edition</span>
+            <span class="edition-placeholder-note">Systeme für Heißhunger, Stresskauf und Autopilot</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <nav aria-label="Footer-Navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+        <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Richard Kerschbaumer</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
+</body>
+</html>
