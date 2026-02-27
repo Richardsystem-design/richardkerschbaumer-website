@@ -59,7 +59,6 @@
     .hero-cta-group { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
     .btn-buy { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 18px 36px; border-radius: 2px; transition: background 0.2s; }
     .btn-buy:hover { background: var(--red-dark); }
-    .btn-buy-disabled { opacity: 0.5; cursor: default; pointer-events: none; }
     .btn-coming { font-family: 'Barlow', sans-serif; font-size: 0.85rem; color: rgba(245,243,239,0.35); }
     .hero-visual { display: flex; align-items: flex-end; justify-content: center; }
     .hero-cover { width: 100%; max-width: 360px; aspect-ratio: 3/4; background: var(--white); display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; padding: 40px 36px; position: relative; box-shadow: -24px 24px 60px rgba(0,0,0,0.5); }
@@ -142,7 +141,7 @@
     .purchase-includes li { padding: 12px 0; color: rgba(245,243,239,0.6); font-size: 0.95rem; border-bottom: 1px solid rgba(245,243,239,0.07); display: flex; gap: 14px; align-items: center; }
     .purchase-includes li:last-child { border-bottom: none; }
     .purchase-includes li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; }
-    .btn-buy-large { display: block; width: 100%; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 22px 36px; border-radius: 2px; transition: background 0.2s; text-align: center; cursor: not-allowed; opacity: 0.55; }
+    .btn-buy-large { display: block; width: 100%; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 22px 36px; border-radius: 2px; transition: background 0.2s; text-align: center; }
     .btn-buy-large:hover { background: var(--red-dark); }
     .coming-note { margin-top: 20px; font-size: 0.85rem; color: rgba(245,243,239,0.3); }
 
@@ -183,22 +182,22 @@
 
   <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="/" class="nav-logo">Richard Kerschbaumer</a>
-    <ul class="nav-links" role="list">
-      <li><a href="/ueber-mich.html">Über mich</a></li>
-      <li><a href="/blog.html">Blog</a></li>
-      <li><a href="/friss-nicht-weniger.html">Bücher</a></li>
+        <ul class="nav-links" role="list">
+      <li><a href="/bucher.html">Bücher</a></li>
       <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/ueber-mich.html">Über mich</a></li>
       <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
-  <div class="nav-mobile" id="mobile-menu">
-    <a href="/ueber-mich.html">Über mich</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/friss-nicht-weniger.html">Bücher</a>
+    <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html">Bücher</a>
     <a href="/systeme.html">Systeme</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html">Über mich</a>
     <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
   </div>
 
@@ -215,9 +214,7 @@
           <h1 class="hero-title">Bad<br>Day.</h1>
           <p class="hero-lead">25 Systeme für den Tag an dem nichts geht. Kein Motivationstext. Keine Atemübung die du googlen musst. Nur konkrete Handgriffe – geordnet nach Zustand.</p>
           <div class="hero-cta-group">
-            <!-- Payhip-Link eintragen wenn verfügbar -->
-            <a href="#kaufen" class="btn-buy btn-buy-disabled" aria-disabled="true">Bald verfügbar</a>
-            <span class="btn-coming">Kauflink kommt in Kürze</span>
+            <a href="https://payhip.com/b/6EaOK" class="btn-buy" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
@@ -420,8 +417,7 @@
             <li>Nur für den persönlichen Gebrauch</li>
           </ul>
           <!-- PAYHIP LINK HIER EINTRAGEN -->
-          <a href="#" class="btn-buy-large" aria-disabled="true">Bald verfügbar</a>
-          <p class="coming-note">Der Kauflink wird hier eingetragen sobald Payhip eingerichtet ist.</p>
+          <a href="https://payhip.com/b/6EaOK" class="btn-buy-large" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
         </div>
       </div>
     </section>

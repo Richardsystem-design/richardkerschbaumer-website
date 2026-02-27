@@ -111,6 +111,12 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
+
+    .product-card.gratis { background: var(--white); border: 2px dashed rgba(13,13,13,0.15); }
+    .gratis-badge { background: rgba(13,13,13,0.06) !important; color: var(--black) !important; border-color: rgba(13,13,13,0.1) !important; }
+    .gratis-price { color: #2a9d2a; }
+    .btn-gratis { display: inline-flex; align-items: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; background: #25d366; color: var(--white); text-decoration: none; padding: 14px 28px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; }
+    .btn-gratis:hover { background: #1da851; }
   </style>
 </head>
 <body>
@@ -152,24 +158,24 @@
       <h2 id="products-heading" class="sr-only">Alle Systeme</h2>
       <div class="products-grid">
 
-        <!-- 4-Wochen-Alltagssystem -->
-        <div class="product-card">
-          <span class="product-badge">System 01 · PDF</span>
-          <h2 class="product-title">4-Wochen-<br>Alltagssystem</h2>
-          <p class="product-subtitle">Struktur für den normalen Tag</p>
-          <p class="product-desc">4 Mini-Experimente gegen Aufschieberitis, Handy-Autopilot und Kopfchaos. Kein neuer Lebensplan. Jede Woche ein Werkzeug testen – am Ende behältst du das eine das wirklich funktioniert.</p>
+        <!-- 4-Wochen-Alltagstest (Gratis) -->
+        <div class="product-card gratis">
+          <span class="product-badge gratis-badge">Gratis · WhatsApp-Kanal</span>
+          <h2 class="product-title">4-Wochen-<br>Alltagstest</h2>
+          <p class="product-subtitle">4 Mini-Experimente. 1 das bleibt.</p>
+          <p class="product-desc">Kein Lebensplan den du nach drei Tagen abbrichst. Du testest vier konkrete Werkzeuge – je eine Woche. Start-Knopf, Flugmodus, Fokus-Laser, Erfolgs-Brille. Am Ende behältst du das eine das wirklich funktioniert.</p>
           <div class="product-tags">
-            <span class="product-tag">Gewohnheiten</span>
-            <span class="product-tag">Struktur</span>
-            <span class="product-tag">4 Wochen</span>
+            <span class="product-tag">4 Werkzeuge</span>
+            <span class="product-tag">PDF</span>
             <span class="product-tag">Sofort nutzbar</span>
+            <span class="product-tag">Kein Abo</span>
           </div>
           <div class="product-footer">
             <div>
-              <div class="product-price">4,90 €</div>
+              <div class="product-price gratis-price">0,00 €</div>
               <a href="/alltagssystem.html" class="btn-detail">Mehr erfahren →</a>
             </div>
-            <a href="https://payhip.com/b/KqQ4M" class="btn-primary" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
+            <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="btn-gratis" target="_blank" rel="noopener noreferrer">Gratis holen</a>
           </div>
         </div>
 
@@ -190,8 +196,7 @@
               <div class="product-price">9,90 €</div>
               <a href="/bad-day.html" class="btn-detail">Mehr erfahren →</a>
             </div>
-            <!-- Payhip-Link kommt noch -->
-            <a href="/bad-day.html" class="btn-primary">Mehr erfahren</a>
+            <a href="https://payhip.com/b/6EaOK" class="btn-primary" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
           </div>
         </div>
 
