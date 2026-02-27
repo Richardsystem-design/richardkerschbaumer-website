@@ -61,12 +61,7 @@
     .btn-buy:hover { background: var(--red-dark); }
     .btn-coming { font-family: 'Barlow', sans-serif; font-size: 0.85rem; color: rgba(245,243,239,0.35); }
     .hero-visual { display: flex; align-items: flex-end; justify-content: center; }
-    .hero-cover { width: 100%; max-width: 360px; aspect-ratio: 3/4; background: var(--white); display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; padding: 40px 36px; position: relative; box-shadow: -24px 24px 60px rgba(0,0,0,0.5); }
-    .hero-cover::before { content: ''; position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: #f0c000; }
-    .hero-cover-author { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: #555; position: absolute; top: 40px; left: 48px; }
-    .hero-cover-big { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 7rem; line-height: 0.85; color: var(--black); text-transform: uppercase; margin-bottom: 8px; }
-    .hero-cover-edition { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; }
-    .hero-cover-sub { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; color: #333; }
+    .hero-cover-img { width: 100%; max-width: 320px; height: auto; box-shadow: -24px 24px 60px rgba(0,0,0,0.6); display: block; }
 
     /* STATS BAR */
     .stats-bar { background: var(--red); padding: 0 clamp(20px,5vw,80px); }
@@ -217,13 +212,8 @@
             <a href="https://payhip.com/b/6EaOK" class="btn-buy" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-cover">
-            <span class="hero-cover-author">Richard Kerschbaumer</span>
-            <div class="hero-cover-big">BAD<br>DAY</div>
-            <div class="hero-cover-edition">Starter-Edition</div>
-            <div class="hero-cover-sub">25 Systeme für<br>schlechte Tage.</div>
-          </div>
+        <div class="hero-visual">
+          <img src="bad-day-cover.webp" alt="Bad Day Starter-Edition – 25 Systeme für schlechte Tage von Richard Kerschbaumer" class="hero-cover-img" width="360" height="480" fetchpriority="high" decoding="async">
         </div>
       </div>
     </header>
