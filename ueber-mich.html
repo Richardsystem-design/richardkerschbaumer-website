@@ -34,16 +34,12 @@
     }
   }
   </script>
+
+  <link rel="preload" as="font" href="fonts/barlow-400.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/barlow-condensed-900.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+
   <style>
-    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 900; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-regular.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-italic.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-v13-latin-500.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-v13-latin-600.woff2') format('woff2'); }
-  </style>
-<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -83,7 +79,7 @@
     .skip-link:focus { top: 16px; }
 
     /* NAV */
-    nav.main-nav {
+    nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
@@ -465,19 +461,6 @@
       margin-top: 8px;
     }
 
-
-    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
-    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
-    .nav-mobile.open { display: flex; }
-    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
-    .nav-mobile a:last-child { border-bottom: none; }
-    .nav-mobile a:hover { color: var(--white); }
-    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
-
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .story-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -485,9 +468,8 @@
       .heute-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
-      nav.main-nav { padding: 16px 20px; }
+      nav { padding: 16px 20px; }
       .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -498,32 +480,21 @@
       .page-hero h1 { animation: fadeUp 0.6s ease both; }
       .page-hero-lead { animation: fadeUp 0.6s 0.15s ease both; }
     }
-
   </style>
 </head>
 <body>
 
   <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
-  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+  <nav role="navigation" aria-label="Hauptnavigation">
     <a href="/" class="nav-logo" aria-label="Richard Kerschbaumer – zur Startseite">Richard Kerschbaumer</a>
-        <ul class="nav-links" role="list">
-      <li><a href="/bucher.html">Bücher</a></li>
-      <li><a href="/systeme.html">Systeme</a></li>
-      <li><a href="/blog.html">Blog</a></li>
+    <ul class="nav-links" role="list">
       <li><a href="/ueber-mich.html" aria-current="page">Über mich</a></li>
-      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      <li><a href="/#buecher">Bücher</a></li>
+      <li><a href="/#stimmen">Stimmen</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Kanal beitreten, öffnet neues Fenster">WhatsApp</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
-
-    <div class="nav-mobile" id="mobile-menu">
-    <a href="/bucher.html">Bücher</a>
-    <a href="/systeme.html">Systeme</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/ueber-mich.html" aria-current="page">Über mich</a>
-    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
-  </div>
 
   <main id="main-content">
 
@@ -627,26 +598,6 @@
     </nav>
     <p class="footer-affiliate">&copy; 2026 Richard Kerschbaumer</p>
   </footer>
-
-
-  <script>
-    const btn = document.getElementById('hamburger');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', function() {
-      const isOpen = menu.classList.toggle('open');
-      btn.classList.toggle('open', isOpen);
-      btn.setAttribute('aria-expanded', isOpen);
-      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
-    });
-    menu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        menu.classList.remove('open');
-        btn.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-label', 'Menü öffnen');
-      });
-    });
-  </script>
 
 </body>
 </html>
