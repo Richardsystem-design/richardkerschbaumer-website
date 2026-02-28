@@ -105,7 +105,7 @@
     .problem-content p { color: rgba(245,243,239,0.55); font-size: 1.05rem; line-height: 1.85; margin-bottom: 20px; }
     .problem-content p:last-child { margin-bottom: 0; }
     .problem-list { list-style: none; display: flex; flex-direction: column; }
-    .problem-list li { border-bottom: 1px solid rgba(245,243,239,0.07); padding: 18px 0; color: rgba(245,243,239,0.5); font-size: 1rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 16px; }
+    .problem-list li { border-bottom: 1px solid rgba(245,243,239,0.07); padding: 18px 0; color: rgba(245,243,239,0.7); font-size: 1rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 16px; }
     .problem-list li::before { content: '—'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
 
     /* SYSTEMS OVERVIEW */
@@ -116,19 +116,18 @@
     .systems-header p { color: #666; font-size: 1.05rem; max-width: 540px; }
     .systems-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
     .system-cat { background: var(--black); padding: 32px 24px; }
-    .system-cat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; color: rgba(245,243,239,0.06); line-height: 1; margin-bottom: 16px; }
+    .system-cat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; color: rgba(245,243,239,0.15); line-height: 1; margin-bottom: 16px; }
     .system-cat-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; line-height: 1.15; }
     .system-cat-items { list-style: none; display: flex; flex-direction: column; }
-    .system-cat-items li { font-size: 0.82rem; color: rgba(245,243,239,0.4); padding: 7px 0; border-bottom: 1px solid rgba(245,243,239,0.05); line-height: 1.4; }
+    .system-cat-items li { font-size: 0.82rem; color: rgba(245,243,239,0.65); padding: 7px 0; border-bottom: 1px solid rgba(245,243,239,0.12); line-height: 1.4; }
     .system-cat-items li:last-child { border-bottom: none; }
-    .system-cat-accent { border-top: 3px solid var(--red); }
 
     /* ── INTERACTIVE TOOL ── */
     .tool-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
     .tool-inner { max-width: 1200px; margin: 0 auto; }
     .tool-header { margin-bottom: 48px; }
     .tool-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
-    .tool-header p { color: rgba(245,243,239,0.45); font-size: 1.05rem; max-width: 540px; }
+    .tool-header p { color: rgba(245,243,239,0.65); font-size: 1.05rem; max-width: 540px; }
 
     .sys-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; }
     .sys-btn {
@@ -138,7 +137,7 @@
     .sys-btn:hover, .sys-btn.active { border-top-color: var(--red); background: rgba(200,16,46,0.1); }
     .sys-icon { font-size: 1.3rem; margin-bottom: 10px; display: block; }
     .sys-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.2rem; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
-    .sys-trigger { font-size: 0.82rem; color: rgba(245,243,239,0.38); line-height: 1.5; font-style: italic; }
+    .sys-trigger { font-size: 0.82rem; color: rgba(245,243,239,0.55); line-height: 1.5; font-style: italic; }
 
     /* CARD */
     .card-wrap { display: none; margin-top: 2px; }
@@ -153,11 +152,11 @@
     .fn-box { padding: 20px 22px; }
     .fn-box.yes { background: rgba(200,16,46,0.1); border-top: 2px solid var(--red); }
     .fn-box.no { background: rgba(245,243,239,0.04); border-top: 2px solid rgba(245,243,239,0.1); }
-    .fn-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.35); margin-bottom: 10px; }
+    .fn-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.5); margin-bottom: 10px; }
     .fn-box.yes .fn-label { color: var(--red); }
     .fn-text { font-size: 0.92rem; line-height: 1.65; color: rgba(245,243,239,0.75); }
 
-    .steps-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.35); margin-bottom: 16px; }
+    .steps-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.5); margin-bottom: 16px; }
     .step { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(245,243,239,0.05); align-items: flex-start; }
     .step:last-child { border: none; }
     .sn { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; color: rgba(200,16,46,0.2); min-width: 36px; line-height: 1; }
@@ -178,11 +177,11 @@
 
     .extras { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 20px; }
     .ex { background: rgba(245,243,239,0.03); padding: 20px 22px; border-top: 1px solid rgba(245,243,239,0.07); }
-    .ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.35); margin-bottom: 8px; }
+    .ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.5); margin-bottom: 8px; }
     .ex-text { font-size: 0.88rem; line-height: 1.65; color: rgba(245,243,239,0.6); }
     .why { margin-top: 2px; padding: 20px 22px; background: rgba(245,243,239,0.02); border-left: 3px solid var(--red); }
-    .why-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.35); margin-bottom: 8px; }
-    .why-text { font-size: 0.88rem; line-height: 1.75; color: rgba(245,243,239,0.45); font-style: italic; }
+    .why-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.5); margin-bottom: 8px; }
+    .why-text { font-size: 0.88rem; line-height: 1.75; color: rgba(245,243,239,0.65); font-style: italic; }
 
     .tool-cta-hint { margin-top: 32px; padding: 24px; background: rgba(200,16,46,0.07); border: 1px solid rgba(200,16,46,0.2); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
     .tool-cta-hint p { color: rgba(245,243,239,0.6); font-size: 0.95rem; line-height: 1.6; }
@@ -197,7 +196,7 @@
     .how-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
     .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
     .how-step { background: var(--white); padding: 36px 28px; }
-    .step-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: rgba(13,13,13,0.06); line-height: 1; margin-bottom: 16px; }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: rgba(13,13,13,0.12); line-height: 1; margin-bottom: 16px; }
     .step-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; color: var(--black); margin-bottom: 12px; line-height: 1.2; }
     .step-desc { font-size: 0.92rem; color: #555; line-height: 1.75; }
 
@@ -358,7 +357,7 @@
           <p>Jedes System hat einen Mindeststandard – das Minimum das zählt. Alles darüber ist Bonus.</p>
         </div>
         <div class="systems-grid">
-          <div class="system-cat system-cat-accent">
+          <div class="system-cat">
             <div class="system-cat-num">01</div>
             <div class="system-cat-title">Start &amp;<br>Motivation</div>
             <ul class="system-cat-items" role="list">
