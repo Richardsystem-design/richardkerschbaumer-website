@@ -7,25 +7,27 @@
   <meta name="description" content="Schreib mir direkt – kein Formular, kein Ticket-System, keine KI die antwortet.">
   <meta name="author" content="Richard Kerschbaumer">
   <link rel="canonical" href="https://www.richardkerschbaumer.at/kontakt.html">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/kontakt.html">
+  <meta property="og:title" content="Kontakt – Richard Kerschbaumer">
+  <meta property="og:description" content="Schreib mir direkt – kein Formular, kein Ticket-System, keine KI die antwortet.">
+  <meta property="og:locale" content="de_AT">
+
+  <link rel="preload" as="font" href="/fonts/barlow-v13-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fonts/barlow-condensed-v13-latin-900.woff2" type="font/woff2" crossorigin>
+
   <style>
     @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-regular.woff2') format('woff2')}
-@font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-italic.woff2') format('woff2')}
-@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/barlow-v13-latin-500.woff2') format('woff2')}
-@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/barlow-v13-latin-600.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2')}
-@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/barlow-v13-latin-500.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/barlow-v13-latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2')}
 
-    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 900; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-regular.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-italic.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-v13-latin-500.woff2') format('woff2'); }
-    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-v13-latin-600.woff2') format('woff2'); }
-  </style>
-<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; }
     html { scroll-behavior: smooth; }
@@ -34,11 +36,12 @@
     .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
     .skip-link:focus { top: 16px; }
 
+    /* NAV */
     nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
     .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--white); }
     .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
     .nav-cta:hover { background: var(--red-dark) !important; }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
@@ -54,7 +57,7 @@
     .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
 
     /* HERO */
-    .page-hero { background: var(--black); padding: 140px clamp(20px,5vw,80px) 100px; min-height: 60vh; display: flex; align-items: flex-end; position: relative; overflow: hidden; }
+    .page-hero { background: var(--black); padding: 140px clamp(20px,5vw,80px) 100px; display: flex; align-items: flex-end; position: relative; overflow: hidden; }
     .page-hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(200,16,46,0.07) 0%, transparent 70%); pointer-events: none; }
     .page-hero-inner { max-width: 720px; position: relative; z-index: 1; }
     .red-rule { display: block; width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
@@ -62,42 +65,40 @@
     .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(3rem,7vw,6rem); line-height: 0.92; color: var(--white); text-transform: uppercase; margin-bottom: 28px; }
     .page-hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.5vw,1.15rem); line-height: 1.75; max-width: 520px; }
 
-    /* CONTACT SECTION */
+    /* CONTACT */
     .contact-section { background: var(--white); padding: clamp(60px,8vw,120px) clamp(20px,5vw,80px); }
-    .contact-inner { max-width: 720px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .contact-grid { max-width: 720px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 
-    .contact-card { background: var(--white); border: 1px solid rgba(13,13,13,0.1); padding: 48px 40px; transition: border-color 0.2s; }
+    .contact-card { border: 1px solid rgba(13,13,13,0.1); padding: 48px 40px; transition: border-color 0.2s; }
     .contact-card:hover { border-color: rgba(13,13,13,0.25); }
+    .contact-card.dark { background: var(--black); border-color: var(--black); }
     .contact-card-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
-    .contact-card h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.4rem,2.5vw,2rem); text-transform: uppercase; color: var(--black); line-height: 1.05; margin-bottom: 16px; }
-    .contact-card p { color: #555; font-size: 0.95rem; line-height: 1.75; margin-bottom: 28px; }
-    .contact-card-link { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 2px solid var(--red); padding-bottom: 3px; transition: color 0.2s; }
-    .contact-card-link:hover { color: var(--red); }
+    .contact-card h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.4rem,2.5vw,2rem); text-transform: uppercase; line-height: 1.05; margin-bottom: 16px; }
+    .contact-card p { font-size: 0.95rem; line-height: 1.75; margin-bottom: 28px; color: #555; }
+    .contact-card.dark h2 { color: var(--white); }
+    .contact-card.dark p { color: rgba(245,243,239,0.55); }
+    .contact-link { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 2px solid var(--red); padding-bottom: 3px; transition: color 0.2s; word-break: break-all; }
+    .contact-link:hover { color: var(--red); }
+    .contact-card.dark .contact-link { color: var(--white); }
+    .contact-card.dark .contact-link:hover { color: var(--red); }
 
-    .contact-card.highlight { background: var(--black); border-color: var(--black); }
-    .contact-card.highlight .contact-card-label { color: var(--red); }
-    .contact-card.highlight h2 { color: var(--white); }
-    .contact-card.highlight p { color: rgba(245,243,239,0.55); }
-    .contact-card.highlight .contact-card-link { color: var(--white); border-bottom-color: var(--red); }
-    .contact-card.highlight .contact-card-link:hover { color: var(--red); }
-
-    /* NOTE */
     .contact-note { max-width: 720px; margin-top: 40px; padding: 28px 32px; border-left: 3px solid rgba(13,13,13,0.12); }
     .contact-note p { color: #888; font-size: 0.9rem; line-height: 1.7; }
     .contact-note strong { color: var(--black); }
 
+    /* FOOTER */
     footer { background: #080808; padding: 48px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
     .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(245,243,239,0.4); letter-spacing: 0.05em; text-transform: uppercase; }
     .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
     .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
     .footer-links a:hover { color: rgba(245,243,239,0.8); }
-    .footer-affiliate { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
+    .footer-copy { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
 
     @media (max-width: 900px) {
       nav.main-nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-      .contact-inner { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
       .contact-card { padding: 36px 28px; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
@@ -115,22 +116,25 @@
 
   <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="/" class="nav-logo">Richard Kerschbaumer</a>
-        <ul class="nav-links" role="list">
+    <ul class="nav-links" role="list">
       <li><a href="/bucher.html">Bücher</a></li>
       <li><a href="/systeme.html">Systeme</a></li>
       <li><a href="/blog.html">Blog</a></li>
       <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/kontakt.html" aria-current="page">Kontakt</a></li>
       <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
-    <div class="nav-mobile" id="mobile-menu">
+
+  <div class="nav-mobile" id="mobile-menu">
     <a href="/bucher.html">Bücher</a>
     <a href="/systeme.html">Systeme</a>
     <a href="/blog.html">Blog</a>
     <a href="/ueber-mich.html">Über mich</a>
+    <a href="/kontakt.html">Kontakt</a>
     <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
   </div>
 
@@ -141,31 +145,31 @@
         <span class="red-rule"></span>
         <span class="section-label">Kontakt</span>
         <h1>Schreib<br>mir.</h1>
-        <p class="page-hero-lead">Kein Formular, kein Ticket-System, keine KI die antwortet. Eine E-Mail – ich lese sie selbst.</p>
+        <p class="page-hero-lead">Kein Formular, kein Ticket-System, keine KI die antwortet. Direkt – ich lese es selbst.</p>
       </div>
     </header>
 
     <section class="contact-section" aria-labelledby="contact-heading">
-      <div class="contact-inner">
+      <div class="contact-grid">
 
-        <div class="contact-card highlight">
+        <div class="contact-card dark">
           <span class="contact-card-label">E-Mail</span>
           <h2 id="contact-heading">Direkt<br>schreiben.</h2>
           <p>Fragen zu den Büchern, Feedback, Kooperationsanfragen – oder einfach weil du was loswerden willst.</p>
-          <a href="/cdn-cgi/l/email-protection#cea5a1a0baafa5ba8ebca7ada6afbcaaa5abbcbdada6acafbba3abbce0afba" class="contact-card-link"><span class="__cf_email__" data-cfemail="97fcf8f9e3f6fce3d7e5fef4fff6e5f3fcf2e5e4f4fff5f6e2faf2e5b9f6e3">[email&#160;protected]</span></a>
+          <a href="mailto:kontakt@rkb.email" class="contact-link">kontakt@rkb.email</a>
         </div>
 
         <div class="contact-card">
           <span class="contact-card-label">WhatsApp-Kanal</span>
           <h2>Auf dem<br>Laufenden.</h2>
           <p>Neue Artikel, Tools, ehrliche Einschätzungen – direkt aufs Handy. Kein Gruppen-Chat, kein Spam.</p>
-          <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="contact-card-link" target="_blank" rel="noopener noreferrer">Kanal beitreten →</a>
+          <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="contact-link" target="_blank" rel="noopener noreferrer">Kanal beitreten →</a>
         </div>
 
       </div>
 
       <div class="contact-note">
-        <p><strong>Kooperationen & Anfragen:</strong> Ich beantworte E-Mails persönlich – das bedeutet manchmal dauert es ein paar Tage. Kein Assistent, kein Autoresponder.</p>
+        <p><strong>Antwortzeit:</strong> Ich beantworte E-Mails persönlich – das bedeutet manchmal dauert es ein paar Tage. Kein Assistent, kein Autoresponder.</p>
       </div>
     </section>
 
@@ -181,10 +185,10 @@
         <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
       </ul>
     </nav>
-    <p class="footer-affiliate">&copy; 2026 Richard Kerschbaumer</p>
+    <p class="footer-copy">&copy; 2026 Richard Kerschbaumer</p>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const btn = document.getElementById('hamburger');
     const menu = document.getElementById('mobile-menu');
     btn.addEventListener('click', function() {
@@ -194,4 +198,13 @@
       btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
     });
     menu.querySelectorAll('a').forEach(function(a) {
-      a.addEve
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
+</body>
+</html>
