@@ -34,12 +34,16 @@
     }
   }
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
   <style>
+    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2'); }
+    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 800; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2'); }
+    @font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 900; font-display: swap; src: url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2'); }
+    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-regular.woff2') format('woff2'); }
+    @font-face { font-family: 'Barlow'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-italic.woff2') format('woff2'); }
+    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-v13-latin-500.woff2') format('woff2'); }
+    @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-v13-latin-600.woff2') format('woff2'); }
+  </style>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -503,20 +507,21 @@
 
   <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="/" class="nav-logo" aria-label="Richard Kerschbaumer – zur Startseite">Richard Kerschbaumer</a>
-    <ul class="nav-links" role="list">
-      <li><a href="/ueber-mich.html" aria-current="page">Über mich</a></li>
-      <li><a href="/#buecher">Bücher</a></li>
-      <li><a href="/#stimmen">Stimmen</a></li>
+        <ul class="nav-links" role="list">
+      <li><a href="/bucher.html">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
       <li><a href="/blog.html">Blog</a></li>
-      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Kanal beitreten, öffnet neues Fenster">WhatsApp</a></li>
+      <li><a href="/ueber-mich.html" aria-current="page">Über mich</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
 
-  <div class="nav-mobile" id="mobile-menu">
-    <a href="/ueber-mich.html">Über mich</a>
-    <a href="/#buecher">Bücher</a>
+    <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
     <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html" aria-current="page">Über mich</a>
     <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
   </div>
 
