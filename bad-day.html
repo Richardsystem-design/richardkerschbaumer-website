@@ -123,72 +123,71 @@
     .system-cat-items li:last-child { border-bottom: none; }
     .system-cat-accent { border-top: 3px solid var(--red); }
 
-    /* ── INTERACTIVE TOOL ── */
+    /* ── SCHNELL-FINDER TOOL ── */
     .tool-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
-    .tool-inner { max-width: 1200px; margin: 0 auto; }
+    .tool-inner { max-width: 720px; margin: 0 auto; }
     .tool-header { margin-bottom: 48px; }
     .tool-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
-    .tool-header p { color: rgba(245,243,239,0.75); font-size: 1.05rem; max-width: 540px; }
+    .tool-header h2 em { color: var(--red); font-style: normal; }
+    .tool-header p { color: rgba(245,243,239,0.5); font-size: 1rem; max-width: 540px; }
 
-    .sys-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2px; }
-    .sys-btn {
-      background: rgba(245,243,239,0.04); border: none; border-top: 2px solid rgba(245,243,239,0.08);
-      padding: 24px 20px; cursor: pointer; text-align: left; transition: all 0.18s;
+    .finder-screen { display: none; }
+    .finder-screen.active { display: block; animation: finderFade 0.35s ease-out; }
+    @keyframes finderFade { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+
+    .finder-question { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); margin-bottom: 24px; }
+    .finder-choices { display: flex; flex-direction: column; gap: 2px; }
+    .finder-btn { display: flex; align-items: center; gap: 16px; width: 100%; padding: 20px 24px; background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.08); border-radius: 2px; color: var(--white); cursor: pointer; text-align: left; font-family: 'Barlow', sans-serif; transition: all 0.15s; }
+    .finder-btn:hover { background: rgba(200,16,46,0.1); border-color: rgba(200,16,46,0.3); }
+    .finder-btn:active { background: rgba(200,16,46,0.18); }
+    .finder-icon { font-size: 1.5rem; flex-shrink: 0; width: 36px; text-align: center; }
+    .finder-text { flex: 1; }
+    .finder-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
+    .finder-desc { font-size: 0.82rem; color: rgba(245,243,239,0.45); line-height: 1.4; }
+    .finder-arrow { color: rgba(245,243,239,0.15); font-size: 1.1rem; flex-shrink: 0; transition: color 0.15s, transform 0.15s; }
+    .finder-btn:hover .finder-arrow { color: var(--red); transform: translateX(3px); }
+
+    /* RESULT */
+    .finder-back { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,239,0.4); background: none; border: none; cursor: pointer; padding: 0; transition: color 0.15s; margin-bottom: 24px; }
+    .finder-back:hover { color: var(--white); }
+    .finder-rule { width: 48px; height: 3px; background: var(--red); margin-bottom: 24px; }
+    .finder-topic { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .finder-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,5vw,3.4rem); text-transform: uppercase; line-height: 1; color: var(--white); margin-bottom: 8px; }
+    .finder-for { color: rgba(245,243,239,0.5); font-size: 0.9rem; margin-bottom: 32px; font-style: italic; }
+
+    .finder-steps { background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.08); border-radius: 2px; padding: 28px 24px; margin-bottom: 20px; }
+    .finder-steps-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.4); margin-bottom: 20px; }
+    .finder-step { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid rgba(245,243,239,0.06); font-size: 0.92rem; color: rgba(245,243,239,0.8); line-height: 1.55; }
+    .finder-step:last-child { border-bottom: none; }
+    .finder-sn { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.8rem; color: var(--red); flex-shrink: 0; width: 20px; text-align: right; }
+
+    .finder-min { background: var(--red); padding: 20px 24px; border-radius: 2px; margin-bottom: 40px; display: flex; align-items: center; gap: 14px; }
+    .finder-min-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); white-space: nowrap; }
+    .finder-min-text { font-weight: 600; font-size: 0.95rem; color: var(--white); }
+
+    .finder-locked { position: relative; margin-bottom: 40px; }
+    .finder-locked-items { display: flex; flex-direction: column; gap: 2px; }
+    .finder-locked-row { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; }
+    .finder-locked-icon { color: rgba(245,243,239,0.15); font-size: 0.9rem; flex-shrink: 0; }
+    .finder-locked-text { font-size: 0.85rem; color: rgba(245,243,239,0.25); }
+    .finder-locked-blur { position: relative; }
+    .finder-locked-blur::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100%; background: linear-gradient(to bottom, transparent 0%, var(--black) 90%); pointer-events: none; }
+
+    .finder-upsell { background: rgba(245,243,239,0.03); border: 1px solid rgba(245,243,239,0.1); border-radius: 2px; padding: 32px 28px; text-align: center; margin-bottom: 32px; }
+    .finder-upsell-hook { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; line-height: 1.2; color: var(--white); margin-bottom: 12px; }
+    .finder-upsell-detail { font-size: 0.88rem; color: rgba(245,243,239,0.5); line-height: 1.6; margin-bottom: 20px; }
+    .finder-remaining { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 24px; }
+    .finder-rem-item { padding: 12px 16px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; text-align: left; }
+    .finder-rem-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; color: rgba(245,243,239,0.35); margin-bottom: 2px; }
+    .finder-rem-trigger { font-size: 0.75rem; color: rgba(245,243,239,0.2); }
+    .finder-upsell-sub { font-size: 0.85rem; color: rgba(245,243,239,0.4); line-height: 1.6; margin-bottom: 24px; }
+    .finder-cta { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s; }
+    .finder-cta:hover { background: var(--red-dark); }
+
+    @media (max-width: 540px) {
+      .finder-min { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .finder-remaining { grid-template-columns: 1fr; }
     }
-    .sys-btn:hover, .sys-btn.active { border-top-color: var(--red); background: rgba(200,16,46,0.1); }
-    .sys-icon { font-size: 1.3rem; margin-bottom: 10px; display: block; }
-    .sys-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.2rem; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
-    .sys-trigger { font-size: 0.82rem; color: rgba(245,243,239,0.65); line-height: 1.5; font-style: italic; }
-
-    /* CARD */
-    .card-wrap { display: none; margin-top: 2px; }
-    .card-wrap.show { display: block; }
-    .card-inner { background: rgba(245,243,239,0.03); border: 1px solid rgba(245,243,239,0.08); padding: clamp(28px,4vw,56px); }
-    .card-back { background: none; border: 1px solid rgba(245,243,239,0.2); border-radius: 2px; color: rgba(245,243,239,0.65); font-family: 'Barlow', sans-serif; font-size: 0.85rem; padding: 8px 16px; cursor: pointer; margin-bottom: 36px; transition: all 0.18s; }
-    .card-back:hover { color: var(--white); border-color: rgba(245,243,239,0.35); }
-    .card-topic { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
-    .card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.8rem,7vw,5rem); text-transform: uppercase; line-height: 0.88; color: var(--white); margin-bottom: 40px; }
-
-    .fn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 40px; }
-    .fn-box { padding: 20px 22px; }
-    .fn-box.yes { background: rgba(200,16,46,0.1); border-top: 2px solid var(--red); }
-    .fn-box.no { background: rgba(245,243,239,0.04); border-top: 2px solid rgba(245,243,239,0.1); }
-    .fn-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.55); margin-bottom: 10px; }
-    .fn-box.yes .fn-label { color: var(--red); }
-    .fn-text { font-size: 0.92rem; line-height: 1.65; color: rgba(245,243,239,0.82); }
-
-    .steps-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.55); margin-bottom: 16px; }
-    .step { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(245,243,239,0.05); align-items: flex-start; }
-    .step:last-child { border: none; }
-    .sn { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; color: rgba(200,16,46,0.7); min-width: 36px; line-height: 1; }
-    .st { font-size: 0.95rem; line-height: 1.7; color: rgba(245,243,239,0.8); padding-top: 4px; }
-
-    .ms { background: rgba(200,16,46,0.08); border: 1px solid rgba(200,16,46,0.3); border-left: 4px solid var(--red); padding: 28px; margin: 36px 0 20px; }
-    .ms-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
-    .ms-text { font-size: 1rem; line-height: 1.65; color: var(--white); margin-bottom: 20px; font-weight: 500; }
-    .cb-row { display: flex; align-items: center; gap: 14px; cursor: pointer; user-select: none; }
-    .cb { width: 30px; height: 30px; border: 2px solid var(--red); border-radius: 2px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: transparent; transition: all 0.2s; }
-    .cb.on { background: var(--red); }
-    .cb svg { display: none; }
-    .cb.on svg { display: block; }
-    .cb-label { font-size: 0.95rem; font-weight: 600; color: rgba(245,243,239,0.8); }
-    .done-msg { background: var(--red); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 18px 24px; text-align: center; margin-top: 16px; display: none; animation: fadeup 0.35s ease; }
-    .done-msg.show { display: block; }
-    @keyframes fadeup { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
-
-    .extras { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 20px; }
-    .ex { background: rgba(245,243,239,0.03); padding: 20px 22px; border-top: 1px solid rgba(245,243,239,0.07); }
-    .ex-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.55); margin-bottom: 8px; }
-    .ex-text { font-size: 0.88rem; line-height: 1.65; color: rgba(245,243,239,0.6); }
-    .why { margin-top: 2px; padding: 20px 22px; background: rgba(245,243,239,0.02); border-left: 3px solid var(--red); }
-    .why-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.55); margin-bottom: 8px; }
-    .why-text { font-size: 0.88rem; line-height: 1.75; color: rgba(245,243,239,0.75); font-style: italic; }
-
-    .tool-cta-hint { margin-top: 32px; padding: 24px; background: rgba(200,16,46,0.07); border: 1px solid rgba(200,16,46,0.2); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-    .tool-cta-hint p { color: rgba(245,243,239,0.6); font-size: 0.95rem; line-height: 1.6; }
-    .tool-cta-hint p strong { color: var(--white); }
-    .tool-cta-hint a { flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; background: var(--red); color: var(--white); text-decoration: none; padding: 12px 24px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; }
-    .tool-cta-hint a:hover { background: var(--red-dark); }
 
     /* HOW */
     .how-section { background: #f0ede7; padding: var(--section-pad) clamp(20px,5vw,80px); }
@@ -259,8 +258,8 @@
       .purchase-box { padding: 36px 24px; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
-      .fn-grid, .extras { grid-template-columns: 1fr; }
-      .tool-cta-hint { flex-direction: column; text-align: center; }
+      .finder-min { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .finder-remaining { grid-template-columns: 1fr; }
     }
     @media (max-width: 540px) {
       .systems-grid { grid-template-columns: 1fr; }
@@ -396,54 +395,70 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE TOOL -->
-    <section class="tool-section" aria-labelledby="tool-heading">
+    <!-- SCHNELL-FINDER TOOL -->
+    <section class="tool-section" id="schnell-finder" aria-labelledby="tool-heading">
       <div class="tool-inner">
         <div class="tool-header">
           <span class="red-rule"></span>
-          <span class="section-label">5 Systeme gratis ausprobieren</span>
-          <h2 id="tool-heading">Wähle nach Zustand.<br>Nicht nach Motivation.</h2>
-          <p>Hier siehst du wie ein System aufgebaut ist. 5 davon kannst du sofort nutzen – die anderen 20 sind im PDF.</p>
+          <span class="section-label">Bad Day · Schnell-Finder</span>
+          <h2 id="tool-heading">Was ist gerade <em>los?</em></h2>
+          <p>Wähle deinen Zustand. Bekomm ein System. Mach den Mindeststandard. Fertig.</p>
         </div>
 
-        <div class="sys-grid">
-          <button class="sys-btn" onclick="showCard(0)">
-            <span class="sys-icon">👊</span>
-            <div class="sys-name">Klopfcode</div>
-            <div class="sys-trigger">Ich komm nicht rein.</div>
-          </button>
-          <button class="sys-btn" onclick="showCard(1)">
-            <span class="sys-icon">🚽</span>
-            <div class="sys-name">WC-Reset</div>
-            <div class="sys-trigger">Ich bin kurz vorm Explodieren.</div>
-          </button>
-          <button class="sys-btn" onclick="showCard(2)">
-            <span class="sys-icon">🍴</span>
-            <div class="sys-name">Besteck-Parkplatz</div>
-            <div class="sys-trigger">Ich schiebe Bissen an Bissen.</div>
-          </button>
-          <button class="sys-btn" onclick="showCard(3)">
-            <span class="sys-icon">🧊</span>
-            <div class="sys-name">Kalt-Schock</div>
-            <div class="sys-trigger">Ich sacke komplett weg.</div>
-          </button>
-          <button class="sys-btn" onclick="showCard(4)">
-            <span class="sys-icon">👅</span>
-            <div class="sys-name">Zunge-Parkplatz</div>
-            <div class="sys-trigger">Ich bin innerlich angespannt.</div>
-          </button>
+        <!-- Screen 1: Zustandswahl -->
+        <div class="finder-screen active" id="finder-question">
+          <div class="finder-question">Was beschreibt dich gerade am besten?</div>
+          <div class="finder-choices">
+            <button class="finder-btn" onclick="finderShow('start')">
+              <span class="finder-icon">⚡</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich komm nicht rein</div>
+                <div class="finder-desc">Null Antrieb, alles fühlt sich zu groß an, ich starte einfach nicht.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('fokus')">
+              <span class="finder-icon">🎯</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich verzettle mich</div>
+                <div class="finder-desc">Ich springe herum, schiebe auf, nichts wird fertig.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('stress')">
+              <span class="finder-icon">🔥</span>
+              <div class="finder-text">
+                <div class="finder-label">Alles ist zu viel</div>
+                <div class="finder-desc">Kopf rast, Körper angespannt, kurz vorm Explodieren.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('essen')">
+              <span class="finder-icon">🍴</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich ess im Autopilot</div>
+                <div class="finder-desc">Schlingen, snacken, nachladen – ohne es zu merken.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('energie')">
+              <span class="finder-icon">🔋</span>
+              <div class="finder-text">
+                <div class="finder-label">Akku komplett leer</div>
+                <div class="finder-desc">Müde, benommen, Körper parkt, Kopf wie Watte.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+          </div>
         </div>
 
-        <div class="card-wrap" id="card-wrap">
-          <div class="card-inner">
-            <button class="card-back" onclick="closeCard()">← Zurück zur Auswahl</button>
-            <div id="card-content"></div>
-          </div>
-          <div class="tool-cta-hint">
-            <p>Das sind <strong>5 von 25 Systemen.</strong> Die anderen 20 – Fokus, Aufschoben, alle Energie- und Stress-Systeme – sind im kompletten PDF.</p>
-            <a href="https://payhip.com/b/6EaOK" target="_blank" rel="noopener noreferrer">Alle 25 holen – 9,90 €</a>
-          </div>
+        <!-- Screen 2: Ergebnis -->
+        <div class="finder-screen" id="finder-result">
+          <button class="finder-back" onclick="finderBack()">← Anderer Zustand</button>
+          <div class="finder-rule"></div>
+          <div id="finder-content"></div>
         </div>
+
       </div>
     </section>
 
@@ -561,127 +576,78 @@
       });
     });
 
-    // Tool
-    const SYSTEMS = [
-      {
-        icon:"👊", topic:"Start & Motivation · 1/5", title:"Klopfcode",
-        for:"Wenn du festhängst und nicht in die Aufgabe reinkommst.",
-        notFor:"Motivation herzaubern oder den perfekten Plan finden.",
-        steps:[
-          "Klopf 3× kurz irgendwohin: Tisch / Brustbein / Oberschenkel – egal.",
-          "Sag leise oder im Kopf: Start.",
-          "Mach den kleinsten Einstieg: Datei öffnen / Stift nehmen / Schuhe an.",
-          "Optional: Mini-Serie: 3 Übungen / 3 Sätze / 3 Handgriffe."
-        ],
-        min:"3× klopfen + 1 Sache starten.",
-        upgrade:"Nochmal 3× klopfen und noch eine Mini-Serie. Danach stoppst du bewusst oder gehst normal weiter.",
-        stolper:"Nicht nach dem Klopfen nochmal planen – sofort den kleinsten Schritt machen.",
-        why:"Du gibst dem Kopf ein Startsignal und dem Körper eine erste Bewegung. Das unterbricht den Ich-sollte-mal-Film und macht aus Grübeln Handlung."
+    // Schnell-Finder
+    const FINDER = {
+      start: {
+        system: { topic: "Start & Motivation · 1/5", name: "Klopfcode", forText: "Wenn du festhängst und nicht in die Aufgabe reinkommst.", steps: ["Klopf 3× kurz irgendwohin: Tisch, Brustbein, Oberschenkel – egal.", "Sag leise oder im Kopf: Start.", "Mach den kleinsten Einstieg: Datei öffnen, Stift nehmen, Schuhe an.", "Optional: Mini-Serie – 3 Übungen, 3 Sätze, 3 Handgriffe."], min: "3× klopfen + 1 Sache starten." },
+        remaining: [{ name: "Timer ohne Zeit", trigger: "Zeit macht dir Druck" }, { name: "Nur-Öffnen-Regel", trigger: "Schon der Start ist zu groß" }, { name: "Erster Meter", trigger: "Der Kopf diskutiert nur" }, { name: "Laut-Start", trigger: "Du weißt was zu tun wäre" }],
+        category: "Start & Motivation"
       },
-      {
-        icon:"🚽", topic:"Stress & Überforderung · 1/5", title:"WC-Reset",
-        for:"Wenn du kurz vorm Explodieren bist oder komplett dicht machst.",
-        notFor:"Problem lösen. Nur Reset.",
-        steps:[
-          "Geh aufs WC. Ja, auch wenn du nicht musst.",
-          "Spül einmal oder wasch kurz die Hände.",
-          "Atme einmal tief aus. Schultern runter.",
-          "Geh raus und mach 1 Mini-Schritt: öffnen / anrufen / anfangen."
-        ],
-        min:"WC rein. 1× spülen oder Hände waschen.",
-        upgrade:"Bleib kurz stehen und atme 3× ruhig aus. Dann erst: nächster Mini-Schritt.",
-        stolper:"Wenn du am WC anfängst zu analysieren, bist du wieder im gleichen Film. Hier wird nur Reset gedrückt. Ende.",
-        why:"Ortswechsel + Ritual setzt einen klaren Schnitt. Dein Nervensystem bekommt Stopp, und du kommst leichter zurück in Handlung."
+      fokus: {
+        system: { topic: "Fokus & Aufschieben · 1/5", name: "Nächste Ecke", forText: "Wenn du aufschiebst, weil dir alles zu groß vorkommt.", steps: ["Definiere deine nächste Ecke: Absatz fertig, Fläche fertig, 1 Übung.", "Starte und arbeite nur bis dorthin.", "Wenn die Ecke erreicht ist: kurz Stopp.", "Entscheide neu: noch eine Ecke oder Pause."], min: "1 Ecke festlegen + anfangen." },
+        remaining: [{ name: "Zehnerblock", trigger: "Du verzettelst dich" }, { name: "Korrektur-Fenster", trigger: "Perfektion blockiert" }, { name: "Steh-Weiter", trigger: "Du klebst fest" }, { name: "Blindflug", trigger: "Jeder Satz wird 3× gelesen" }],
+        category: "Fokus & Aufschieben"
       },
-      {
-        icon:"🍴", topic:"Essen & Impulse · 3/5", title:"Besteck-Parkplatz",
-        for:"Wenn du im Schaufelmodus bist und Bissen an Bissen reihst.",
-        notFor:"Achtsamkeits-Guru spielen. Es ist eine harte, physische Bremse.",
-        steps:[
-          "Nimm einen Bissen.",
-          "Leg das Besteck komplett auf den Tisch. Nicht in der Hand behalten.",
-          "Kauen und schlucken.",
-          "Erst wenn der Mund leer ist, greifst du das Besteck wieder an. 5 Bissen."
-        ],
-        min:"Die ersten 5 Bissen mit Parkplatz.",
-        upgrade:"Zieh das die halbe Mahlzeit durch. Wechsel für den Rest auf die schwache Hand.",
-        stolper:"Besteck nur in der Hand ruhen lassen reicht nicht. Es muss den Tisch berühren. Sonst kippst du sofort wieder in den Autopiloten.",
-        why:"Du zerschießt die fließende Bewegung vom Teller zum Mund. Das ständige Neu-Greifen nervt anfangs – aber genau diese Reibung holt dich ins Hier und Jetzt."
+      stress: {
+        system: { topic: "Stress & Überforderung · 1/5", name: "WC-Reset", forText: "Wenn du kurz vorm Explodieren bist oder komplett dicht machst.", steps: ["Geh aufs WC. Ja, auch wenn du nicht musst.", "Spül einmal oder wasch kurz die Hände.", "Atme einmal tief aus. Schultern runter.", "Geh raus und mach 1 Mini-Schritt: öffnen, anrufen, anfangen."], min: "WC rein. 1× spülen oder Hände waschen." },
+        remaining: [{ name: "Geräusch-Anker", trigger: "Kopf ist zu laut" }, { name: "Zunge-Parkplatz", trigger: "Hektisch und angespannt" }, { name: "Fingerleiter", trigger: "Reizüberflutet" }, { name: "Farb-Zählung", trigger: "Gedankenkarussell" }],
+        category: "Stress & Überforderung"
       },
-      {
-        icon:"🧊", topic:"Energie & Müdigkeit · 4/5", title:"Kalt-Schock",
-        for:"Wenn du komplett wegsackst und das System neu booten musst.",
-        notFor:"Langfristig Energie aufbauen. Es ist reiner Defibrillator.",
-        steps:[
-          "Geh zum Waschbecken.",
-          "Dreh das Wasser auf eiskalt.",
-          "Halt beide Handgelenke für 10 Sekunden drunter.",
-          "Abtrocknen und sofort zurück an die Arbeit."
-        ],
-        min:"10 Sekunden auf die Handgelenke.",
-        upgrade:"Spritz dir das eiskalte Wasser dreimal direkt ins Gesicht. Danach sofort 10× Wadenpumpe.",
-        stolper:"Lauwarm bringt nichts. Es muss beißen.",
-        why:"Kälte löst einen extremen physischen Reiz aus. Dein Körper schüttet sofort Adrenalin aus – der Nebel im Kopf reißt auf."
+      essen: {
+        system: { topic: "Essen & Impulse · 3/5", name: "Besteck-Parkplatz", forText: "Wenn du im Schaufelmodus bist und Bissen an Bissen reihst.", steps: ["Nimm einen Bissen.", "Leg das Besteck komplett auf den Tisch. Nicht in der Hand behalten.", "Kauen und schlucken.", "Erst wenn der Mund leer ist, greifst du das Besteck wieder an. 5 Bissen."], min: "Die ersten 5 Bissen mit Parkplatz." },
+        remaining: [{ name: "Ein-Hand-essen", trigger: "Snackst automatisch nebenbei" }, { name: "Spitzen-Bissen", trigger: "Schlingst und merkst nichts" }, { name: "Haltungswechsel", trigger: "Impuls zu stark" }, { name: "Falsche Hand", trigger: "Autopilot lädt nach" }],
+        category: "Essen & Impulse"
       },
-      {
-        icon:"👅", topic:"Stress & Überforderung · 3/5", title:"Zunge-Parkplatz",
-        for:"Wenn du innerlich angespannt bist und dein Körper auf Alarm steht.",
-        notFor:"Komplett entspannen. Nur kurz runterregeln.",
-        steps:[
-          "Zungenspitze an den Gaumen – hinter die oberen Schneidezähne.",
-          "Lass den Kiefer locker: Zähne nicht zusammenbeißen.",
-          "Atme einmal langsam aus.",
-          "Mach 1 Mini-Schritt: öffnen / hinsetzen / anfangen."
-        ],
-        min:"Zunge parken + Kiefer lösen.",
-        upgrade:"Halte die Zunge dort, während du den nächsten kleinen Schritt machst. Wenn du wieder zusammenbeißt: neu parken.",
-        stolper:"Locker lassen – kein Krafttraining. Es ist nur ein Parkplatz.",
-        why:"Zunge und Kiefer hängen stark mit Anspannung zusammen. Wenn du hier lockerst, schaltet dein Körper einen Gang runter – unsichtbar und sofort."
+      energie: {
+        system: { topic: "Energie & Müdigkeit · 4/5", name: "Kalt-Schock", forText: "Wenn du komplett wegsackst und das System neu booten musst.", steps: ["Geh zum Waschbecken.", "Dreh das Wasser auf eiskalt.", "Halt beide Handgelenke für 10 Sekunden drunter.", "Abtrocknen und sofort zurück an die Arbeit."], min: "10 Sekunden auf die Handgelenke." },
+        remaining: [{ name: "Wadenpumpe", trigger: "Kreislauf tot, Körper parkt" }, { name: "Horizont-Sweep", trigger: "Kopf wie Watte, Blick klebt" }, { name: "Oberschenkel-Klemme", trigger: "Brauchst Spannung" }, { name: "Geruchs-Kick", trigger: "Brauchst sofort Wachheit" }],
+        category: "Energie & Müdigkeit"
       }
-    ];
+    };
 
-    function showCard(idx) {
-      const s = SYSTEMS[idx];
-      document.querySelectorAll('.sys-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
-      document.getElementById('card-content').innerHTML = `
-        <div class="card-topic">${s.icon} ${s.topic}</div>
-        <div class="card-title">${s.title}</div>
-        <div class="fn-grid">
-          <div class="fn-box yes"><div class="fn-label">✓ Dafür</div><div class="fn-text">${s.for}</div></div>
-          <div class="fn-box no"><div class="fn-label">✗ Nicht dafür</div><div class="fn-text">${s.notFor}</div></div>
-        </div>
-        <div class="steps-label">So machst du's</div>
-        ${s.steps.map((t,i)=>`<div class="step"><div class="sn">${i+1}</div><div class="st">${t}</div></div>`).join('')}
-        <div class="ms">
-          <div class="ms-label">Mindeststandard</div>
-          <div class="ms-text">${s.min}</div>
-          <label class="cb-row" onclick="toggleDone(this)">
-            <div class="cb" id="cb"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5L5.5 10L13 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <span class="cb-label">gemacht</span>
-          </label>
-          <div class="done-msg" id="done-msg">Reicht. Das war genug.</div>
-        </div>
-        <div class="extras">
-          <div class="ex"><div class="ex-label">↑ Upgrade</div><div class="ex-text">${s.upgrade}</div></div>
-          <div class="ex"><div class="ex-label">⚠ Stolperfalle</div><div class="ex-text">${s.stolper}</div></div>
-        </div>
-        <div class="why"><div class="why-label">Warum es wirkt</div><div class="why-text">${s.why}</div></div>
-      `;
-      const w = document.getElementById('card-wrap');
-      w.classList.add('show');
-      setTimeout(() => w.scrollIntoView({behavior:'smooth', block:'start'}), 80);
+    function finderShow(key) {
+      const d = FINDER[key];
+      const s = d.system;
+      const stepsHTML = s.steps.map((step, i) =>
+        '<div class="finder-step"><span class="finder-sn">' + (i+1) + '</span><span>' + step + '</span></div>'
+      ).join('');
+      const remHTML = d.remaining.map(r =>
+        '<div class="finder-rem-item"><div class="finder-rem-name">🔒 ' + r.name + '</div><div class="finder-rem-trigger">' + r.trigger + '</div></div>'
+      ).join('');
+
+      document.getElementById('finder-content').innerHTML =
+        '<div class="finder-topic">' + s.topic + '</div>' +
+        '<h3 class="finder-name">' + s.name + '</h3>' +
+        '<p class="finder-for">' + s.forText + '</p>' +
+        '<div class="finder-steps"><div class="finder-steps-label">So machst du\'s</div>' + stepsHTML + '</div>' +
+        '<div class="finder-min"><span class="finder-min-label">Mindeststandard</span><span class="finder-min-text">' + s.min + '</span></div>' +
+        '<div class="finder-locked"><div class="finder-locked-blur"><div class="finder-locked-items">' +
+          '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Upgrade – was du an guten Tagen draufpacken kannst</span></div>' +
+          '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Stolperfalle – der Fehler der das System killt</span></div>' +
+          '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Warum es wirkt – die Mechanik dahinter</span></div>' +
+        '</div></div></div>' +
+        '<div class="finder-upsell">' +
+          '<div class="finder-upsell-hook">Das war 1 von 5 Systemen<br>für „' + d.category + '".</div>' +
+          '<p class="finder-upsell-detail">Die anderen 4 für genau diese Kategorie:</p>' +
+          '<div class="finder-remaining">' + remHTML + '</div>' +
+          '<p class="finder-upsell-sub">Insgesamt 25 Systeme. 5 Kategorien. Jedes mit Upgrade, Stolperfalle und Erklärung.</p>' +
+          '<a href="https://payhip.com/b/6EaOK" target="_blank" rel="noopener noreferrer" class="finder-cta">Alle 25 holen – 9,90 €</a>' +
+        '</div>' +
+        '<button class="finder-back" onclick="finderBack()" style="margin-top:8px;">← Anderer Zustand wählen</button>';
+
+      document.getElementById('finder-question').classList.remove('active');
+      document.getElementById('finder-result').classList.add('active');
+      setTimeout(function() {
+        document.getElementById('schnell-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
     }
 
-    function toggleDone(label) {
-      const cb = document.getElementById('cb');
-      const done = document.getElementById('done-msg');
-      cb.classList.toggle('on');
-      done.classList.toggle('show', cb.classList.contains('on'));
-    }
-
-    function closeCard() {
-      document.getElementById('card-wrap').classList.remove('show');
-      document.querySelectorAll('.sys-btn').forEach(b => b.classList.remove('active'));
+    function finderBack() {
+      document.getElementById('finder-result').classList.remove('active');
+      document.getElementById('finder-question').classList.add('active');
+      setTimeout(function() {
+        document.getElementById('schnell-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
     }
   </script>
 </body>
