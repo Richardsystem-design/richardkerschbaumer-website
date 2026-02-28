@@ -81,13 +81,17 @@
   }
   </script>
 
-  <!-- Performance -->
-  <link rel="preload" as="font" href="fonts/barlow-v13-latin-regular.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="fonts/barlow-condensed-v13-latin-900.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="richard-foto.webp" fetchpriority="high">
-  <link rel="stylesheet" href="fonts/fonts.css">
-
+  <!-- Performance -->  <link rel="preload" as="image" href="richard-foto.webp" fetchpriority="high">
   <style>
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-italic.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/barlow-v13-latin-500.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/barlow-v13-latin-600.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2')}
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -767,7 +771,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="richard-foto.webp" alt="Richard Kerschbaumer, Autor aus Österreich" width="420" height="580" fetchpriority="high" decoding="async">
+        <img src="richard-foto-sm.webp" srcset="richard-foto-sm.webp 420w, richard-foto-md.webp 825w" sizes="(max-width:600px) 280px, 420px" alt="Richard Kerschbaumer, Autor aus Österreich" width="420" height="521" fetchpriority="high" decoding="async">
       </div>
     </section>
 
@@ -798,7 +802,7 @@
       <div class="books-grid">
 
         <article class="book-card" aria-labelledby="book1-title">
-          <img src="machs-einfach.webp" alt="Buchcover Mach's einfach: gelbes Cover mit Spielknopf-Symbol" class="book-cover" width="100" height="150" loading="lazy" decoding="async">
+          <img src="machs-einfach-sm.webp" srcset="machs-einfach-sm.webp 200w, machs-einfach-md.webp 400w" sizes="140px" alt="Buchcover Mach's einfach: gelbes Cover mit Spielknopf-Symbol" class="book-cover" width="100" height="160" loading="lazy" decoding="async">
           <div class="book-info">
             <span class="book-info-label">Gewohnheiten &amp; Alltag</span>
             <h3 id="book1-title">Mach's einfach</h3>
@@ -811,7 +815,7 @@
         </article>
 
         <article class="book-card" aria-labelledby="book2-title">
-          <img src="friss-nicht-weniger.webp" alt="Buchcover Friss nicht weniger: schwarzes Cover mit Gabel-Illustration" class="book-cover" width="100" height="150" loading="lazy" decoding="async">
+          <img src="friss-nicht-weniger-sm.webp" srcset="friss-nicht-weniger-sm.webp 200w, friss-nicht-weniger-md.webp 400w" sizes="140px" alt="Buchcover Friss nicht weniger: schwarzes Cover mit Gabel-Illustration" class="book-cover" width="100" height="160" loading="lazy" decoding="async">
           <div class="book-info">
             <span class="book-info-label">Ernährung &amp; Abnehmen</span>
             <h3 id="book2-title">Friss nicht weniger</h3>
@@ -877,7 +881,7 @@
           </div>
         </div>
         <div class="bad-day-teaser-visual" aria-hidden="true">
-          <img src="bad-day-cover.webp" alt="Bad Day Starter-Edition Cover" width="280" height="373" loading="lazy" decoding="async">
+          <img src="bad-day-cover-sm.webp" srcset="bad-day-cover-sm.webp 300w, bad-day-cover-md.webp 560w" sizes="(max-width:600px) 260px, 280px" alt="Bad Day Starter-Edition Cover" width="280" height="280" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
