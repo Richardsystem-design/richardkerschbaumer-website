@@ -82,10 +82,10 @@
   </script>
 
   <!-- Performance -->
-  <link rel="preload" as="font" href="fonts/barlow-400.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="fonts/barlow-condensed-900.woff2" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="richard-foto.webp" fetchpriority="high">
-  <link rel="stylesheet" href="fonts/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -134,7 +134,7 @@
     .skip-link:focus { top: 16px; }
 
     /* NAV */
-    nav {
+    nav.main-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
@@ -385,7 +385,6 @@
 
     .text-italic { font-style: italic; }
     .hero-lead strong { font-style: italic; font-weight: 600; }
-    .review-card blockquote { font-style: italic; }
 
     /* PRODUCTS */
     .products { background: #111; padding: var(--section-pad) clamp(20px, 5vw, 80px); }
@@ -495,30 +494,14 @@
     .btn-red-small:hover { background: var(--red-dark); }
 
     /* SOCIAL PROOF */
-    .social-proof { padding: var(--section-pad) clamp(20px, 5vw, 80px); background: var(--white); }
 
-    .social-proof-header { margin-bottom: 48px; }
 
-    .social-proof-header h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      text-transform: uppercase;
-      line-height: 1;
-    }
 
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
-    .review-card { background: var(--black); color: var(--white); padding: 36px; border-radius: 2px; }
 
-    .review-stars { color: var(--red); font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
 
-    .review-card blockquote { font-size: 1rem; line-height: 1.7; color: rgba(245,243,239,0.85); font-style: italic; margin-bottom: 20px; }
 
-    .review-meta { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,239,0.4); }
 
-    .reviews-source { margin-top: 24px; font-size: 0.85rem; color: var(--gray); text-align: center; }
-    .reviews-source a { color: var(--gray); }
 
     /* WHATSAPP */
     .whatsapp-section {
@@ -564,17 +547,6 @@
     }
     .btn-whatsapp:hover { background: #1da851; transform: translateY(-1px); }
 
-    .btn-library {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: rgba(245,243,239,0.5);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-      align-self: flex-start;
-    }
-    .btn-library:hover { color: var(--white); }
 
     .whatsapp-visual { display: flex; flex-direction: column; gap: 12px; }
 
@@ -592,6 +564,67 @@
     .wc-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 6px; }
 
     .wc-text { color: rgba(245,243,239,0.7); font-size: 0.9rem; line-height: 1.5; }
+
+    /* LEAD MAGNET */
+    .lead-magnet {
+      background: var(--black);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .lead-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .lead-text { color: var(--white); }
+    .lead-text .section-label { color: rgba(245,243,239,0.5); }
+
+    .lead-text h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin: 16px 0 28px;
+      color: var(--white);
+    }
+    .lead-text h2 span { color: var(--red); }
+
+    .lead-text p {
+      color: rgba(245,243,239,0.7);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+    .lead-text p:last-of-type { margin-bottom: 32px; }
+
+    .lead-visual { display: flex; flex-direction: column; gap: 12px; }
+
+    .lead-card {
+      background: #1a1a1a;
+      border-left: 3px solid var(--red);
+      padding: 16px 20px;
+      border-radius: 2px;
+    }
+    .lead-card--muted { border-left-color: #333; opacity: 0.45; }
+
+    .lead-week {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .lead-card--muted .lead-week { color: #555; }
+    .lead-card p { color: rgba(245,243,239,0.7); font-size: 0.95rem; margin: 0; }
 
     /* FOOTER */
     footer {
@@ -627,6 +660,19 @@
       margin-top: 8px;
     }
 
+
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; padding-top: 100px; text-align: center; }
@@ -641,10 +687,13 @@
       .reviews-grid { grid-template-columns: 1fr; }
       .whatsapp-section { grid-template-columns: 1fr; gap: 48px; }
       .whatsapp-visual { display: none; }
+      .lead-inner { grid-template-columns: 1fr; gap: 40px; }
+      .lead-visual { display: none; }
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
-      nav { padding: 16px 20px; }
+      nav.main-nav { padding: 16px 20px; }
       .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
     }
 
     /* Animations – nur wenn keine Bewegungseinschränkung */
@@ -659,21 +708,51 @@
       .hero-buttons { animation: fadeUp 0.6s 0.3s ease both; }
       .hero-image { animation: fadeUp 0.8s 0.15s ease both; }
     }
+
+
+    /* Bad Day Teaser */
+    .bad-day-teaser { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .bad-day-teaser-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center; }
+    .bad-day-teaser-text { max-width: 560px; }
+    .bad-day-teaser-text h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.8rem, 5vw, 4.5rem); line-height: 0.95; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .bad-day-teaser-text h2 span { color: var(--red); }
+    .bad-day-teaser-text p { color: rgba(245,243,239,0.7); font-size: 1.05rem; line-height: 1.75; margin-bottom: 24px; }
+    .bad-day-teaser-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .bad-day-teaser-cta { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .bad-day-teaser-visual img { width: 240px; height: auto; box-shadow: -16px 16px 48px rgba(0,0,0,0.6); display: block; }
+    @media (max-width: 900px) {
+      .bad-day-teaser-inner { grid-template-columns: 1fr; gap: 36px; }
+      .bad-day-teaser-visual { display: flex; justify-content: center; }
+      .bad-day-teaser-visual img { width: 180px; }
+    }
+
+    .btn-outline-small { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); text-decoration: none; border: 1px solid rgba(245,243,239,0.3); padding: 10px 20px; border-radius: 2px; transition: border-color 0.2s; white-space: nowrap; }
+    .btn-outline-small:hover { border-color: var(--white); }
   </style>
 </head>
 <body>
 
   <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
-  <nav role="navigation" aria-label="Hauptnavigation">
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
     <a href="/" class="nav-logo" aria-label="Richard Kerschbaumer – zur Startseite">Richard Kerschbaumer</a>
-    <ul class="nav-links" role="list">
-      <li><a href="#ueber-mich">Über mich</a></li>
-      <li><a href="#buecher">Bücher</a></li>
-      <li><a href="#stimmen">Stimmen</a></li>
-      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Kanal beitreten, öffnet neues Fenster">WhatsApp</a></li>
+        <ul class="nav-links" role="list">
+      <li><a href="/bucher.html">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
     </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
+
+    <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
 
   <main id="main-content">
 
@@ -725,7 +804,7 @@
             <h3 id="book1-title">Mach's einfach</h3>
             <p>Mikro-Gewohnheiten die auch am Dienstagabend nach einem beschissenen Tag funktionieren. Kein Selbsthilfe-Kitsch. Kein „du schaffst das!".</p>
             <div class="book-buttons">
-              <a href="https://www.richardkerschbaumer.at/leseproben" class="btn-outline-white">Gratis-Leseprobe</a>
+              <a href="/machs-einfach.html" class="btn-outline-small">Mehr erfahren →</a>
               <a href="https://amzn.to/478dH7C" class="btn-red-small" target="_blank" rel="noopener noreferrer sponsored" aria-label="Mach's einfach bei Amazon kaufen, Affiliate-Link, öffnet neues Fenster">Bei Amazon *</a>
             </div>
           </div>
@@ -738,7 +817,7 @@
             <h3 id="book2-title">Friss nicht weniger</h3>
             <p>Abnehmen ohne die nächste Diät die du in vier Wochen abbrichst. Warum weniger essen das falsche Ziel ist – und was stattdessen funktioniert.</p>
             <div class="book-buttons">
-              <a href="https://www.richardkerschbaumer.at/leseproben" class="btn-outline-white">Gratis-Leseprobe</a>
+              <a href="/friss-nicht-weniger.html" class="btn-outline-small">Mehr erfahren →</a>
               <a href="https://amzn.to/3YYWdHz" class="btn-red-small" target="_blank" rel="noopener noreferrer sponsored" aria-label="Friss nicht weniger bei Amazon kaufen, Affiliate-Link, öffnet neues Fenster">Bei Amazon *</a>
             </div>
           </div>
@@ -748,29 +827,59 @@
     </section>
 
     <div class="section-divider-mid" aria-hidden="true"></div>
-    <section class="social-proof" id="stimmen" aria-labelledby="reviews-heading">
-      <div class="social-proof-header">
-        <span class="red-rule" aria-hidden="true"></span><span class="section-label">Was Leser sagen</span>
-        <h2 id="reviews-heading">Echte Meinungen.<br>Keine Hochglanz-Zitate.</h2>
+    <section class="lead-magnet" id="alltagstest" aria-labelledby="lead-heading">
+      <div class="lead-inner">
+        <div class="lead-text">
+          <span class="red-rule" aria-hidden="true"></span>
+          <span class="section-label">Gratis. Kein Newsletter.</span>
+          <h2 id="lead-heading">4 Wochen.<br>4 Werkzeuge.<br><span>1 das bleibt.</span></h2>
+          <p>Kein neuer Lebensplan den du nach drei Tagen abbrichst. Ein Alltagstest – du probierst 4 Mini-Systeme aus und behältst das einzige das wirklich funktioniert.</p>
+          <p>Hol dir den Test gratis im WhatsApp-Kanal.</p>
+          <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="4-Wochen-Alltagstest gratis holen, öffnet WhatsApp, neues Fenster">→ Gratis holen</a>
+        </div>
+        <div class="lead-visual" aria-hidden="true">
+          <div class="lead-card">
+            <span class="lead-week">Woche 1</span>
+            <p>Der Start-Knopf – Die 5-Minuten-Lüge</p>
+          </div>
+          <div class="lead-card">
+            <span class="lead-week">Woche 2</span>
+            <p>Flugmodus – Dein Morgen gehört dir</p>
+          </div>
+          <div class="lead-card">
+            <span class="lead-week">Woche 3</span>
+            <p>Fokus-Laser – Die EINE Sache</p>
+          </div>
+          <div class="lead-card lead-card--muted">
+            <span class="lead-week">Woche 4</span>
+            <p>Erfolgs-Brille – Habe-ich-erledigt-Liste</p>
+          </div>
+        </div>
       </div>
-      <div class="reviews-grid">
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote class="review-text">„Habe die erste Woche direkt 1kg abgenommen."</blockquote>
-          <footer class="review-meta"><cite>Verifizierter Kauf · Juli 2025</cite></footer>
-        </article>
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote class="review-text">„Ein humorvoller Umgang mit einer sensiblen Thematik – locker und amüsant geschrieben. Absolut empfehlenswert!"</blockquote>
-          <footer class="review-meta"><cite>Verifizierter Kauf · Juni 2025</cite></footer>
-        </article>
-        <article class="review-card">
-          <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
-          <blockquote class="review-text">„Tolles Buch, sehr humorvoll und gut geschrieben."</blockquote>
-          <footer class="review-meta"><cite>Verifizierter Kauf · Juni 2025</cite></footer>
-        </article>
+    </section>
+
+    <div class="section-divider-mid" aria-hidden="true"></div>
+    <section class="bad-day-teaser" aria-labelledby="bad-day-teaser-heading">
+      <div class="bad-day-teaser-inner">
+        <div class="bad-day-teaser-text">
+          <span class="red-rule" aria-hidden="true"></span>
+          <span class="section-label">Digitales System · PDF</span>
+          <h2 id="bad-day-teaser-heading">Wenn nichts geht.<br><span>Trotzdem weitermachen.</span></h2>
+          <p>25 konkrete Systeme für den Tag an dem du keinen Bock hast, der Kopf voll ist und Motivation das letzte ist was du spürst. Geordnet nach Zustand – nicht nach Motivation.</p>
+          <div class="bad-day-teaser-tags">
+            <span class="product-tag">25 Systeme</span>
+            <span class="product-tag">5 Kategorien</span>
+            <span class="product-tag">Sofort nutzbar</span>
+          </div>
+          <div class="bad-day-teaser-cta">
+            <a href="/bad-day.html" class="btn-primary">Mehr erfahren</a>
+            <a href="https://payhip.com/b/6EaOK" class="btn-secondary" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+          </div>
+        </div>
+        <div class="bad-day-teaser-visual" aria-hidden="true">
+          <img src="bad-day-cover.webp" alt="Bad Day Starter-Edition Cover" width="280" height="373" loading="lazy" decoding="async">
+        </div>
       </div>
-      <p class="reviews-source">Alle Rezensionen stammen von <a href="https://www.amazon.de" target="_blank" rel="noopener noreferrer">Amazon.de</a></p>
     </section>
 
     <div class="section-divider-light" aria-hidden="true"></div>
@@ -785,7 +894,6 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp-Kanal beitreten
           </a>
-          <a href="https://www.richardkerschbaumer.at/downloads/bibliothek" class="btn-library">→ Lieber anonym stöbern? Gratis-Bibliothek</a>
         </div>
       </div>
       <div class="whatsapp-visual" aria-hidden="true">
@@ -810,14 +918,34 @@
     <span class="footer-brand">Richard Kerschbaumer</span>
     <nav aria-label="Footer-Navigation">
       <ul class="footer-links" role="list">
-        <li><a href="https://www.richardkerschbaumer.at/impressum">Impressum</a></li>
-        <li><a href="https://www.richardkerschbaumer.at/datenschutzerklaerung">Datenschutz</a></li>
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
         <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, öffnet neues Fenster">Instagram</a></li>
         <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, öffnet neues Fenster">LinkedIn</a></li>
       </ul>
     </nav>
     <p class="footer-affiliate">Links mit * sind Affiliate-Links. Wenn du darüber etwas kaufst, verdiene ich eine kleine Provision. &copy; 2026 Richard Kerschbaumer</p>
   </footer>
+
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  </script>
 
 </body>
 </html>
