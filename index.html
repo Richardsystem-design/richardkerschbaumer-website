@@ -732,6 +732,20 @@
 
     .btn-outline-small { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); text-decoration: none; border: 1px solid rgba(245,243,239,0.3); padding: 10px 20px; border-radius: 2px; transition: border-color 0.2s; white-space: nowrap; }
     .btn-outline-small:hover { border-color: var(--white); }
+
+    /* Bad Day Edition Cards */
+    .bad-day-editions { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .bad-day-edition-card { background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.1); padding: 32px 28px; border-radius: 2px; display: flex; flex-direction: column; gap: 16px; }
+    .bad-day-edition-card.bad-day-edition-new { border-color: rgba(200,16,46,0.35); }
+    .bad-day-edition-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.4); }
+    .bad-day-new-tag { background: var(--red); color: var(--white); font-size: 0.65rem; padding: 2px 8px; border-radius: 2px; margin-left: 8px; letter-spacing: 0.12em; vertical-align: middle; }
+    .bad-day-edition-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.8rem; text-transform: uppercase; color: var(--white); line-height: 1; }
+    .bad-day-edition-desc { color: rgba(245,243,239,0.5); font-size: 0.9rem; line-height: 1.65; }
+    .bad-day-edition-meta { display: flex; gap: 16px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,243,239,0.3); }
+    .bad-day-edition-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+    @media (max-width: 600px) {
+      .bad-day-editions { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -866,24 +880,39 @@
 
     <div class="section-divider-mid" aria-hidden="true"></div>
     <section class="bad-day-teaser" aria-labelledby="bad-day-teaser-heading">
-      <div class="bad-day-teaser-inner">
-        <div class="bad-day-teaser-text">
+      <div class="bad-day-teaser-inner" style="grid-template-columns:1fr; gap:0;">
+        <div class="bad-day-teaser-text" style="max-width:700px; margin-bottom:48px;">
           <span class="red-rule" aria-hidden="true"></span>
-          <span class="section-label">Digitales System · PDF</span>
-          <h2 id="bad-day-teaser-heading">Wenn nichts geht.<br><span>Trotzdem weitermachen.</span></h2>
-          <p>25 konkrete Systeme für den Tag an dem du keinen Bock hast, der Kopf voll ist und Motivation das letzte ist was du spürst. Geordnet nach Zustand – nicht nach Motivation.</p>
-          <div class="bad-day-teaser-tags">
-            <span class="product-tag">25 Systeme</span>
-            <span class="product-tag">5 Kategorien</span>
-            <span class="product-tag">Sofort nutzbar</span>
+          <span class="section-label">Bad Day · Systemreihe</span>
+          <h2 id="bad-day-teaser-heading">Schlechter Tag?<br><span>Nimm ein System.</span></h2>
+          <p>25 konkrete Handgriffe pro Edition. Geordnet nach Zustand, nicht nach Motivation. Jedes System hat einen Mindeststandard – das Minimum das zählt. Kein Coaching, kein 30-Tage-Plan.</p>
+        </div>
+        <div class="bad-day-editions">
+          <div class="bad-day-edition-card">
+            <span class="bad-day-edition-badge">Starter-Edition</span>
+            <h3 class="bad-day-edition-title">Alltag</h3>
+            <p class="bad-day-edition-desc">Start, Fokus, Stress, Essen, Energie – für den Tag an dem nichts geht.</p>
+            <div class="bad-day-edition-meta">
+              <span>25 Systeme</span><span>9,90 €</span>
+            </div>
+            <div class="bad-day-edition-buttons">
+              <a href="/bad-day.html" class="btn-outline-small">Mehr erfahren →</a>
+            </div>
           </div>
-          <div class="bad-day-teaser-cta">
-            <a href="/bad-day.html" class="btn-primary">Mehr erfahren</a>
-            <a href="https://payhip.com/b/6EaOK" class="btn-secondary" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+          <div class="bad-day-edition-card bad-day-edition-new">
+            <span class="bad-day-edition-badge">Work-Edition <span class="bad-day-new-tag">Neu</span></span>
+            <h3 class="bad-day-edition-title">Job</h3>
+            <p class="bad-day-edition-desc">Start, Fokus, Druck, Energie, Feierabend – für den Arbeitstag der dich blockiert.</p>
+            <div class="bad-day-edition-meta">
+              <span>25 Systeme</span><span>9,90 €</span>
+            </div>
+            <div class="bad-day-edition-buttons">
+              <a href="/bad-day-work.html" class="btn-outline-small">Mehr erfahren →</a>
+            </div>
           </div>
         </div>
-        <div class="bad-day-teaser-visual" aria-hidden="true">
-          <img src="bad-day-cover-sm.webp" srcset="bad-day-cover-sm.webp 300w, bad-day-cover-md.webp 560w" sizes="(max-width:600px) 260px, 280px" alt="Bad Day Starter-Edition Cover" width="280" height="280" loading="lazy" decoding="async">
+        <div style="margin-top:40px;">
+          <a href="/systeme.html" class="btn-outline-small">Alle Systeme ansehen →</a>
         </div>
       </div>
     </section>
