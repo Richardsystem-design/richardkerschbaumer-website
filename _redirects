@@ -1,9 +1,5 @@
 # Redirects: Jouwweb-URLs + Canonical-Fixes
 
-# Canonical: extensionless URLs → .html (avoid duplicate content)
-/systeme  /systeme.html  301
-/bad-day  /bad-day.html  301
-
 # Jouwweb old URLs
 
 /blog/3016358_fastenzeit-system-wartung-statt-verzicht-drama          /blog/fastenzeit-system-wartung-statt-verzicht-drama          301
