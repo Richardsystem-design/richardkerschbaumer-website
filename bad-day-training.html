@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bad Day Training-Edition – 25 Systeme für schlechte Tage beim Training | Richard Kerschbaumer</title>
+  <meta name="description" content="25 konkrete Systeme für Losgehen, Kleinmachen, Dranbleiben, Weitermachen und Kopfsache. Für den Tag an dem du nicht trainieren willst – aber trotzdem gehst.">
+  <meta name="author" content="Richard Kerschbaumer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/bad-day-training.html">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/bad-day-training.html">
+  <meta property="og:title" content="Bad Day Training-Edition – Richard Kerschbaumer">
+  <meta property="og:description" content="25 konkrete Systeme für schlechte Tage beim Training. Kein Motivations-Bla. Direkt anwendbar.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://www.richardkerschbaumer.at/bad-day-training.html#product",
+        "name": "Bad Day Training-Edition",
+        "description": "25 konkrete Systeme für schlechte Tage beim Training.",
+        "url": "https://www.richardkerschbaumer.at/bad-day-training.html",
+        "brand": { "@type": "Brand", "name": "Richard Kerschbaumer" },
+        "offers": {
+          "@type": "Offer",
+          "price": "9.90",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://payhip.com/b/g01LG"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/barlow-v13-latin-500.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/barlow-v13-latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2')}
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; --section-pad: clamp(60px, 8vw, 120px); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
+    /* NAV */
+    nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+    .red-rule { display: block; width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
+
+    /* HERO */
+    .hero { background: var(--black); padding: 130px clamp(20px,5vw,80px) 0; overflow: hidden; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: end; }
+    .hero-content { padding-bottom: 80px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-series { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,243,239,0.4); }
+    .hero-edition { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--red); padding: 6px 16px; border-radius: 2px; }
+    h1.hero-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(4rem,8vw,8rem); line-height: 0.88; color: var(--white); text-transform: uppercase; margin-bottom: 32px; }
+    h1.hero-title em { color: var(--red); font-style: normal; }
+    .hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.4vw,1.2rem); line-height: 1.8; max-width: 520px; margin-bottom: 48px; }
+    .hero-cta-group { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .btn-buy { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 18px 36px; border-radius: 2px; transition: background 0.2s; }
+    .btn-buy:hover { background: var(--red-dark); }
+    .hero-visual { display: flex; align-items: flex-end; justify-content: center; }
+    .hero-cover-img { width: 100%; max-width: 320px; height: auto; box-shadow: -24px 24px 60px rgba(0,0,0,0.6); display: block; }
+
+    /* STATS BAR */
+    .stats-bar { background: var(--red); padding: 0 clamp(20px,5vw,80px); }
+    .stats-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; }
+    .stat-item { flex: 1; padding: 28px 0; border-right: 1px solid rgba(245,243,239,0.15); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--white); line-height: 1; }
+    .stat-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,239,0.6); }
+
+    /* PROBLEM */
+    .problem-section { padding: var(--section-pad) clamp(20px,5vw,80px); background: var(--black); }
+    .problem-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .problem-content h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 28px; }
+    .problem-content p { color: rgba(245,243,239,0.55); font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+    .problem-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .problem-list li { padding: 18px 0; border-bottom: 1px solid rgba(245,243,239,0.08); color: rgba(245,243,239,0.7); font-size: 1rem; display: flex; align-items: flex-start; gap: 16px; line-height: 1.5; }
+    .problem-list li::before { content: '—'; color: var(--red); font-weight: 700; flex-shrink: 0; }
+
+    /* SYSTEMS */
+    .systems-section { padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .systems-inner { max-width: 1200px; margin: 0 auto; }
+    .systems-header { margin-bottom: 56px; }
+    .systems-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .systems-header p { color: #555; font-size: 1rem; line-height: 1.7; max-width: 560px; }
+    .systems-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+    .system-cat { background: #f0ede7; padding: 36px 24px; }
+    .system-cat-accent { background: var(--black); }
+    .system-cat-accent .system-cat-num, .system-cat-accent .system-cat-title { color: var(--white); }
+    .system-cat-accent .system-cat-items li { color: rgba(245,243,239,0.6); border-color: rgba(245,243,239,0.08); }
+    .system-cat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; color: rgba(13,13,13,0.15); line-height: 1; margin-bottom: 8px; }
+    .system-cat-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; text-transform: uppercase; color: var(--black); margin-bottom: 20px; letter-spacing: 0.05em; }
+    .system-cat-items { list-style: none; }
+    .system-cat-items li { padding: 10px 0; font-size: 0.88rem; color: #555; border-bottom: 1px solid rgba(13,13,13,0.06); line-height: 1.4; }
+    .system-cat-items li:last-child { border-bottom: none; }
+
+    /* SCHNELL-FINDER */
+    .tool-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .tool-inner { max-width: 800px; margin: 0 auto; }
+    .tool-header { margin-bottom: 48px; }
+    .tool-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+    .tool-header h2 em { color: var(--red); font-style: normal; }
+    .tool-header p { color: rgba(245,243,239,0.5); font-size: 1rem; line-height: 1.7; }
+    .finder-screen { display: none; }
+    .finder-screen.active { display: block; }
+    .finder-question { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; color: var(--white); margin-bottom: 24px; letter-spacing: 0.05em; }
+    .finder-choices { display: flex; flex-direction: column; gap: 2px; }
+    .finder-btn { display: flex; align-items: center; gap: 20px; width: 100%; background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.08); padding: 20px 24px; cursor: pointer; text-align: left; transition: border-color 0.2s, background 0.2s; border-radius: 2px; }
+    .finder-btn:hover { border-color: var(--red); background: rgba(200,16,46,0.06); }
+    .finder-icon { font-size: 1.6rem; flex-shrink: 0; width: 40px; text-align: center; }
+    .finder-text { flex: 1; }
+    .finder-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+    .finder-desc { font-size: 0.85rem; color: rgba(245,243,239,0.4); line-height: 1.5; }
+    .finder-arrow { color: var(--red); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; }
+    .finder-back { background: none; border: none; color: rgba(245,243,239,0.4); font-size: 0.85rem; cursor: pointer; padding: 8px 0; font-family: 'Barlow', sans-serif; transition: color 0.2s; }
+    .finder-back:hover { color: var(--white); }
+    .finder-rule { width: 48px; height: 3px; background: var(--red); margin: 20px 0; }
+    .finder-system-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
+    .finder-system-cat { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; display: block; }
+    .finder-min { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; padding: 16px 0; border-top: 1px solid rgba(245,243,239,0.08); border-bottom: 1px solid rgba(245,243,239,0.08); }
+    .finder-min-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.35); flex-shrink: 0; }
+    .finder-min-value { color: var(--white); font-weight: 600; font-size: 0.95rem; }
+    .finder-remaining { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 32px; }
+    .finder-rem-item { font-size: 0.82rem; color: rgba(245,243,239,0.35); margin-bottom: 2px; }
+    .finder-rem-trigger { font-size: 0.75rem; color: rgba(245,243,239,0.2); }
+    .finder-upsell-sub { font-size: 0.85rem; color: rgba(245,243,239,0.4); line-height: 1.6; margin-bottom: 24px; }
+    .finder-cta { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s; }
+    .finder-cta:hover { background: var(--red-dark); }
+
+    @media (max-width: 540px) {
+      .finder-min { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .finder-remaining { grid-template-columns: 1fr; }
+    }
+
+    /* HOW */
+    .how-section { background: #f0ede7; padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .how-inner { max-width: 1200px; margin: 0 auto; }
+    .how-header { margin-bottom: 56px; }
+    .how-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .how-step { background: var(--white); padding: 36px 28px; }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: rgba(13,13,13,0.2); line-height: 1; margin-bottom: 16px; }
+    .step-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; color: var(--black); margin-bottom: 12px; line-height: 1.2; }
+    .step-desc { font-size: 0.92rem; color: #555; line-height: 1.75; }
+
+    /* NOT NOT */
+    .notnot-section { padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .notnot-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .notnot-col { padding: 56px 48px; }
+    .notnot-col.dark { background: var(--black); }
+    .notnot-col.light { background: #f0ede7; }
+    .notnot-col h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.8rem; text-transform: uppercase; margin-bottom: 32px; line-height: 1; }
+    .notnot-col.dark h3 { color: var(--white); }
+    .notnot-col.light h3 { color: var(--black); }
+    .notnot-list { list-style: none; display: flex; flex-direction: column; }
+    .notnot-list li { padding: 14px 0; font-size: 1rem; line-height: 1.5; display: flex; gap: 14px; align-items: flex-start; }
+    .notnot-col.dark .notnot-list li { color: rgba(245,243,239,0.78); border-bottom: 1px solid rgba(245,243,239,0.06); }
+    .notnot-col.light .notnot-list li { color: #555; border-bottom: 1px solid rgba(13,13,13,0.06); }
+    .notnot-list li:last-child { border-bottom: none; }
+    .notnot-icon { flex-shrink: 0; font-size: 1rem; line-height: 1.5; }
+
+    /* CROSS-SELL */
+    .crosssell-section { background: #f0ede7; padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .crosssell-inner { max-width: 800px; margin: 0 auto; }
+    .crosssell-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem,3.5vw,3rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .crosssell-inner p { color: #555; font-size: 1rem; line-height: 1.7; margin-bottom: 28px; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); text-decoration: none; border: 2px solid rgba(13,13,13,0.2); padding: 14px 28px; border-radius: 2px; transition: border-color 0.2s; }
+    .btn-outline:hover { border-color: var(--black); }
+
+    /* PURCHASE */
+    .purchase-section { background: var(--white); padding: var(--section-pad) clamp(20px,5vw,80px); text-align: center; }
+    .purchase-inner { max-width: 560px; margin: 0 auto; }
+    .purchase-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.5rem,5vw,4.5rem); line-height: 0.95; text-transform: uppercase; color: var(--black); margin-bottom: 20px; }
+    .purchase-inner > p { color: #555; font-size: 1rem; line-height: 1.7; margin-bottom: 40px; }
+    .purchase-box { background: var(--black); padding: 48px 40px; border-radius: 2px; text-align: center; }
+    .purchase-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .purchase-price-note { color: rgba(245,243,239,0.4); font-size: 0.85rem; margin-bottom: 32px; }
+    .purchase-includes { list-style: none; text-align: left; margin-bottom: 36px; }
+    .purchase-includes li { padding: 12px 0; color: rgba(245,243,239,0.65); font-size: 0.95rem; border-bottom: 1px solid rgba(245,243,239,0.06); display: flex; align-items: center; gap: 12px; }
+    .purchase-includes li::before { content: '✓'; color: var(--red); font-weight: 700; }
+    .purchase-includes li:last-child { border-bottom: none; }
+    .btn-buy-large { display: block; width: 100%; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 22px 36px; border-radius: 2px; transition: background 0.2s; text-align: center; }
+    .btn-buy-large:hover { background: var(--red-dark); }
+
+    /* FOOTER */
+    footer { background: #080808; padding: 48px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(245,243,239,0.4); letter-spacing: 0.05em; text-transform: uppercase; }
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+    .footer-copy { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
+
+    @media (max-width: 900px) {
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 0; }
+      .hero-visual { order: -1; padding-top: 20px; }
+      .hero-cover-img { max-width: 200px; }
+      .hero-content { padding-bottom: 60px; }
+      .stats-bar-inner { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(245,243,239,0.1); }
+      .problem-inner { grid-template-columns: 1fr; gap: 48px; }
+      .systems-grid { grid-template-columns: 1fr 1fr; }
+      .how-steps { grid-template-columns: 1fr 1fr; }
+      .notnot-inner { grid-template-columns: 1fr; }
+      .notnot-col { padding: 40px 28px; }
+      .purchase-box { padding: 36px 24px; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 540px) {
+      .systems-grid { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr; }
+    }
+
+    /* WhatsApp CTA Banner */
+    .wa-cta-banner {
+      background: var(--black);
+      padding: 48px clamp(20px, 5vw, 80px);
+      border-top: 2px solid var(--red);
+    }
+    .wa-cta-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .wa-cta-text h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .wa-cta-text p {
+      color: rgba(245,243,239,0.55);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .wa-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .wa-cta-btn:hover { background: #1da851; transform: translateY(-1px); }
+    @media (max-width: 640px) {
+      .wa-cta-inner { flex-direction: column; text-align: center; }
+      .wa-cta-btn { width: 100%; justify-content: center; }
+    }
+
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/bucher.html">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+      <li><a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-cta" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/kontakt.html">Kontakt</a>
+    <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="hero-series">Bad Day · Reihe</span>
+            <span class="hero-edition">Training-Edition</span>
+          </div>
+          <h1 class="hero-title">Bad<br><em>Day.</em></h1>
+          <p class="hero-lead">25 Systeme für den Tag an dem du nicht trainieren willst – aber trotzdem gehst. Kein Motivationstext. Kein Trainingsplan. Nur konkrete Handgriffe – geordnet nach dem, was dich gerade blockiert.</p>
+          <div class="hero-cta-group">
+            <a href="https://payhip.com/b/g01LG" class="btn-buy" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="Cover_Training_Edition.webp" alt="Bad Day Training-Edition – 25 Systeme für schlechte Tage beim Training von Richard Kerschbaumer" class="hero-cover-img" width="360" height="480" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+    </header>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar" role="region" aria-label="Kennzahlen">
+      <div class="stats-bar-inner">
+        <div class="stat-item"><span class="stat-num">25</span><span class="stat-label">Systeme</span></div>
+        <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Kategorien</span></div>
+        <div class="stat-item"><span class="stat-num">34</span><span class="stat-label">Seiten</span></div>
+        <div class="stat-item"><span class="stat-num">PDF</span><span class="stat-label">Sofort-Download</span></div>
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section class="problem-section" aria-labelledby="problem-heading">
+      <div class="problem-inner">
+        <div class="problem-content">
+          <span class="red-rule"></span>
+          <span class="section-label">Das Problem</span>
+          <h2 id="problem-heading">Beim Training<br>scheitert niemand<br>am Plan.</h2>
+          <p>An einem guten Tag gehst du einfach los. Du trainierst, du ziehst durch, du kommst besser raus als du reingegangen bist. Kein Problem.</p>
+          <p>Aber dann kommt der Tag an dem du seit einer Stunde mit dir diskutierst. Wo sich alles zu groß anfühlt. Wo du weißt, dass du gehen solltest – und trotzdem auf dem Sofa klebst.</p>
+          <p>Motivation hilft da nicht. Und ein neuer Trainingsplan auch nicht. Was hilft: ein System das kleiner ist als der Widerstand.</p>
+        </div>
+        <ul class="problem-list" role="list">
+          <li>Du diskutierst seit einer Stunde ob du heute trainierst</li>
+          <li>Training fühlt sich riesig an obwohl du weißt es sind nur 30 Minuten</li>
+          <li>Du fängst an aber hörst nach 5 Minuten auf</li>
+          <li>Du warst tagelang raus und der Wiedereinstieg fühlt sich unmöglich an</li>
+          <li>Du siehst keinen Fortschritt und fragst dich warum du überhaupt gehst</li>
+          <li>Du willst nicht gesehen werden im Gym</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SYSTEMS OVERVIEW -->
+    <section class="systems-section" aria-labelledby="systems-heading">
+      <div class="systems-inner">
+        <div class="systems-header">
+          <span class="red-rule"></span>
+          <span class="section-label">Was drin ist</span>
+          <h2 id="systems-heading">25 Systeme.<br>5 Kategorien.</h2>
+          <p>Jedes System hat einen Mindeststandard – das Minimum das zählt. Alles darüber ist Bonus.</p>
+        </div>
+        <div class="systems-grid">
+          <div class="system-cat system-cat-accent">
+            <div class="system-cat-num">01</div>
+            <div class="system-cat-title">Losgehen</div>
+            <ul class="system-cat-items" role="list">
+              <li>Startschuss-Fake</li><li>Zehn-Sekunden-Raub</li><li>Körper-Zuerst</li><li>Tier-Modus</li><li>Körper-Inventur</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">02</div>
+            <div class="system-cat-title">Kleinmachen</div>
+            <ul class="system-cat-items" role="list">
+              <li>Witz-Einheit</li><li>Einser-Ding</li><li>Streich-Liste</li><li>Schrumpf-Maschine</li><li>Countdown-Training</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">03</div>
+            <div class="system-cat-title">Dranbleiben</div>
+            <ul class="system-cat-items" role="list">
+              <li>Partner-Phantasie</li><li>Selbst-Kommentar</li><li>Musik-Kette</li><li>Zeitlupen-Modus</li><li>Letztes-Geschenk</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">04</div>
+            <div class="system-cat-title">Weitermachen</div>
+            <ul class="system-cat-items" role="list">
+              <li>Fester-Tag-Anker</li><li>Strich-Kalender</li><li>Kleinster-Rückfall-Plan</li><li>Nie-Zweimal-Regel</li><li>Identitäts-Satz</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">05</div>
+            <div class="system-cat-title">Kopfsache</div>
+            <ul class="system-cat-items" role="list">
+              <li>Schlecht-Erlaubnis</li><li>Fremder-Trick</li><li>Abguck-Training</li><li>Info-Sperre</li><li>Geister-Modus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHNELL-FINDER TOOL -->
+    <section class="tool-section" id="schnell-finder" aria-labelledby="tool-heading">
+      <div class="tool-inner">
+        <div class="tool-header">
+          <span class="red-rule"></span>
+          <span class="section-label">Bad Day · Schnell-Finder</span>
+          <h2 id="tool-heading">Was blockiert dich <em>gerade?</em></h2>
+          <p>Wähle deinen Zustand. Bekomm ein System. Mach den Mindeststandard. Fertig.</p>
+        </div>
+
+        <!-- Screen 1: Zustandswahl -->
+        <div class="finder-screen active" id="finder-question">
+          <div class="finder-question">Wo hängst du gerade fest?</div>
+          <div class="finder-choices">
+            <button class="finder-btn" onclick="finderShow('losgehen')">
+              <span class="finder-icon">⚡</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich komm nicht los</div>
+                <div class="finder-desc">Diskutiere seit Ewigkeiten, fühlt sich alles riesig an.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('kleinmachen')">
+              <span class="finder-icon">🔻</span>
+              <div class="finder-text">
+                <div class="finder-label">Alles zu viel</div>
+                <div class="finder-desc">Kein Plan, keine Energie, alles fühlt sich überdimensioniert an.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('dranbleiben')">
+              <span class="finder-icon">🔄</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich will aufhören</div>
+                <div class="finder-desc">Bin mittendrin aber der Kopf will raus.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('weitermachen')">
+              <span class="finder-icon">📅</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich war raus</div>
+                <div class="finder-desc">Tagelang nichts gemacht, Wiedereinstieg fühlt sich unmöglich an.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('kopfsache')">
+              <span class="finder-icon">🧠</span>
+              <div class="finder-text">
+                <div class="finder-label">Kopf sabotiert</div>
+                <div class="finder-desc">Nicht gut genug, will nicht gesehen werden, zu viel Recherche.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Screen 2: Ergebnis -->
+        <div class="finder-screen" id="finder-result">
+          <button class="finder-back" onclick="finderBack()">← Anderer Zustand</button>
+          <div class="finder-rule"></div>
+          <div id="finder-content"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" aria-labelledby="how-heading">
+      <div class="how-inner">
+        <div class="how-header">
+          <span class="red-rule"></span>
+          <span class="section-label">So funktioniert's</span>
+          <h2 id="how-heading">Kein Nachdenken.<br>Nur wählen und machen.</h2>
+        </div>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="step-num">1</div>
+            <div class="step-title">Thema wählen</div>
+            <p class="step-desc">Losgehen, Kleinmachen, Dranbleiben, Weitermachen oder Kopfsache. Du weißt selbst wo du gerade feststeckst.</p>
+          </div>
+          <div class="how-step">
+            <div class="step-num">2</div>
+            <div class="step-title">System nehmen</div>
+            <p class="step-desc">Wenn du nicht weißt welches: nimm das erste im Thema. Kein langes Abwägen.</p>
+          </div>
+          <div class="how-step">
+            <div class="step-num">3</div>
+            <div class="step-title">Mindeststandard</div>
+            <p class="step-desc">Nur das Minimum machen. Kein Bonus, kein Perfektionismus. Was zählt steht fett da.</p>
+          </div>
+          <div class="how-step">
+            <div class="step-num">4</div>
+            <div class="step-title">Neu entscheiden</div>
+            <p class="step-desc">Danach entscheidest du: noch eins. Oder Schluss. Kein Zwang. Kein Soll.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOT / NOT -->
+    <section class="notnot-section" aria-labelledby="notnot-heading">
+      <h2 id="notnot-heading" class="sr-only">Was das ist und was nicht</h2>
+      <div class="notnot-inner">
+        <div class="notnot-col dark">
+          <h3>Das ist es nicht.</h3>
+          <ul class="notnot-list" role="list">
+            <li><span class="notnot-icon">✕</span> Kein Trainingsplan</li>
+            <li><span class="notnot-icon">✕</span> Kein 12-Wochen-Programm</li>
+            <li><span class="notnot-icon">✕</span> Keine Übungsvideos</li>
+            <li><span class="notnot-icon">✕</span> Kein &bdquo;Push through the pain&ldquo;</li>
+            <li><span class="notnot-icon">✕</span> Keine Fitness-App die du nach 3 Tagen löschst</li>
+          </ul>
+        </div>
+        <div class="notnot-col light">
+          <h3>Das ist es.</h3>
+          <ul class="notnot-list" role="list">
+            <li><span class="notnot-icon">✓</span> 25 Systeme für den Tag an dem Training unmöglich scheint</li>
+            <li><span class="notnot-icon">✓</span> Jedes System unter 2 Minuten verstanden</li>
+            <li><span class="notnot-icon">✓</span> Mindeststandard pro System – das Minimum das zählt</li>
+            <li><span class="notnot-icon">✓</span> Geordnet nach Zustand, nicht nach Muskelgruppe</li>
+            <li><span class="notnot-icon">✓</span> Für Anfänger, Wiedereinsteiger und jeden der mal feststeckt</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CROSS-SELL -->
+    <section class="crosssell-section" aria-labelledby="crosssell-heading">
+      <div class="crosssell-inner">
+        <span class="red-rule"></span>
+        <span class="section-label">Weitere Editionen</span>
+        <h2 id="crosssell-heading">Andere Tage,<br>andere Systeme.</h2>
+        <p>Die Training-Edition ist für Tage an denen du nicht trainieren willst. Für den Alltag gibt's die Starter-Edition. Für den Job die Work-Edition. Andere Kategorien, andere Systeme.</p>
+        <a href="/systeme.html" class="btn-outline">Alle Editionen ansehen →</a>
+      </div>
+    </section>
+
+    <!-- PURCHASE -->
+    <section class="purchase-section" id="kaufen" aria-labelledby="purchase-heading">
+      <div class="purchase-inner">
+        <span class="red-rule" style="margin: 0 auto 20px;"></span>
+        <h2 id="purchase-heading">Hol dir<br>das System.</h2>
+        <p>9,90 Euro. Einmalig. Kein Abo, kein Newsletter-Zwang. Du lädst die PDF runter und kannst sie sofort nutzen.</p>
+        <div class="purchase-box">
+          <div class="purchase-price">9,90 €</div>
+          <p class="purchase-price-note">Einmaliger Kauf · Sofort-Download · PDF</p>
+          <ul class="purchase-includes" role="list">
+            <li>34 Seiten PDF</li>
+            <li>25 Systeme in 5 Kategorien</li>
+            <li>Schnellauswahl nach Zustand</li>
+            <li>Mindeststandard pro System</li>
+            <li>Nur für den persönlichen Gebrauch</li>
+          </ul>
+          <a href="https://payhip.com/b/g01LG" class="btn-buy-large" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp CTA Banner -->
+    <section class="wa-cta-banner" aria-labelledby="wa-cta-heading">
+      <div class="wa-cta-inner">
+        <div class="wa-cta-text">
+          <h2 id="wa-cta-heading">Neue Systeme direkt aufs Handy.</h2>
+          <p>Kein Newsletter. Kein Spam.</p>
+        </div>
+        <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="wa-cta-btn" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp-Kanal
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <ul class="footer-links" role="list">
+      <li><a href="/impressum.html">Impressum</a></li>
+      <li><a href="/datenschutz.html">Datenschutz</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Richard Kerschbaumer. Alle Rechte vorbehalten.</div>
+  </footer>
+
+  <script>
+    // Hamburger
+    document.getElementById('hamburger').addEventListener('click', function() {
+      this.classList.toggle('open');
+      this.setAttribute('aria-expanded', this.classList.contains('open'));
+      document.getElementById('mobile-menu').classList.toggle('open');
+    });
+
+    // Schnell-Finder Data
+    var finderData = {
+      losgehen: {
+        name: 'Startschuss-Fake',
+        cat: 'Losgehen · 1/5',
+        min: '1× klatschen + aufstehen.',
+        remaining: [
+          { name: 'Zehn-Sekunden-Raub', trigger: 'Training fühlt sich riesig an' },
+          { name: 'Körper-Zuerst', trigger: 'Kopf sagt „noch nicht"' },
+          { name: 'Tier-Modus', trigger: 'Zu viel Denken, zu wenig Tun' },
+          { name: 'Körper-Inventur', trigger: 'Fühlst dich wie ein Klotz' }
+        ]
+      },
+      kleinmachen: {
+        name: 'Witz-Einheit',
+        cat: 'Kleinmachen · 1/5',
+        min: '1 Mini-Übung im Alltag einbauen.',
+        remaining: [
+          { name: 'Einser-Ding', trigger: 'Die Auswahl lähmt dich' },
+          { name: 'Streich-Liste', trigger: 'Dein Plan ist zu lang' },
+          { name: 'Schrumpf-Maschine', trigger: 'Kannst dich zu nichts aufraffen' },
+          { name: 'Countdown-Training', trigger: 'Kein Plan, keinen Plan nötig' }
+        ]
+      },
+      dranbleiben: {
+        name: 'Partner-Phantasie',
+        cat: 'Dranbleiben · 1/5',
+        min: '3× mit Phantasie-Partner wechseln.',
+        remaining: [
+          { name: 'Selbst-Kommentar', trigger: 'Innerer Monolog nervt' },
+          { name: 'Musik-Kette', trigger: 'Zählst nur noch Minuten' },
+          { name: 'Zeitlupen-Modus', trigger: 'Normales Tempo ist zu viel' },
+          { name: 'Letztes-Geschenk', trigger: 'Will aufhören' }
+        ]
+      },
+      weitermachen: {
+        name: 'Fester-Tag-Anker',
+        cat: 'Weitermachen · 1/5',
+        min: '1 festen Tag festlegen.',
+        remaining: [
+          { name: 'Strich-Kalender', trigger: 'Kein Überblick ob du dranbleibst' },
+          { name: 'Kleinster-Rückfall-Plan', trigger: 'Tagelang raus gewesen' },
+          { name: 'Nie-Zweimal-Regel', trigger: 'Einmal ausgelassen, jetzt kippt\'s' },
+          { name: 'Identitäts-Satz', trigger: 'Siehst dich nicht als Sportler' }
+        ]
+      },
+      kopfsache: {
+        name: 'Schlecht-Erlaubnis',
+        cat: 'Kopfsache · 1/5',
+        min: '1× „darf heute schlecht sein" sagen.',
+        remaining: [
+          { name: 'Fremder-Trick', trigger: 'Nicht gut genug' },
+          { name: 'Abguck-Training', trigger: 'Weißt nicht wie Übungen gehen' },
+          { name: 'Info-Sperre', trigger: 'Recherchierst statt zu starten' },
+          { name: 'Geister-Modus', trigger: 'Willst nicht gesehen werden' }
+        ]
+      }
+    };
+
+    function finderShow(key) {
+      var d = finderData[key];
+      var html =
+        '<div class="finder-system-name">' + d.name + '</div>' +
+        '<span class="finder-system-cat">' + d.cat + '</span>' +
+        '<div class="finder-min">' +
+          '<span class="finder-min-label">Mindeststandard</span>' +
+          '<span class="finder-min-value">' + d.min + '</span>' +
+        '</div>' +
+        '<div class="finder-remaining">';
+
+      for (var i = 0; i < d.remaining.length; i++) {
+        html += '<div><div class="finder-rem-item">' + d.remaining[i].name + '</div><div class="finder-rem-trigger">' + d.remaining[i].trigger + '</div></div>';
+      }
+
+      html += '</div>' +
+        '<div class="finder-upsell-sub">Das ist 1 von 25 Systemen. Jedes mit Upgrade, Stolperfalle und Erklärung. 5 Kategorien. Jedes mit Upgrade, Stolperfalle und Erklärung.</div>' +
+        '<a href="https://payhip.com/b/g01LG" target="_blank" rel="noopener noreferrer" class="finder-cta">Alle 25 holen – 9,90 €</a>' +
+        '</div>' +
+        '<button class="finder-back" onclick="finderBack()" style="margin-top:8px;">← Anderer Zustand wählen</button>';
+
+      document.getElementById('finder-content').innerHTML = html;
+      document.getElementById('finder-question').classList.remove('active');
+      document.getElementById('finder-result').classList.add('active');
+      setTimeout(function() {
+        document.getElementById('schnell-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+
+    function finderBack() {
+      document.getElementById('finder-result').classList.remove('active');
+      document.getElementById('finder-question').classList.add('active');
+      setTimeout(function() {
+        document.getElementById('schnell-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+  </script>
+</body>
+</html>
