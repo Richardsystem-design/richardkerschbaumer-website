@@ -229,4 +229,24 @@
     <priority>0.2</priority>
   </url>
 
+
+  <!-- Kern-Konzepte Artikel (Phase 1) -->
+  <url>
+    <loc>https://www.richardkerschbaumer.at/was-ist-ein-mindeststandard-und-warum-veraendert-er-alles.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/warum-systeme-funktionieren-und-motivation-nicht.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/der-schlechteste-tag-als-massstab-warum-du-fuer-mittwoch-planst-nicht-fuer-montag.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
