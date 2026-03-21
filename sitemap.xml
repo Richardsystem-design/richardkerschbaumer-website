@@ -249,4 +249,24 @@
     <priority>0.7</priority>
   </url>
 
+
+  <!-- Produktbrücken-Artikel (Phase 2) -->
+  <url>
+    <loc>https://www.richardkerschbaumer.at/gewohnheiten-aufbauen-ohne-sie-als-gewohnheiten-zu-denken.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/produktivitaet-ist-bullshit-warum-du-nur-ein-funktionierendes-minimum-brauchst.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/training-an-tagen-wo-du-nicht-trainieren-willst-das-einzige-system-das-zaehlt.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
