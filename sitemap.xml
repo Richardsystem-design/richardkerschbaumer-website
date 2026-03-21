@@ -269,4 +269,18 @@
     <priority>0.7</priority>
   </url>
 
+
+  <!-- Positionierungs-Artikel (Phase 3) -->
+  <url>
+    <loc>https://www.richardkerschbaumer.at/warum-du-kein-tracking-brauchst-und-es-trotzdem-funktioniert.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/aufhoeren-sich-selbst-zu-beluegen-ein-realitaets-check-in-5-fragen.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
