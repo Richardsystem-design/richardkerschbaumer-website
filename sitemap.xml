@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Startseite -->
   <url>
     <loc>https://www.richardkerschbaumer.at/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Hauptseiten -->
+  <url>
+    <loc>https://www.richardkerschbaumer.at/bucher.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/systeme.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -14,11 +34,12 @@
   </url>
 
   <url>
-    <loc>https://www.richardkerschbaumer.at/bucher.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.richardkerschbaumer.at/mythen-klartext.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
+  <!-- Bücher -->
   <url>
     <loc>https://www.richardkerschbaumer.at/machs-einfach.html</loc>
     <changefreq>yearly</changefreq>
@@ -31,12 +52,7 @@
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://www.richardkerschbaumer.at/systeme.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+  <!-- Systeme / Produkte -->
   <url>
     <loc>https://www.richardkerschbaumer.at/alltagssystem.html</loc>
     <changefreq>yearly</changefreq>
@@ -50,11 +66,151 @@
   </url>
 
   <url>
-    <loc>https://www.richardkerschbaumer.at/blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.richardkerschbaumer.at/bad-day-work.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.richardkerschbaumer.at/bad-day-training.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog-Artikel -->
+  <url>
+    <loc>https://www.richardkerschbaumer.at/fastenzeit-system-wartung-statt-verzicht-drama.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/umgebungs-design-warum-du-gegen-deine-kueche-immer-verlierst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/schlaf-als-fettverbrenner-warum-5-stunden-dein-system-sabotieren.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/das-disziplin-maerchen-warum-du-keine-willenskraft-brauchst-und-was-stattdessen-funktioniert.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/ziele-messie-warum-du-weniger-wollen-musst-um-mehr-zu-erreichen.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/sozialer-druck-wie-du-feierst-und-trinkst-ohne-dein-system-zu-killen.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/das-stress-essen-protokoll-warum-du-frisst-wenn-der-chef-nervt.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/meal-prep-fuer-leute-die-kochen-hassen-das-ueberlebens-system.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/die-protein-pflicht-warum-eiweiss-kein-pumper-ding-ist-sondern-dein-ueberleben-sichert.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/die-diaet-falle-warum-verzicht-dich-dicker-macht-und-wie-du-ausbrichst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/die-ich-hab-keine-zeit-luege-wie-du-mit-2-stunden-pro-woche-fit-wirts.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/das-cardio-hamsterrad-warum-eisen-fressen-schlank-macht-und-laufen-nicht.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/neat-die-unterschaetzte-waffe-gegen-fett-warum-du-nicht-joggen-musst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/light-produkte-die-lizenz-zum-fettwerden.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/biohacking-kritik-warum-du-kein-dna-kit-brauchst-wenn-du-nicht-mal-spazieren-gehst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/die-supplement-abzocke-warum-dein-urin-teurer-ist-als-dein-lebensstil.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/neujahrsvorsaetze-warum-du-am-1-januar-eigentlich-schon-verloren-hast.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/erfolgsporno-warum-dein-gehirn-dich-beluegt-waehrend-du-scrollst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.richardkerschbaumer.at/tag-1-der-selbstverarsche-warum-du-heute-garantiert-scheitern-wirst.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Rechtliches -->
   <url>
     <loc>https://www.richardkerschbaumer.at/kontakt.html</loc>
     <changefreq>yearly</changefreq>
