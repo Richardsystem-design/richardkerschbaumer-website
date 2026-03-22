@@ -6,7 +6,7 @@
 
   <!-- SEO Primary -->
   <title>Richard Kerschbaumer | Alltagssysteme, die auch ohne Motivation funktionieren</title>
-  <meta name="description" content="Kein Motivationstheater. Systeme, die auch am schlechtesten Tag funktionieren. Bad Day Editionen, Bücher und gratis Alltagstest von Richard Kerschbaumer.">
+  <meta name="description" content="Kein Motivationstheater. Systeme, die auch am schlechtesten Tag funktionieren. Bücher und gratis Alltagstest von Richard Kerschbaumer.">
   <meta name="author" content="Richard Kerschbaumer">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.richardkerschbaumer.at/">
@@ -312,8 +312,6 @@
       margin-bottom: 20px;
     }
 
-    .text-italic { font-style: italic; }
-
     .section-label {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
@@ -323,6 +321,82 @@
       color: var(--red);
       margin-bottom: 16px;
       display: block;
+    }
+
+    /* ===================== */
+    /* ABOUT                 */
+    /* ===================== */
+    .about {
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      background: var(--white);
+    }
+
+    .about-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .about h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      color: var(--black);
+    }
+
+    .about p { color: #444; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.75; }
+    .about p strong { color: var(--black); font-weight: 600; }
+
+    .about-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--red);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 12px;
+      transition: gap 0.2s;
+    }
+    .about-link:hover { gap: 14px; }
+
+    .about-quote {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px;
+      border-radius: 2px;
+    }
+
+    .about-quote::before {
+      content: '\201C';
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 8rem;
+      line-height: 0.8;
+      color: var(--red);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .about-quote blockquote {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      line-height: 1.4;
+      color: var(--white);
+      font-style: italic;
     }
 
     /* ===================== */
@@ -448,46 +522,6 @@
     }
     .btn-red-small:hover { background: var(--red-dark); }
 
-    /* Bundle card */
-    .sys-card--bundle {
-      border: 2px solid var(--red);
-    }
-    .sys-card--bundle .sys-card-title { color: var(--red); }
-
-    .sys-card-price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .sys-card-price-old {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.95rem;
-      color: rgba(245,243,239,0.3);
-      text-decoration: line-through;
-    }
-
-    .sys-card-price-new {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 1.6rem;
-      color: var(--white);
-    }
-
-    .sys-card-save {
-      display: inline-block;
-      background: var(--red);
-      color: var(--white);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 2px;
-    }
-
     /* Gratis card */
     .sys-card--gratis {
       background: #1a1a1a;
@@ -509,11 +543,31 @@
       align-self: flex-start;
     }
 
-    .systeme-bottom-row {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2px;
+    .systeme-footer {
+      margin-top: 32px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
     }
+
+    .systeme-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      border: 2px solid rgba(13,13,13,0.2);
+      padding: 14px 28px;
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+    .systeme-link:hover { border-color: var(--black); }
 
     /* ===================== */
     /* BOOKS                 */
@@ -581,131 +635,44 @@
     .book-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 
     /* ===================== */
-    /* ABOUT                 */
+    /* SLIM CLOSING          */
     /* ===================== */
-    .about {
-      padding: var(--section-pad) clamp(20px, 5vw, 80px);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      background: var(--white);
-    }
-
-    .about-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .about h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      line-height: 1;
-      text-transform: uppercase;
-      margin-bottom: 32px;
-      color: var(--black);
-    }
-
-    .about p { color: #444; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.75; }
-    .about p strong { color: var(--black); font-weight: 600; }
-
-    .about-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--red);
-      text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 12px;
-      transition: gap 0.2s;
-    }
-    .about-link:hover { gap: 14px; }
-
-    .about-quote {
-      background: var(--black);
-      color: var(--white);
-      padding: 48px;
-      border-radius: 2px;
-    }
-
-    .about-quote::before {
-      content: '\201C';
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 8rem;
-      line-height: 0.8;
-      color: var(--red);
-      display: block;
-      margin-bottom: 16px;
-    }
-
-    .about-quote blockquote {
-      font-size: clamp(1.2rem, 2vw, 1.6rem);
-      line-height: 1.4;
-      color: var(--white);
-      font-style: italic;
-    }
-
-    /* ===================== */
-    /* SLIM CLOSING CTA      */
-    /* ===================== */
-    .closing-cta {
+    .closing-section {
       background: var(--black);
       padding: clamp(48px, 6vw, 80px) clamp(20px, 5vw, 80px);
       text-align: center;
     }
 
-    .closing-cta-inner {
-      max-width: 600px;
+    .closing-inner {
+      max-width: 560px;
       margin: 0 auto;
     }
 
-    .closing-cta h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .closing-cta h2 span { color: var(--red); }
-
-    .closing-cta p {
-      color: rgba(245,243,239,0.55);
-      font-size: 1rem;
+    .closing-section p {
+      color: rgba(245,243,239,0.5);
+      font-size: 1.05rem;
       line-height: 1.7;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
-    .closing-cta-buttons {
+    .closing-links {
       display: flex;
-      gap: 16px;
+      gap: 32px;
       justify-content: center;
       flex-wrap: wrap;
     }
 
-    .closing-cta-link {
+    .closing-link {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(245,243,239,0.4);
+      color: rgba(245,243,239,0.45);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .closing-cta-link:hover { color: var(--white); }
+    .closing-link:hover { color: var(--white); }
 
     /* ===================== */
     /* FOOTER                */
@@ -772,7 +739,6 @@
       .book-card { grid-template-columns: 1fr; }
       .book-cover { width: 80px; height: 120px; }
       .systeme-grid { grid-template-columns: 1fr; }
-      .systeme-bottom-row { grid-template-columns: 1fr; }
       nav.main-nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
@@ -806,7 +772,7 @@
       <li><a href="/blog.html">Blog</a></li>
       <li><a href="/ueber-mich.html">Über mich</a></li>
       <li><a href="/kontakt.html">Kontakt</a></li>
-      <li><a href="https://payhip.com/b/AtXuR" class="nav-cta" target="_blank" rel="noopener noreferrer">Bundle – 19,90 €</a></li>
+      <li><a href="https://payhip.com/b/nW6Jx" class="nav-cta" target="_blank" rel="noopener noreferrer">Gratis Alltagstest</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
@@ -817,7 +783,7 @@
     <a href="/blog.html">Blog</a>
     <a href="/ueber-mich.html">Über mich</a>
     <a href="/kontakt.html">Kontakt</a>
-    <a href="https://payhip.com/b/AtXuR" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">Bundle – 19,90 €</a>
+    <a href="https://payhip.com/b/nW6Jx" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">Gratis Alltagstest</a>
   </div>
 
   <main id="main-content">
@@ -841,9 +807,30 @@
     </section>
 
     <!-- ==================== -->
-    <!-- 2. SYSTEME-BLOCK     -->
+    <!-- 2. ABOUT             -->
     <!-- ==================== -->
     <div class="section-divider-dark" aria-hidden="true"></div>
+    <section class="about" id="ueber-mich" aria-labelledby="about-heading">
+      <div class="about-text">
+        <span class="red-rule" aria-hidden="true"></span><span class="about-label">Wer schreibt hier eigentlich?</span>
+        <h2 id="about-heading">Kein Coach.<br>Kein Anzug.<br>Kein Flipchart.</h2>
+        <p>Ich bin Richard – seit 15 Jahren selbstständig, mit allem was dazugehört.</p>
+        <p>Ich komme täglich zu Menschen nach Hause. Ich höre zu. Ich höre von der Arbeit die nervt, von Diäten die nicht funktionieren, von Vorsätzen die drei Tage halten.</p>
+        <p>Irgendwann habe ich aufgehört zuzuhören und angefangen aufzuschreiben. Weil die Probleme immer dieselben sind – und die Lösungen meistens viel einfacher, als die Ratgeber-Industrie dir weismachen will.</p>
+        <p><strong>Keine Motivationssprüche. Keine 90-Tage-Programme. Systeme, die auch funktionieren wenn du keinen Bock hast.</strong></p>
+        <a href="/ueber-mich.html" class="about-link">Mehr über mich →</a>
+      </div>
+      <div class="about-visual" aria-hidden="true">
+        <div class="about-quote">
+          <blockquote>Systeme schlagen Motivation. Immer. Auch am Dienstag um 19 Uhr nach einem beschissenen Tag.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- 3. SYSTEME           -->
+    <!-- ==================== -->
+    <div class="section-divider-light" aria-hidden="true"></div>
     <section class="systeme-section" id="systeme" aria-labelledby="systeme-heading">
       <div class="systeme-header">
         <span class="red-rule" aria-hidden="true"></span>
@@ -852,18 +839,17 @@
         <p>25 konkrete Handgriffe pro Edition. Geordnet nach Zustand, nicht nach Motivation. Jedes System hat einen Mindeststandard – das Minimum das zählt.</p>
       </div>
 
-      <!-- 3 Editions row -->
       <div class="systeme-grid">
+
         <div class="sys-card">
           <span class="sys-card-label">Starter-Edition</span>
           <h3 class="sys-card-title">Alltag</h3>
           <p class="sys-card-desc">Start, Fokus, Stress, Essen, Energie – für den Tag an dem nichts geht.</p>
           <div class="sys-card-meta">
-            <span>25 Systeme</span><span>9,90 €</span>
+            <span>25 Systeme</span>
           </div>
           <div class="sys-card-buttons">
             <a href="/bad-day.html" class="btn-outline-small">Mehr erfahren →</a>
-            <a href="https://payhip.com/b/6EaOK" class="btn-red-small" target="_blank" rel="noopener noreferrer">Kaufen</a>
           </div>
         </div>
 
@@ -872,11 +858,10 @@
           <h3 class="sys-card-title">Job</h3>
           <p class="sys-card-desc">Start, Fokus, Druck, Energie, Feierabend – für den Arbeitstag der dich blockiert.</p>
           <div class="sys-card-meta">
-            <span>25 Systeme</span><span>9,90 €</span>
+            <span>25 Systeme</span>
           </div>
           <div class="sys-card-buttons">
             <a href="/bad-day-work.html" class="btn-outline-small">Mehr erfahren →</a>
-            <a href="https://payhip.com/b/hSmJj" class="btn-red-small" target="_blank" rel="noopener noreferrer">Kaufen</a>
           </div>
         </div>
 
@@ -885,46 +870,35 @@
           <h3 class="sys-card-title">Training</h3>
           <p class="sys-card-desc">Losgehen, Kleinmachen, Dranbleiben, Weitermachen, Kopfsache – für den Tag an dem du nicht trainieren willst.</p>
           <div class="sys-card-meta">
-            <span>25 Systeme</span><span>9,90 €</span>
+            <span>25 Systeme</span>
           </div>
           <div class="sys-card-buttons">
             <a href="/bad-day-training.html" class="btn-outline-small">Mehr erfahren →</a>
-            <a href="https://payhip.com/b/g01LG" class="btn-red-small" target="_blank" rel="noopener noreferrer">Kaufen</a>
           </div>
         </div>
+
       </div>
 
-      <!-- Bottom row: Bundle (2/3) + Alltagstest gratis (1/3) -->
-      <div class="systeme-bottom-row">
-        <div class="sys-card sys-card--bundle">
-          <span class="sys-card-label">Bad Day · Bundle</span>
-          <h3 class="sys-card-title">Alle drei Editionen</h3>
-          <p class="sys-card-desc">75 Systeme. 15 Kategorien. Drei PDFs, sofort runtergeladen. Kein Abo, kein Upsell.</p>
-          <div class="sys-card-price-row">
-            <span class="sys-card-price-old">29,70 €</span>
-            <span class="sys-card-price-new">19,90 €</span>
-            <span class="sys-card-save">Spare 9,80 €</span>
-          </div>
-          <div class="sys-card-buttons">
-            <a href="/bad-day-bundle.html" class="btn-outline-small">Details →</a>
-            <a href="https://payhip.com/b/AtXuR" class="btn-red-small" target="_blank" rel="noopener noreferrer">Bundle kaufen</a>
-          </div>
-        </div>
-
-        <div class="sys-card sys-card--gratis">
+      <!-- Gratis Einstieg -->
+      <div style="margin-top: 2px;">
+        <div class="sys-card sys-card--gratis" style="max-width: 400px;">
           <span class="sys-card-label">Zum Ausprobieren</span>
           <span class="gratis-badge">Gratis</span>
-          <h3 class="sys-card-title" style="font-size:1.4rem;">4-Wochen-Alltagstest</h3>
+          <h3 class="sys-card-title" style="font-size: 1.4rem;">4-Wochen-Alltagstest</h3>
           <p class="sys-card-desc">4 Mini-Systeme testen. Du behältst das einzige das funktioniert.</p>
           <div class="sys-card-buttons">
             <a href="https://payhip.com/b/nW6Jx" class="btn-outline-small" target="_blank" rel="noopener noreferrer">Gratis holen →</a>
           </div>
         </div>
       </div>
+
+      <div class="systeme-footer">
+        <a href="/systeme.html" class="systeme-link">Alle Systeme ansehen →</a>
+      </div>
     </section>
 
     <!-- ==================== -->
-    <!-- 3. BÜCHER            -->
+    <!-- 4. BÜCHER            -->
     <!-- ==================== -->
     <div class="section-divider-light" aria-hidden="true"></div>
     <section class="products" id="buecher" aria-labelledby="books-heading">
@@ -964,40 +938,16 @@
     </section>
 
     <!-- ==================== -->
-    <!-- 4. ABOUT             -->
+    <!-- 5. SCHLUSS            -->
     <!-- ==================== -->
     <div class="section-divider-mid" aria-hidden="true"></div>
-    <section class="about" id="ueber-mich" aria-labelledby="about-heading">
-      <div class="about-text">
-        <span class="red-rule" aria-hidden="true"></span><span class="about-label">Wer schreibt hier eigentlich?</span>
-        <h2 id="about-heading">Kein Coach.<br>Kein Anzug.<br>Kein Flipchart.</h2>
-        <p>Ich bin Richard – seit 15 Jahren selbstständig, mit allem was dazugehört.</p>
-        <p>Ich komme täglich zu Menschen nach Hause. Ich höre zu. Ich höre von der Arbeit die nervt, von Diäten die nicht funktionieren, von Vorsätzen die drei Tage halten.</p>
-        <p>Irgendwann habe ich aufgehört zuzuhören und angefangen aufzuschreiben. Weil die Probleme immer dieselben sind – und die Lösungen meistens viel einfacher, als die Ratgeber-Industrie dir weismachen will.</p>
-        <p><strong>Keine Motivationssprüche. Keine 90-Tage-Programme. Systeme, die auch funktionieren wenn du keinen Bock hast.</strong></p>
-        <a href="/ueber-mich.html" class="about-link">Mehr über mich →</a>
-      </div>
-      <div class="about-visual" aria-hidden="true">
-        <div class="about-quote">
-          <blockquote>Systeme schlagen Motivation. Immer. Auch am Dienstag um 19 Uhr nach einem beschissenen Tag.</blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== -->
-    <!-- 5. SLIM CLOSING CTA  -->
-    <!-- ==================== -->
-    <div class="section-divider-light" aria-hidden="true"></div>
-    <section class="closing-cta" aria-labelledby="closing-heading">
-      <div class="closing-cta-inner">
-        <span class="red-rule" style="margin: 0 auto 20px;" aria-hidden="true"></span>
-        <h2 id="closing-heading">75 Systeme.<br><span>Ein Preis.</span></h2>
-        <p>Drei Editionen. Alltag, Arbeit, Training. Sofort-Download, kein Abo.</p>
-        <div class="closing-cta-buttons">
-          <a href="https://payhip.com/b/AtXuR" class="btn-primary" target="_blank" rel="noopener noreferrer">Bundle holen – 19,90 €</a>
-        </div>
-        <div style="margin-top: 20px;">
-          <a href="/systeme.html" class="closing-cta-link">Oder einzelne Editionen ansehen →</a>
+    <section class="closing-section">
+      <div class="closing-inner">
+        <p>Du willst nichts kaufen? Kein Problem. Hier gibt es genug zu lesen – kostenlos, ohne Anmeldung.</p>
+        <div class="closing-links">
+          <a href="/blog.html" class="closing-link">Blog →</a>
+          <a href="/mythen-klartext.html" class="closing-link">Mythen &amp; Klartext →</a>
+          <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="closing-link" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal →</a>
         </div>
       </div>
     </section>
