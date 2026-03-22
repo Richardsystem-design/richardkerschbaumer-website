@@ -19,18 +19,34 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Bad Day Bundle – Alle 3 Editionen",
-    "description": "75 konkrete Systeme für schlechte Tage. Starter-Edition, Work-Edition und Training-Edition als Komplettpaket.",
-    "url": "https://www.richardkerschbaumer.at/bad-day-bundle.html",
-    "brand": { "@type": "Brand", "name": "Richard Kerschbaumer" },
-    "offers": {
-      "@type": "Offer",
-      "price": "19.90",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock",
-      "url": "https://www.richardkerschbaumer.at/bad-day-bundle.html"
-    }
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://www.richardkerschbaumer.at/bad-day-bundle.html#product",
+        "name": "Bad Day Bundle – Alle 3 Editionen",
+        "description": "75 konkrete Systeme für schlechte Tage. Starter-Edition, Work-Edition und Training-Edition als Komplettpaket. 3 PDFs, sofort nutzbar.",
+        "image": "https://www.richardkerschbaumer.at/bad-day-cover.webp",
+        "url": "https://www.richardkerschbaumer.at/bad-day-bundle.html",
+        "brand": { "@type": "Brand", "name": "Richard Kerschbaumer" },
+        "author": { "@type": "Person", "name": "Richard Kerschbaumer", "url": "https://www.richardkerschbaumer.at" },
+        "offers": {
+          "@type": "Offer",
+          "price": "19.90",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2027-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://payhip.com/b/AtXuR"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.richardkerschbaumer.at/" },
+          { "@type": "ListItem", "position": 2, "name": "Systeme", "item": "https://www.richardkerschbaumer.at/systeme.html" },
+          { "@type": "ListItem", "position": 3, "name": "Bad Day Bundle", "item": "https://www.richardkerschbaumer.at/bad-day-bundle.html" }
+        ]
+      }
+    ]
   }
   </script>
 
