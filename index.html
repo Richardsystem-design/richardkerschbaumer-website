@@ -304,6 +304,13 @@
       margin-bottom: -2px;
     }
 
+    .section-divider-dark-reverse {
+      height: 60px;
+      background: #111;
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+      margin-bottom: -2px;
+    }
+
     .red-rule {
       display: block;
       width: 48px;
@@ -327,7 +334,7 @@
     /* ABOUT                 */
     /* ===================== */
     .about {
-      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px) clamp(32px, 4vw, 60px);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
@@ -404,7 +411,7 @@
     /* ===================== */
     .systeme-section {
       background: var(--white);
-      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+      padding: clamp(32px, 4vw, 60px) clamp(20px, 5vw, 80px) var(--section-pad);
     }
 
     .systeme-header {
@@ -462,7 +469,7 @@
       font-weight: 900;
       font-size: 1.8rem;
       text-transform: uppercase;
-      color: var(--white);
+      color: var(--red);
       line-height: 1;
     }
 
@@ -531,8 +538,8 @@
 
     .gratis-badge {
       display: inline-block;
-      background: rgba(245,243,239,0.1);
-      color: rgba(245,243,239,0.6);
+      background: rgba(37,211,102,0.15);
+      color: #25D366;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
       font-size: 0.7rem;
@@ -818,7 +825,6 @@
         <p>Ich komme täglich zu Menschen nach Hause. Ich höre zu. Ich höre von der Arbeit die nervt, von Diäten die nicht funktionieren, von Vorsätzen die drei Tage halten.</p>
         <p>Irgendwann habe ich aufgehört zuzuhören und angefangen aufzuschreiben. Weil die Probleme immer dieselben sind – und die Lösungen meistens viel einfacher, als die Ratgeber-Industrie dir weismachen will.</p>
         <p><strong>Keine Motivationssprüche. Keine 90-Tage-Programme. Systeme, die auch funktionieren wenn du keinen Bock hast.</strong></p>
-        <a href="/ueber-mich.html" class="about-link">Mehr über mich →</a>
       </div>
       <div class="about-visual" aria-hidden="true">
         <div class="about-quote">
@@ -830,7 +836,6 @@
     <!-- ==================== -->
     <!-- 3. SYSTEME           -->
     <!-- ==================== -->
-    <div class="section-divider-light" aria-hidden="true"></div>
     <section class="systeme-section" id="systeme" aria-labelledby="systeme-heading">
       <div class="systeme-header">
         <span class="red-rule" aria-hidden="true"></span>
@@ -900,7 +905,7 @@
     <!-- ==================== -->
     <!-- 4. BÜCHER            -->
     <!-- ==================== -->
-    <div class="section-divider-light" aria-hidden="true"></div>
+    <div class="section-divider-dark-reverse" aria-hidden="true"></div>
     <section class="products" id="buecher" aria-labelledby="books-heading">
       <div class="section-header">
         <span class="red-rule" aria-hidden="true"></span><span class="section-label">Die Bücher dahinter</span>
@@ -947,7 +952,6 @@
         <div class="closing-links">
           <a href="/blog.html" class="closing-link">Blog →</a>
           <a href="/mythen-klartext.html" class="closing-link">Mythen &amp; Klartext →</a>
-          <a href="https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D" class="closing-link" target="_blank" rel="noopener noreferrer">WhatsApp-Kanal →</a>
         </div>
       </div>
     </section>
