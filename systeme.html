@@ -23,6 +23,19 @@
     @font-face { font-family: 'Barlow'; font-style: italic; font-weight: 400; font-display: swap; src: url('/fonts/barlow-v13-latin-italic.woff2') format('woff2'); }
     @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-v13-latin-500.woff2') format('woff2'); }
     @font-face { font-family: 'Barlow'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-v13-latin-600.woff2') format('woff2'); }
+
+    /* Bundle Card */
+    .product-card.bundle { background: var(--black); border: 2px solid var(--red); grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 32px; }
+    .bundle-card-left { display: flex; flex-direction: column; gap: 14px; }
+    .bundle-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; padding-top: 4px; flex-shrink: 0; }
+    .bundle-card-price-stack { text-align: right; }
+    .bundle-card-old { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; color: rgba(245,243,239,0.3); text-decoration: line-through; display: block; }
+    .bundle-card-new { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.8rem; color: var(--white); line-height: 1; display: block; }
+    .bundle-card-save { display: inline-block; background: var(--red); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em; padding: 3px 8px; border-radius: 2px; margin-top: 6px; }
+    .bundle-card-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn-bundle { display: inline-block; background: var(--red); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 12px 22px; border-radius: 2px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .btn-bundle:hover { background: var(--red-dark); }
+    @media (max-width: 700px) { .product-card.bundle { grid-template-columns: 1fr; } .bundle-card-right { align-items: flex-start; } .bundle-card-price-stack { text-align: left; } .bundle-card-btns { justify-content: flex-start; } }
   </style>
 <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -301,6 +314,33 @@
             <div class="product-buttons">
               <a href="/bad-day-training.html" class="btn-detail">Mehr erfahren</a>
               <a href="https://payhip.com/b/g01LG" class="btn-primary" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bad Day Bundle -->
+        <div class="product-card bundle">
+          <div class="bundle-card-left">
+            <span class="product-badge" style="color:var(--red);">Bundle · 3 Editionen · PDF</span>
+            <h2 class="product-title">Bad Day<br>Bundle</h2>
+            <p class="product-subtitle">Starter + Work + Training in einem Paket</p>
+            <p class="product-desc">Alle drei Editionen. 75 Systeme für schlechte Tage – im Alltag, im Job, beim Training. Drei PDFs, sofort runtergeladen. Kein Abo, kein Upsell, kein „für nur 49€ mehr bekommst du auch noch“.</p>
+            <div class="product-tags">
+              <span class="product-tag">75 Systeme</span>
+              <span class="product-tag">3 Editionen</span>
+              <span class="product-tag">102 Seiten</span>
+              <span class="product-tag">Sofort nutzbar</span>
+            </div>
+          </div>
+          <div class="bundle-card-right">
+            <div class="bundle-card-price-stack">
+              <span class="bundle-card-old">29,70 €</span>
+              <span class="bundle-card-new">19,90 €</span>
+              <span class="bundle-card-save">–9,80 €</span>
+            </div>
+            <div class="bundle-card-btns">
+              <a href="/bad-day-bundle.html" class="btn-detail">Mehr erfahren</a>
+              <a href="https://payhip.com/b/AtXuR" class="btn-bundle" target="_blank" rel="noopener noreferrer">Jetzt kaufen</a>
             </div>
           </div>
         </div>

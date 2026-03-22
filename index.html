@@ -748,6 +748,22 @@
     @media (max-width: 600px) {
       .bad-day-editions { grid-template-columns: 1fr; }
     }
+
+    /* Homepage Bundle Strip */
+    .bundle-strip { background: var(--black); padding: 48px clamp(20px,5vw,80px); }
+    .bundle-strip-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .bundle-strip-left { display: flex; flex-direction: column; gap: 10px; }
+    .bundle-strip-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--red); }
+    .bundle-strip-headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 3.5vw, 2.6rem); text-transform: uppercase; color: var(--white); line-height: 1; }
+    .bundle-strip-headline span { color: var(--red); }
+    .bundle-strip-sub { font-size: 0.9rem; color: rgba(245,243,239,0.45); line-height: 1.6; max-width: 400px; }
+    .bundle-strip-right { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
+    .bundle-strip-price { text-align: right; }
+    .bundle-strip-old { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; color: rgba(245,243,239,0.3); text-decoration: line-through; display: block; }
+    .bundle-strip-new { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--white); line-height: 1; display: block; }
+    .bundle-strip-btn { display: inline-block; background: var(--red); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 13px 24px; border-radius: 2px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .bundle-strip-btn:hover { background: var(--red-dark); }
+    @media (max-width: 600px) { .bundle-strip-inner { flex-direction: column; align-items: flex-start; } .bundle-strip-right { flex-direction: column; align-items: flex-start; } .bundle-strip-price { text-align: left; } }
   </style>
 </head>
 <body>
@@ -790,6 +806,24 @@
       </div>
       <div class="hero-image">
         <img src="richard-foto-sm.webp" srcset="richard-foto-sm.webp 420w, richard-foto-md.webp 825w" sizes="(max-width:600px) 280px, 420px" alt="Richard Kerschbaumer, Autor aus Österreich" width="420" height="521" fetchpriority="high" decoding="async">
+      </div>
+    </section>
+
+        <!-- Bundle Strip -->
+    <section class="bundle-strip" aria-label="Bad Day Bundle">
+      <div class="bundle-strip-inner">
+        <div class="bundle-strip-left">
+          <span class="bundle-strip-eyebrow">Alle 3 Editionen · Bundle</span>
+          <div class="bundle-strip-headline">75 Systeme.<br><span>Ein Preis.</span></div>
+          <p class="bundle-strip-sub">Starter + Work + Training. 9,80&nbsp;€ günstiger als Einzelkauf. Einmal kaufen, sofort nutzen.</p>
+        </div>
+        <div class="bundle-strip-right">
+          <div class="bundle-strip-price">
+            <span class="bundle-strip-old">29,70&nbsp;€</span>
+            <span class="bundle-strip-new">19,90&nbsp;€</span>
+          </div>
+          <a href="/bad-day-bundle.html" class="bundle-strip-btn">Bundle ansehen →</a>
+        </div>
       </div>
     </section>
 
