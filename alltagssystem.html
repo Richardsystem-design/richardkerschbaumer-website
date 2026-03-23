@@ -70,21 +70,8 @@
     .hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.4vw,1.2rem); line-height: 1.85; max-width: 520px; margin-bottom: 48px; }
     .btn-buy { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 18px 36px; border-radius: 2px; transition: background 0.2s; }
     .btn-buy:hover { background: var(--red-dark); }
-    .hero-visual { display: flex; justify-content: center; }
-    .pdf-mockup { width: 100%; max-width: 280px; background: var(--white); position: relative; box-shadow: -16px 16px 40px rgba(0,0,0,0.5); }
-    .pdf-mockup-top { background: var(--black); padding: 28px 24px 20px; border-bottom: 3px solid var(--red); }
-    .pdf-mockup-overline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,243,239,0.35); display: block; margin-bottom: 10px; }
-    .pdf-mockup-tagline { font-family: 'Barlow', sans-serif; font-size: 0.78rem; color: rgba(245,243,239,0.4); margin-bottom: 16px; font-style: italic; }
-    .pdf-mockup-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; line-height: 0.9; text-transform: uppercase; color: var(--white); }
-    .pdf-mockup-body { padding: 20px 24px; }
-    .pdf-mockup-desc { font-size: 0.8rem; color: #555; line-height: 1.6; margin-bottom: 16px; }
-    .pdf-mockup-items { list-style: none; }
-    .pdf-mockup-items li { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--black); padding: 7px 0; border-bottom: 1px solid rgba(13,13,13,0.07); display: flex; gap: 10px; align-items: center; }
-    .pdf-mockup-items li:last-child { border-bottom: none; }
-    .pdf-mockup-items li::before { content: ''; display: block; width: 5px; height: 5px; background: var(--red); flex-shrink: 0; }
-    .pdf-mockup-footer { background: #f0ede7; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
-    .pdf-mockup-meta { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
-    .pdf-mockup-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--black); }
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
+    .hero-cover-img { width: 100%; max-width: 340px; height: auto; filter: drop-shadow(-16px 16px 40px rgba(0,0,0,0.5)); }
 
     /* STATS */
     .stats-bar { background: var(--red); padding: 0 clamp(20px,5vw,80px); }
@@ -159,7 +146,8 @@
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-      .hero-visual { display: none; }
+      .hero-visual { display: flex; justify-content: center; order: -1; }
+      .hero-cover-img { max-width: 240px; }
       .stats-bar-inner { flex-wrap: wrap; }
       .stat-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(245,243,239,0.1); }
       .konzept-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -214,25 +202,7 @@
           <a href="https://payhip.com/b/nW6Jx" class="btn-buy" target="_blank" rel="noopener noreferrer">Gratis holen — PDF per E-Mail</a>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="pdf-mockup">
-            <div class="pdf-mockup-top">
-              <span class="pdf-mockup-overline">Richard Kerschbaumer</span>
-              <p class="pdf-mockup-tagline">3 Systeme. 0 Ausreden.</p>
-              <div class="pdf-mockup-title">Bad Day<br>Zero-<br>Edition</div>
-            </div>
-            <div class="pdf-mockup-body">
-              <p class="pdf-mockup-desc">3 Handgriffe für Tage an denen nichts geht.</p>
-              <ul class="pdf-mockup-items" role="list">
-                <li>Der Erste Griff</li>
-                <li>Der Schlussstrich</li>
-                <li>Der Mini-Reset</li>
-              </ul>
-            </div>
-            <div class="pdf-mockup-footer">
-              <span class="pdf-mockup-meta">7 Seiten · PDF</span>
-              <span class="pdf-mockup-price">Gratis</span>
-            </div>
-          </div>
+          <img src="zero-edition-cover.webp" alt="Bad Day Zero-Edition Cover" class="hero-cover-img" width="400" height="400" fetchpriority="high" decoding="async">
         </div>
       </div>
     </header>
