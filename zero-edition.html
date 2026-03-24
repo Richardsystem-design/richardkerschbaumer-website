@@ -313,40 +313,6 @@
     </section>
 
     <style>
-      .signup-form { display: flex; gap: 0; max-width: 480px; margin: 0 auto; }
-      .signup-input {
-        flex: 1;
-        font-family: 'Barlow', sans-serif;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 18px 20px;
-        border: 2px solid rgba(245,243,239,0.15);
-        border-right: none;
-        border-radius: 2px 0 0 2px;
-        background: rgba(245,243,239,0.06);
-        color: var(--white);
-        outline: none;
-        transition: border-color 0.2s;
-      }
-      .signup-input::placeholder { color: rgba(245,243,239,0.3); }
-      .signup-input:focus { border-color: var(--red); background: rgba(245,243,239,0.08); }
-      .signup-btn {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 800;
-        font-size: 1rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        background: var(--red);
-        color: var(--white);
-        border: 2px solid var(--red);
-        border-radius: 0 2px 2px 0;
-        padding: 18px 28px;
-        cursor: pointer;
-        transition: background 0.2s;
-        white-space: nowrap;
-      }
-      .signup-btn:hover { background: var(--red-dark); border-color: var(--red-dark); }
-      .signup-btn:disabled { opacity: 0.6; cursor: not-allowed; }
       .signup-note {
         font-size: 0.82rem;
         color: rgba(245,243,239,0.3);
@@ -355,37 +321,6 @@
       }
       .signup-note a { color: rgba(245,243,239,0.4); text-decoration: underline; }
       .signup-note a:hover { color: rgba(245,243,239,0.6); }
-      .signup-success {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 700;
-        font-size: 1.1rem;
-        letter-spacing: 0.05em;
-        text-align: center;
-        padding: 22px 24px;
-        border-radius: 2px;
-        background: rgba(42,157,42,0.1);
-        color: #4ade80;
-        border: 1px solid rgba(42,157,42,0.2);
-        display: none;
-      }
-      .signup-error-msg {
-        font-family: 'Barlow', sans-serif;
-        font-size: 0.88rem;
-        color: #f87171;
-        text-align: center;
-        margin-bottom: 12px;
-        display: none;
-      }
-      @media (max-width: 540px) {
-        .signup-form { flex-direction: column; }
-        .signup-input {
-          border-right: 2px solid rgba(245,243,239,0.15);
-          border-radius: 2px 2px 0 0;
-          border-bottom: none;
-        }
-        .signup-input:focus { border-color: var(--red); }
-        .signup-btn { border-radius: 0 0 2px 2px; }
-      }
     </style>
 
     <section class="purchase-section" id="kaufen" aria-labelledby="purchase-heading">
@@ -403,23 +338,9 @@
             <li>Sofort nutzbar – kein Vorbereiten nötig</li>
           </ul>
 
-          <div id="zero-signup">
-            <p id="zero-error" class="signup-error-msg" role="alert"></p>
-            <div class="signup-form" id="zero-form-wrapper">
-              <input type="email" id="zero-email" class="signup-input" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" autocomplete="email">
-              <button type="button" class="signup-btn" id="zero-submit">PDF holen</button>
-            </div>
-            <p class="signup-note">Kein Spam. Kein Abo. Jederzeit abmelden. <a href="/datenschutz.html">Datenschutz</a></p>
-          </div>
-
-          <div id="zero-success" class="signup-success" role="status">
-            ✓ Check dein Postfach — die Zero-Edition ist unterwegs.
-          </div>
-
-          <!-- MailerLite Embed (versteckt, wird programmatisch befuellt) -->
-          <div id="ml-hidden-form" style="position:absolute;left:-9999px;height:0;overflow:hidden;opacity:0;pointer-events:none;" aria-hidden="true">
-            <div class="ml-embedded" data-form="n6SBeX"></div>
-          </div>
+          <!-- MailerLite Formular -->
+          <div class="ml-embedded" data-form="n6SBeX"></div>
+          <p class="signup-note">Kein Spam. Kein Abo. Jederzeit abmelden. <a href="/datenschutz.html">Datenschutz</a></p>
 
         </div>
       </div>
@@ -434,69 +355,54 @@
     ml('account', '2212016');
     </script>
 
-    <script>
-    (function() {
-      var emailEl   = document.getElementById('zero-email');
-      var btnEl     = document.getElementById('zero-submit');
-      var wrapperEl = document.getElementById('zero-signup');
-      var successEl = document.getElementById('zero-success');
-      var errorEl   = document.getElementById('zero-error');
-
-      btnEl.addEventListener('click', function() {
-        var email = emailEl.value.trim();
-        errorEl.style.display = 'none';
-
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          errorEl.textContent = 'Bitte gib eine gueltige E-Mail-Adresse ein.';
-          errorEl.style.display = 'block';
-          emailEl.focus();
-          return;
-        }
-
-        btnEl.disabled = true;
-        btnEl.textContent = '...';
-
-        // MailerLite Embed-Form finden und programmatisch absenden
-        var attempts = 0;
-        var trySubmit = function() {
-          var mlForm = document.querySelector('#ml-hidden-form form');
-          var mlInput = document.querySelector('#ml-hidden-form input[type="email"]');
-          var mlBtn = document.querySelector('#ml-hidden-form button[type="submit"], #ml-hidden-form input[type="submit"]');
-
-          if (mlInput && (mlBtn || mlForm)) {
-            mlInput.value = email;
-            mlInput.dispatchEvent(new Event('input', { bubbles: true }));
-            mlInput.dispatchEvent(new Event('change', { bubbles: true }));
-
-            if (mlBtn) {
-              mlBtn.click();
-            } else if (mlForm) {
-              mlForm.submit();
-            }
-
-            setTimeout(function() {
-              wrapperEl.style.display = 'none';
-              successEl.style.display = 'block';
-            }, 1500);
-          } else if (attempts < 20) {
-            attempts++;
-            setTimeout(trySubmit, 500);
-          } else {
-            // Fallback: ML Form nicht geladen, direkt Erfolg zeigen
-            wrapperEl.style.display = 'none';
-            successEl.style.display = 'block';
-          }
-        };
-
-        trySubmit();
-      });
-
-      // Enter-Taste im Input
-      emailEl.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') { btnEl.click(); }
-      });
-    })();
-    </script>
+    <!-- ML Form Styling Override -->
+    <style>
+      .purchase-box .ml-embedded { max-width: 480px; margin: 0 auto; }
+      .purchase-box .ml-embedded .ml-form-embedWrapper { background: transparent !important; border: none !important; padding: 0 !important; }
+      .purchase-box .ml-embedded .ml-form-embedBody { padding: 0 !important; }
+      .purchase-box .ml-embedded .ml-form-fieldRow input[type="email"] {
+        font-family: 'Barlow', sans-serif !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+        padding: 18px 20px !important;
+        border: 2px solid rgba(245,243,239,0.15) !important;
+        border-radius: 2px !important;
+        background: rgba(245,243,239,0.06) !important;
+        color: #fff !important;
+        height: auto !important;
+      }
+      .purchase-box .ml-embedded .ml-form-fieldRow input[type="email"]::placeholder {
+        color: rgba(245,243,239,0.3) !important;
+      }
+      .purchase-box .ml-embedded .ml-form-fieldRow input[type="email"]:focus {
+        border-color: var(--red) !important;
+        background: rgba(245,243,239,0.08) !important;
+      }
+      .purchase-box .ml-embedded button[type="submit"],
+      .purchase-box .ml-embedded .ml-form-button button {
+        font-family: 'Barlow Condensed', sans-serif !important;
+        font-weight: 800 !important;
+        font-size: 1rem !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        background: var(--red) !important;
+        color: #fff !important;
+        border: none !important;
+        border-radius: 2px !important;
+        padding: 18px 28px !important;
+        cursor: pointer !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+      .purchase-box .ml-embedded button[type="submit"]:hover,
+      .purchase-box .ml-embedded .ml-form-button button:hover {
+        background: var(--red-dark) !important;
+      }
+      .purchase-box .ml-embedded .ml-form-successBody { color: #4ade80 !important; text-align: center !important; }
+      .purchase-box .ml-embedded .ml-form-embedHeader,
+      .purchase-box .ml-embedded .ml-form-embedDescription,
+      .purchase-box .ml-embedded .ml-form-formContent label { display: none !important; }
+    </style>
 
   </main>
 
