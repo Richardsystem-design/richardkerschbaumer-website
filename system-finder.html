@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Welches System passt zu dir? – Schnell-Check | Richard Kerschbaumer</title>
+  <meta name="description" content="4 Fragen. Keine E-Mail. Kein Funnel. Am Ende weißt du, welche Bad Day Edition zu deinem Problem passt.">
+  <meta name="author" content="Richard Kerschbaumer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/system-finder.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/system-finder.html">
+  <meta property="og:title" content="Welches System passt zu dir? – Schnell-Check">
+  <meta property="og:description" content="4 Fragen. Keine E-Mail. Am Ende weißt du, welche Bad Day Edition zu dir passt.">
+  <meta property="og:locale" content="de_AT">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/barlow-condensed-v13-latin-900.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/barlow-condensed-v13-latin-800.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/barlow-condensed-v13-latin-700.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/barlow-v13-latin-regular.woff2" crossorigin>
+
+  <style>
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/barlow-v13-latin-500.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/barlow-v13-latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2')}
+  </style>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; --section-pad: clamp(60px,8vw,120px); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--black); color: var(--white); font-size: 18px; line-height: 1.6; overflow-x: hidden; min-height: 100vh; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
+    /* NAV */
+    nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+    /* HERO */
+    .hero {
+      padding: 140px clamp(20px,5vw,80px) 60px;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,16,46,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(2.5rem,5vw,4.5rem);
+      line-height: 0.95; text-transform: uppercase;
+      letter-spacing: -0.01em; margin-bottom: 24px;
+    }
+    .hero h1 em { color: var(--red); font-style: normal; }
+    .hero-lead {
+      color: rgba(245,243,239,0.6);
+      font-size: clamp(1rem,1.5vw,1.15rem);
+      max-width: 560px; margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* QUIZ CONTAINER */
+    .quiz-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 clamp(20px,5vw,80px) var(--section-pad);
+    }
+
+    /* PROGRESS */
+    .progress-bar {
+      display: flex; gap: 6px;
+      margin-bottom: 48px;
+    }
+    .progress-step {
+      flex: 1; height: 4px;
+      background: rgba(245,243,239,0.1);
+      border-radius: 2px;
+      transition: background 0.4s;
+    }
+    .progress-step.active { background: var(--red); }
+    .progress-step.done { background: rgba(200,16,46,0.4); }
+
+    /* QUESTION */
+    .question-block { display: none; }
+    .question-block.active { display: block; animation: fadeIn 0.3s ease; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .question-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 0.8rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(245,243,239,0.3);
+      margin-bottom: 12px;
+    }
+
+    .question-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(1.6rem,3vw,2.2rem);
+      line-height: 1.15; text-transform: uppercase;
+      margin-bottom: 36px;
+    }
+
+    /* ANSWER OPTIONS */
+    .answers { display: flex; flex-direction: column; gap: 12px; }
+
+    .answer-btn {
+      display: block; width: 100%;
+      background: rgba(245,243,239,0.04);
+      border: 2px solid rgba(245,243,239,0.1);
+      border-radius: 2px;
+      padding: 20px 24px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Barlow', sans-serif;
+      font-size: 1rem; font-weight: 500;
+      color: rgba(245,243,239,0.8);
+      line-height: 1.5;
+    }
+    .answer-btn:hover {
+      border-color: var(--red);
+      background: rgba(200,16,46,0.08);
+      color: var(--white);
+    }
+    .answer-btn:active {
+      transform: scale(0.985);
+    }
+    .answer-btn .answer-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      display: block; margin-bottom: 4px;
+    }
+    .answer-btn .answer-sub {
+      font-size: 0.9rem;
+      color: rgba(245,243,239,0.45);
+    }
+
+    /* RESULT */
+    .result-block { display: none; }
+    .result-block.active { display: block; animation: fadeIn 0.4s ease; }
+
+    .result-verdict {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 0.85rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 16px;
+    }
+
+    .result-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: clamp(2rem,4vw,3.5rem);
+      line-height: 0.95; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .result-desc {
+      color: rgba(245,243,239,0.6);
+      font-size: 1.05rem; line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+
+    .result-card {
+      background: rgba(245,243,239,0.04);
+      border: 2px solid rgba(245,243,239,0.1);
+      border-left: 4px solid var(--red);
+      border-radius: 2px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+    .result-card-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 1.4rem;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .result-card-sub {
+      font-size: 0.9rem;
+      color: rgba(245,243,239,0.4);
+      margin-bottom: 16px;
+    }
+    .result-card-price {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .result-card-price .old-price {
+      font-size: 1rem;
+      color: rgba(245,243,239,0.3);
+      text-decoration: line-through;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .btn-result {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--red); color: var(--white);
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 2px;
+      transition: background 0.2s;
+      margin-right: 12px;
+    }
+    .btn-result:hover { background: var(--red-dark); }
+
+    .btn-result-outline {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(245,243,239,0.6);
+      text-decoration: none;
+      padding: 16px 36px;
+      border: 2px solid rgba(245,243,239,0.2);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-result-outline:hover {
+      color: var(--white);
+      border-color: rgba(245,243,239,0.5);
+    }
+
+    .result-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+
+    .result-restart {
+      display: inline-block;
+      margin-top: 32px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(245,243,239,0.3);
+      text-decoration: none;
+      cursor: pointer;
+      background: none; border: none;
+      transition: color 0.2s;
+    }
+    .result-restart:hover { color: rgba(245,243,239,0.6); }
+
+    /* ALT SECTION */
+    .alt-section {
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(245,243,239,0.08);
+    }
+    .alt-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 0.8rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(245,243,239,0.25);
+      margin-bottom: 16px;
+    }
+    .alt-link {
+      display: inline-block;
+      color: rgba(245,243,239,0.5);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      margin-right: 24px;
+    }
+    .alt-link:hover { color: var(--white); }
+
+    /* FOOTER */
+    footer { background: #080808; padding: 48px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(245,243,239,0.4); letter-spacing: 0.05em; text-transform: uppercase; }
+    .footer-links { display: flex; gap: 32px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.8); }
+    .footer-copy { width: 100%; color: rgba(245,243,239,0.3); font-size: 0.8rem; border-top: 1px solid rgba(245,243,239,0.08); padding-top: 24px; margin-top: 8px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero { padding: 120px 20px 40px; }
+      .quiz-wrap { padding: 0 20px var(--section-pad); }
+      .result-buttons { flex-direction: column; }
+      .btn-result, .btn-result-outline { text-align: center; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/bucher.html">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+      <li><a href="https://payhip.com/b/nW6Jx" class="nav-cta" target="_blank" rel="noopener noreferrer">Gratis Zero-Edition</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/kontakt.html">Kontakt</a>
+    <a href="https://payhip.com/b/nW6Jx" class="nav-mobile-cta" target="_blank" rel="noopener noreferrer">Gratis Zero-Edition</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="hero">
+      <p class="hero-eyebrow">Schnell-Check · 4 Fragen · 30 Sekunden</p>
+      <h1>Welches System<br>passt zu <em>dir?</em></h1>
+      <p class="hero-lead">Kein Funnel. Keine E-Mail. Kein Bullshit. Du beantwortest vier Fragen und bekommst eine ehrliche Empfehlung. Das wars.</p>
+    </header>
+
+    <!-- QUIZ -->
+    <div class="quiz-wrap">
+
+      <div class="progress-bar" aria-label="Fortschritt">
+        <div class="progress-step" id="prog-1"></div>
+        <div class="progress-step" id="prog-2"></div>
+        <div class="progress-step" id="prog-3"></div>
+        <div class="progress-step" id="prog-4"></div>
+      </div>
+
+      <!-- FRAGE 1 -->
+      <div class="question-block active" id="q1">
+        <p class="question-num">Frage 1 / 4</p>
+        <h2 class="question-text">Was nervt dich gerade am meisten?</h2>
+        <div class="answers">
+          <button class="answer-btn" data-scores="starter:2,zero:1">
+            <span class="answer-label">Der Alltag frisst mich auf</span>
+            <span class="answer-sub">Morgens kommst du nicht raus, abends bist du platt, dazwischen passiert zu wenig.</span>
+          </button>
+          <button class="answer-btn" data-scores="work:2,zero:1">
+            <span class="answer-label">Mein Job killt mich</span>
+            <span class="answer-sub">Kein Fokus, kein Feierabend, kein Plan der hält.</span>
+          </button>
+          <button class="answer-btn" data-scores="training:2,zero:1">
+            <span class="answer-label">Training? Welches Training?</span>
+            <span class="answer-sub">Du weißt, dass du dich bewegen solltest. Machst es aber nicht.</span>
+          </button>
+          <button class="answer-btn" data-scores="bundle:3">
+            <span class="answer-label">Eigentlich alles davon</span>
+            <span class="answer-sub">Alltag, Job, Training &ndash; nichts läuft richtig rund.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- FRAGE 2 -->
+      <div class="question-block" id="q2">
+        <p class="question-num">Frage 2 / 4</p>
+        <h2 class="question-text">Wie sieht dein schlechtester Tag aus?</h2>
+        <div class="answers">
+          <button class="answer-btn" data-scores="zero:2">
+            <span class="answer-label">Kommt selten vor</span>
+            <span class="answer-sub">Ab und zu ein Durchhänger &ndash; aber meistens läufts.</span>
+          </button>
+          <button class="answer-btn" data-scores="starter:1,work:1,training:1">
+            <span class="answer-label">Mindestens einmal die Woche</span>
+            <span class="answer-sub">Regelmäßig Tage, an denen gar nichts geht.</span>
+          </button>
+          <button class="answer-btn" data-scores="starter:2,work:2,training:2,bundle:1">
+            <span class="answer-label">Quasi mein Normalzustand</span>
+            <span class="answer-sub">Du funktionierst &ndash; aber mit angezogener Handbremse. Immer.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- FRAGE 3 -->
+      <div class="question-block" id="q3">
+        <p class="question-num">Frage 3 / 4</p>
+        <h2 class="question-text">Was hast du bisher dagegen probiert?</h2>
+        <div class="answers">
+          <button class="answer-btn" data-scores="zero:3">
+            <span class="answer-label">Noch nichts wirklich</span>
+            <span class="answer-sub">Kein System, kein Plan. Du machst einfach weiter wie bisher.</span>
+          </button>
+          <button class="answer-btn" data-scores="starter:1,work:1,training:1">
+            <span class="answer-label">Motivationsvideos und gute Vorsätze</span>
+            <span class="answer-sub">Montag voll motiviert, Mittwoch ist alles vergessen.</span>
+          </button>
+          <button class="answer-btn" data-scores="starter:2,work:2,training:2,bundle:1">
+            <span class="answer-label">Schon vieles &ndash; nichts blieb hängen</span>
+            <span class="answer-sub">Apps, Routinen, Challenges &ndash; du kennst das Spiel.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- FRAGE 4 -->
+      <div class="question-block" id="q4">
+        <p class="question-num">Frage 4 / 4</p>
+        <h2 class="question-text">Was bist du bereit zu investieren?</h2>
+        <div class="answers">
+          <button class="answer-btn" data-scores="zero:4">
+            <span class="answer-label">Erstmal nichts &ndash; ich will testen</span>
+            <span class="answer-sub">Gratis anfangen, schauen obs was bringt.</span>
+          </button>
+          <button class="answer-btn" data-scores="starter:2,work:2,training:2">
+            <span class="answer-label">9,90 &euro; für eine Edition</span>
+            <span class="answer-sub">Eine Sache, aber die richtig.</span>
+          </button>
+          <button class="answer-btn" data-scores="bundle:4">
+            <span class="answer-label">Alles drei &ndash; Bundle</span>
+            <span class="answer-sub">75 Systeme, drei Bereiche. Einmal zahlen, fertig.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ERGEBNIS -->
+      <div class="result-block" id="result">
+        <!-- filled by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <span class="footer-brand">Richard Kerschbaumer</span>
+    <nav aria-label="Footer-Navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+        <li><a href="/mythen-klartext.html">Mythen &amp; Klartext</a></li>
+        <li><a href="https://instagram.com/richardkerschbaumer.autor/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, öffnet neues Fenster">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/richard-kerschbaumer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, öffnet neues Fenster">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2026 Richard Kerschbaumer</p>
+  </footer>
+
+  <script>
+    // NAV
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+
+    // QUIZ LOGIC
+    var scores = { zero: 0, starter: 0, work: 0, training: 0, bundle: 0 };
+    var currentQ = 1;
+    var totalQ = 4;
+
+    var products = {
+      zero: {
+        title: 'Bad Day<br>Zero-Edition',
+        sub: '3 Systeme. 0 Ausreden. Gratis.',
+        desc: 'Du willst erstmal testen, ob das überhaupt was für dich ist. Vernünftig. Die Zero-Edition hat 3 Systeme zum Ausprobieren \u2013 du behältst das eine das funktioniert.',
+        price: '0 \u20AC',
+        oldPrice: null,
+        buyLink: 'https://payhip.com/b/nW6Jx',
+        buyText: 'Gratis holen',
+        detailLink: '/zero-edition.html',
+        altText: 'Wenn du mehr willst:',
+        alts: [
+          { name: 'Starter-Edition \u2192', href: '/bad-day.html' },
+          { name: 'Work-Edition \u2192', href: '/bad-day-work.html' },
+          { name: 'Training-Edition \u2192', href: '/bad-day-training.html' }
+        ]
+      },
+      starter: {
+        title: 'Bad Day<br>Starter-Edition',
+        sub: '25 Systeme für schlechte Tage',
+        desc: 'Der Alltag frisst dich auf und du brauchst Systeme die auch funktionieren, wenn du am liebsten alles hinschmeißen willst. 25 konkrete Handgriffe für Start, Fokus, Stress, Essen und Energie.',
+        price: '9,90 \u20AC',
+        oldPrice: null,
+        buyLink: 'https://payhip.com/b/6EaOK',
+        buyText: 'Jetzt kaufen',
+        detailLink: '/bad-day.html',
+        altText: 'Auch interessant:',
+        alts: [
+          { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
+          { name: 'Bundle: alle 3 Editionen \u2192', href: '/bad-day-bundle.html' }
+        ]
+      },
+      work: {
+        title: 'Bad Day<br>Work-Edition',
+        sub: '25 Systeme für schlechte Tage im Job',
+        desc: 'Dein Arbeitstag blockiert dich. Kein Fokus, zu viel Druck, kein richtiger Feierabend. 25 Systeme für Start, Fokus, Druck, Energie und Feierabend \u2013 für den Schreibtisch, nicht für die Couch.',
+        price: '9,90 \u20AC',
+        oldPrice: null,
+        buyLink: 'https://payhip.com/b/hSmJj',
+        buyText: 'Jetzt kaufen',
+        detailLink: '/bad-day-work.html',
+        altText: 'Auch interessant:',
+        alts: [
+          { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
+          { name: 'Bundle: alle 3 Editionen \u2192', href: '/bad-day-bundle.html' }
+        ]
+      },
+      training: {
+        title: 'Bad Day<br>Training-Edition',
+        sub: '25 Systeme für schlechte Tage beim Training',
+        desc: 'Du willst trainieren, aber dein Kopf macht nicht mit. 25 Systeme für Losgehen, Kleinmachen, Dranbleiben, Weitermachen und Kopfsache \u2013 für den inneren Schweinehund.',
+        price: '9,90 \u20AC',
+        oldPrice: null,
+        buyLink: 'https://payhip.com/b/g01LG',
+        buyText: 'Jetzt kaufen',
+        detailLink: '/bad-day-training.html',
+        altText: 'Auch interessant:',
+        alts: [
+          { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
+          { name: 'Bundle: alle 3 Editionen \u2192', href: '/bad-day-bundle.html' }
+        ]
+      },
+      bundle: {
+        title: 'Bad Day<br>Bundle',
+        sub: 'Starter + Work + Training',
+        desc: 'Bei dir läuft vieles gleichzeitig schief \u2013 oder du willst einfach für alles gewappnet sein. 75 Systeme für Alltag, Job und Training in einem Paket.',
+        price: '19,90 \u20AC',
+        oldPrice: '29,70 \u20AC',
+        buyLink: 'https://payhip.com/b/AtXuR',
+        buyText: 'Bundle kaufen',
+        detailLink: '/bad-day-bundle.html',
+        altText: 'Oder einzeln:',
+        alts: [
+          { name: 'Starter-Edition \u2192', href: '/bad-day.html' },
+          { name: 'Work-Edition \u2192', href: '/bad-day-work.html' },
+          { name: 'Training-Edition \u2192', href: '/bad-day-training.html' }
+        ]
+      }
+    };
+
+    function updateProgress() {
+      for (var i = 1; i <= totalQ; i++) {
+        var el = document.getElementById('prog-' + i);
+        el.className = 'progress-step';
+        if (i < currentQ) el.classList.add('done');
+        if (i === currentQ) el.classList.add('active');
+      }
+    }
+
+    function showQuestion(n) {
+      document.querySelectorAll('.question-block').forEach(function(b) { b.classList.remove('active'); });
+      var q = document.getElementById('q' + n);
+      if (q) q.classList.add('active');
+      currentQ = n;
+      updateProgress();
+    }
+
+    function getWinner() {
+      var maxKey = 'zero';
+      var maxVal = -1;
+      for (var key in scores) {
+        if (scores[key] > maxVal) {
+          maxVal = scores[key];
+          maxKey = key;
+        }
+      }
+      return maxKey;
+    }
+
+    function showResult() {
+      var winner = getWinner();
+      var p = products[winner];
+
+      var priceHtml = p.oldPrice
+        ? '<span class="old-price">' + p.oldPrice + '</span>' + p.price
+        : p.price;
+
+      var altsHtml = '';
+      p.alts.forEach(function(a) {
+        altsHtml += '<a href="' + a.href + '" class="alt-link">' + a.name + '</a>';
+      });
+
+      document.getElementById('result').innerHTML =
+        '<p class="result-verdict">Dein Ergebnis</p>' +
+        '<h2 class="result-title">' + p.title + '</h2>' +
+        '<p class="result-desc">' + p.desc + '</p>' +
+        '<div class="result-card">' +
+          '<p class="result-card-title">' + p.title.replace('<br>', ' ') + '</p>' +
+          '<p class="result-card-sub">' + p.sub + '</p>' +
+          '<p class="result-card-price">' + priceHtml + '</p>' +
+          '<div class="result-buttons">' +
+            '<a href="' + p.buyLink + '" class="btn-result" target="_blank" rel="noopener noreferrer">' + p.buyText + '</a>' +
+            '<a href="' + p.detailLink + '" class="btn-result-outline">Mehr erfahren</a>' +
+          '</div>' +
+        '</div>' +
+        '<div class="alt-section">' +
+          '<p class="alt-label">' + p.altText + '</p>' +
+          altsHtml +
+        '</div>' +
+        '<button class="result-restart" onclick="restartQuiz();">\u2190 Nochmal machen</button>';
+
+      document.querySelectorAll('.question-block').forEach(function(b) { b.classList.remove('active'); });
+      document.getElementById('result').classList.add('active');
+
+      // Progress all done
+      for (var i = 1; i <= totalQ; i++) {
+        document.getElementById('prog-' + i).className = 'progress-step done';
+      }
+    }
+
+    function restartQuiz() {
+      scores = { zero: 0, starter: 0, work: 0, training: 0, bundle: 0 };
+      document.getElementById('result').classList.remove('active');
+      document.getElementById('result').innerHTML = '';
+      showQuestion(1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Answer click handler
+    document.querySelectorAll('.answer-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        // Parse scores
+        var raw = this.getAttribute('data-scores');
+        raw.split(',').forEach(function(pair) {
+          var parts = pair.split(':');
+          scores[parts[0]] = (scores[parts[0]] || 0) + parseInt(parts[1], 10);
+        });
+
+        if (currentQ < totalQ) {
+          showQuestion(currentQ + 1);
+        } else {
+          showResult();
+        }
+      });
+    });
+
+    // Init
+    updateProgress();
+  </script>
+</body>
+</html>

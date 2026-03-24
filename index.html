@@ -575,6 +575,51 @@
     }
     .systeme-link:hover { border-color: var(--black); }
 
+    .finder-cta {
+      margin-top: 40px;
+      background: var(--black);
+      border-radius: 2px;
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .finder-cta-text {
+      color: rgba(245,243,239,0.7);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .finder-cta-text strong {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .finder-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--red);
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 2px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .finder-cta-btn:hover { background: var(--red-dark); }
+
     /* ===================== */
     /* BOOKS                 */
     /* ===================== */
@@ -894,6 +939,14 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="finder-cta">
+        <p class="finder-cta-text">
+          <strong>Welches System passt zu dir?</strong>
+          4 Fragen. 30 Sekunden. Keine E-Mail. Eine ehrliche Empfehlung.
+        </p>
+        <a href="/system-finder.html" class="finder-cta-btn">Schnell-Check starten →</a>
       </div>
 
       <div class="systeme-footer">
