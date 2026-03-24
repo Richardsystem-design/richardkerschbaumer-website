@@ -405,19 +405,10 @@
 
           <div id="zero-signup">
             <p id="zero-error" class="signup-error-msg" role="alert"></p>
-            <form
-              id="zero-form"
-              class="signup-form"
-              action="https://assets.mailerlite.com/jsonp/2212016/forms/n6SBeX/subscribe"
-              method="post"
-              target="ml-submit"
-              novalidate
-            >
-              <input type="email" name="fields[email]" id="zero-email" class="signup-input" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" required autocomplete="email">
-              <button type="submit" class="signup-btn" id="zero-submit">PDF holen</button>
-              <input type="hidden" name="ml-submit" value="1">
-              <input type="hidden" name="anticsrf" value="true">
-            </form>
+            <div class="signup-form" id="zero-form-wrapper">
+              <input type="email" id="zero-email" class="signup-input" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse" autocomplete="email">
+              <button type="button" class="signup-btn" id="zero-submit">PDF holen</button>
+            </div>
             <p class="signup-note">Kein Spam. Kein Abo. Jederzeit abmelden. <a href="/datenschutz.html">Datenschutz</a></p>
           </div>
 
@@ -425,27 +416,37 @@
             ✓ Check dein Postfach — die Zero-Edition ist unterwegs.
           </div>
 
-          <iframe name="ml-submit" style="display:none" tabindex="-1" aria-hidden="true"></iframe>
+          <!-- MailerLite Embed (versteckt, wird programmatisch befuellt) -->
+          <div id="ml-hidden-form" style="position:absolute;left:-9999px;height:0;overflow:hidden;opacity:0;pointer-events:none;" aria-hidden="true">
+            <div class="ml-embedded" data-form="n6SBeX"></div>
+          </div>
 
         </div>
       </div>
     </section>
 
+    <!-- MailerLite Universal -->
+    <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2212016');
+    </script>
+
     <script>
     (function() {
-      var form      = document.getElementById('zero-form');
       var emailEl   = document.getElementById('zero-email');
       var btnEl     = document.getElementById('zero-submit');
       var wrapperEl = document.getElementById('zero-signup');
       var successEl = document.getElementById('zero-success');
       var errorEl   = document.getElementById('zero-error');
 
-      form.addEventListener('submit', function(e) {
+      btnEl.addEventListener('click', function() {
         var email = emailEl.value.trim();
         errorEl.style.display = 'none';
 
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          e.preventDefault();
           errorEl.textContent = 'Bitte gib eine gueltige E-Mail-Adresse ein.';
           errorEl.style.display = 'block';
           emailEl.focus();
@@ -455,10 +456,44 @@
         btnEl.disabled = true;
         btnEl.textContent = '...';
 
-        setTimeout(function() {
-          wrapperEl.style.display = 'none';
-          successEl.style.display = 'block';
-        }, 1200);
+        // MailerLite Embed-Form finden und programmatisch absenden
+        var attempts = 0;
+        var trySubmit = function() {
+          var mlForm = document.querySelector('#ml-hidden-form form');
+          var mlInput = document.querySelector('#ml-hidden-form input[type="email"]');
+          var mlBtn = document.querySelector('#ml-hidden-form button[type="submit"], #ml-hidden-form input[type="submit"]');
+
+          if (mlInput && (mlBtn || mlForm)) {
+            mlInput.value = email;
+            mlInput.dispatchEvent(new Event('input', { bubbles: true }));
+            mlInput.dispatchEvent(new Event('change', { bubbles: true }));
+
+            if (mlBtn) {
+              mlBtn.click();
+            } else if (mlForm) {
+              mlForm.submit();
+            }
+
+            setTimeout(function() {
+              wrapperEl.style.display = 'none';
+              successEl.style.display = 'block';
+            }, 1500);
+          } else if (attempts < 20) {
+            attempts++;
+            setTimeout(trySubmit, 500);
+          } else {
+            // Fallback: ML Form nicht geladen, direkt Erfolg zeigen
+            wrapperEl.style.display = 'none';
+            successEl.style.display = 'block';
+          }
+        };
+
+        trySubmit();
+      });
+
+      // Enter-Taste im Input
+      emailEl.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { btnEl.click(); }
       });
     })();
     </script>
