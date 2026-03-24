@@ -357,10 +357,26 @@
 
     <!-- ML Form Styling Override -->
     <style>
-      .purchase-box .ml-embedded { max-width: 480px; margin: 0 auto; }
-      .purchase-box .ml-embedded .ml-form-embedWrapper { background: transparent !important; border: none !important; padding: 0 !important; }
-      .purchase-box .ml-embedded .ml-form-embedBody { padding: 0 !important; }
-      .purchase-box .ml-embedded .ml-form-fieldRow input[type="email"] {
+      /* Wrapper */
+      .ml-embedded,
+      .ml-form-embedWrapper { background: transparent !important; border: none !important; padding: 0 !important; margin: 0 !important; box-shadow: none !important; max-width: 480px !important; margin: 0 auto !important; }
+      .ml-form-embedBody,
+      .ml-form-embedContent { background: transparent !important; padding: 0 !important; }
+
+      /* Titel + Beschreibung weg */
+      .ml-form-embedWrapper h4,
+      .ml-form-embedWrapper .ml-form-embedHeader,
+      .ml-form-embedWrapper .ml-form-embedDescription,
+      .ml-form-embedContent h4,
+      .ml-form-embedContent p:not(.signup-note) { display: none !important; }
+
+      /* Labels weg */
+      .ml-form-embedWrapper label { display: none !important; }
+
+      /* Email Input */
+      .ml-form-embedWrapper input[type="email"],
+      .ml-form-formContent input[type="email"],
+      .ml-form-fieldRow input {
         font-family: 'Barlow', sans-serif !important;
         font-size: 1rem !important;
         font-weight: 500 !important;
@@ -370,22 +386,34 @@
         background: rgba(245,243,239,0.06) !important;
         color: #fff !important;
         height: auto !important;
+        line-height: 1.4 !important;
+        box-shadow: none !important;
+        outline: none !important;
+        width: 100% !important;
       }
-      .purchase-box .ml-embedded .ml-form-fieldRow input[type="email"]::placeholder {
+      .ml-form-embedWrapper input[type="email"]::placeholder,
+      .ml-form-formContent input[type="email"]::placeholder,
+      .ml-form-fieldRow input::placeholder {
         color: rgba(245,243,239,0.3) !important;
       }
-      .purchase-box .ml-embedded .ml-form-fieldRow input[type="email"]:focus {
-        border-color: var(--red) !important;
+      .ml-form-embedWrapper input[type="email"]:focus,
+      .ml-form-formContent input[type="email"]:focus,
+      .ml-form-fieldRow input:focus {
+        border-color: #c8102e !important;
         background: rgba(245,243,239,0.08) !important;
       }
-      .purchase-box .ml-embedded button[type="submit"],
-      .purchase-box .ml-embedded .ml-form-button button {
+
+      /* Button */
+      .ml-form-embedWrapper button,
+      .ml-form-embedWrapper .ml-form-button button,
+      .ml-form-embedSubmit button,
+      .ml-form-embedWrapper button[type="submit"] {
         font-family: 'Barlow Condensed', sans-serif !important;
         font-weight: 800 !important;
         font-size: 1rem !important;
         letter-spacing: 0.1em !important;
         text-transform: uppercase !important;
-        background: var(--red) !important;
+        background: #c8102e !important;
         color: #fff !important;
         border: none !important;
         border-radius: 2px !important;
@@ -393,15 +421,27 @@
         cursor: pointer !important;
         width: 100% !important;
         height: auto !important;
+        box-shadow: none !important;
+        line-height: 1.4 !important;
+        transition: background 0.2s !important;
       }
-      .purchase-box .ml-embedded button[type="submit"]:hover,
-      .purchase-box .ml-embedded .ml-form-button button:hover {
-        background: var(--red-dark) !important;
+      .ml-form-embedWrapper button:hover,
+      .ml-form-embedWrapper .ml-form-button button:hover,
+      .ml-form-embedSubmit button:hover,
+      .ml-form-embedWrapper button[type="submit"]:hover {
+        background: #a00d24 !important;
       }
-      .purchase-box .ml-embedded .ml-form-successBody { color: #4ade80 !important; text-align: center !important; }
-      .purchase-box .ml-embedded .ml-form-embedHeader,
-      .purchase-box .ml-embedded .ml-form-embedDescription,
-      .purchase-box .ml-embedded .ml-form-formContent label { display: none !important; }
+
+      /* Erfolgsmeldung */
+      .ml-form-successBody,
+      .ml-form-successContent { background: transparent !important; }
+      .ml-form-successBody h4 { color: #4ade80 !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 700 !important; }
+      .ml-form-successBody p { color: #4ade80 !important; }
+
+      /* Sonstigen ML-Kram verstecken */
+      .ml-form-embedWrapper .ml-form-checkboxRow,
+      .ml-form-embedWrapper .ml-form-interestGroupsRow { display: none !important; }
+      .ml-form-align-center { padding: 0 !important; }
     </style>
 
   </main>
