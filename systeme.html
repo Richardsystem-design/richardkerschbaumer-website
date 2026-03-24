@@ -82,9 +82,9 @@
     .page-hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.5vw,1.2rem); line-height: 1.75; max-width: 560px; }
 
     /* FINDER BANNER */
-    .finder-banner { background: var(--black); padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin: 48px auto 0; max-width: 1100px; border-radius: 2px; }
-    .finder-banner-text { color: rgba(245,243,239,0.6); font-size: 0.95rem; }
-    .finder-banner-text strong { color: var(--white); font-weight: 700; }
+    .finder-banner { background: var(--black); padding: 44px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; max-width: 1100px; margin-bottom: 48px; }
+    .finder-banner-text { color: rgba(245,243,239,0.6); font-size: 1rem; }
+    .finder-banner-text strong { color: var(--white); font-weight: 700; display: block; margin-bottom: 2px; }
     .finder-banner-btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 14px 28px; border-radius: 2px; transition: background 0.2s; white-space: nowrap; }
     .finder-banner-btn:hover { background: var(--red-dark); }
 
@@ -245,12 +245,13 @@
       </div>
     </header>
 
-    <div class="finder-banner">
-      <p class="finder-banner-text"><strong>Nicht sicher, was zu dir passt?</strong> 4 Fragen, 30 Sekunden – du bekommst eine Empfehlung.</p>
-      <a href="/system-finder.html" class="finder-banner-btn">Schnell-Check →</a>
-    </div>
-
     <section class="products-section" id="produkte" aria-labelledby="products-heading">
+
+      <div class="finder-banner">
+        <p class="finder-banner-text"><strong>Nicht sicher, was zu dir passt?</strong> 4 Fragen, 30 Sekunden – du bekommst eine Empfehlung.</p>
+        <a href="/system-finder.html" class="finder-banner-btn">Schnell-Check →</a>
+      </div>
+
       <h2 id="products-heading" class="sr-only">Alle Systeme</h2>
       <div class="products-grid">
 
