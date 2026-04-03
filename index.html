@@ -407,6 +407,95 @@
     }
 
     /* ===================== */
+    /* BAD DAY BUCH         */
+    /* ===================== */
+    .buch-section {
+      background: var(--black);
+      padding: var(--section-pad) clamp(20px, 5vw, 80px);
+    }
+
+    .buch-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+
+    .buch-cover {
+      width: clamp(200px, 20vw, 280px);
+      height: auto;
+      border-radius: 2px;
+      box-shadow: -12px 12px 48px rgba(0,0,0,0.6);
+    }
+
+    .buch-text .section-label { color: rgba(245,243,239,0.5); }
+
+    .buch-text h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .buch-text h2 span { color: var(--red); }
+
+    .buch-subtitle {
+      font-family: 'Barlow', sans-serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(245,243,239,0.55);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .buch-text p {
+      color: rgba(245,243,239,0.65);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .buch-quote {
+      border-left: 3px solid var(--red);
+      padding: 16px 20px;
+      margin: 28px 0;
+      font-style: italic;
+      color: rgba(245,243,239,0.75);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .buch-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .buch-arrow {
+      display: block;
+      margin-top: 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,243,239,0.35);
+    }
+
+    @media (max-width: 900px) {
+      .buch-inner { grid-template-columns: 1fr; text-align: center; }
+      .buch-cover { max-width: 200px; margin: 0 auto; }
+      .buch-quote { text-align: left; }
+      .buch-buttons { justify-content: center; }
+      .buch-arrow { text-align: center; }
+    }
+
+    /* ===================== */
     /* SYSTEME GRID          */
     /* ===================== */
     .systeme-section {
@@ -878,8 +967,31 @@
     </section>
 
     <!-- ==================== -->
-    <!-- 3. SYSTEME           -->
+    <!-- 3. BAD DAY BUCH      -->
     <!-- ==================== -->
+    <div class="section-divider-light" aria-hidden="true"></div>
+    <section class="buch-section" id="buch" aria-labelledby="buch-heading">
+      <div class="buch-inner">
+        <img src="badday-buch-cover.webp" alt="Buchcover Bad Day: Warum Systeme funktionieren, wenn du es nicht tust" class="buch-cover" width="280" height="448" loading="lazy" decoding="async">
+        <div class="buch-text">
+          <span class="red-rule" aria-hidden="true"></span>
+          <span class="section-label">Das Buch</span>
+          <h2 id="buch-heading">Bad Day</h2>
+          <span class="buch-subtitle">Warum Systeme funktionieren, wenn du es nicht tust</span>
+          <p>Jeder Vorsatz den du je gefasst hast wurde von der besten Version von dir geschrieben. Das Buch erklärt warum dieser Plan jeden Morgen stirbt — und was stattdessen funktioniert. Kein Motivationsbuch. Kein 30-Tage-Programm. Sondern die Mechanik hinter den Bad-Day-Systemen.</p>
+          <div class="buch-quote">Dieses Buch ist nicht das Produkt. Dieses Buch ist die Erklärung. Es sagt dir warum etwas funktioniert. Das Was — die konkreten Systeme — steckt in den Editionen.</div>
+          <div class="buch-buttons">
+            <a href="https://amzn.to/4trad9Q" class="btn-primary" target="_blank" rel="noopener noreferrer sponsored" aria-label="Bad Day bei Amazon kaufen, öffnet neues Fenster">Bei Amazon *</a>
+          </div>
+          <span class="buch-arrow">↓ Das Warum hinter den Systemen. Danach: die Werkzeuge.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- 4. SYSTEME           -->
+    <!-- ==================== -->
+    <div class="section-divider-dark" aria-hidden="true"></div>
     <section class="systeme-section" id="systeme" aria-labelledby="systeme-heading">
       <div class="systeme-header">
         <span class="red-rule" aria-hidden="true"></span>
@@ -951,46 +1063,6 @@
 
       <div class="systeme-footer">
         <a href="/systeme.html" class="systeme-link">Alle Systeme ansehen →</a>
-      </div>
-    </section>
-
-    <!-- ==================== -->
-    <!-- 4. BÜCHER            -->
-    <!-- ==================== -->
-    <div class="section-divider-dark-reverse" aria-hidden="true"></div>
-    <section class="products" id="buecher" aria-labelledby="books-heading">
-      <div class="section-header">
-        <span class="red-rule" aria-hidden="true"></span><span class="section-label">Die Bücher dahinter</span>
-        <h2 id="books-heading">Wo alles<br>angefangen hat</h2>
-      </div>
-      <div class="books-grid">
-
-        <article class="book-card" aria-labelledby="book1-title">
-          <img src="machs-einfach-sm.webp" srcset="machs-einfach-sm.webp 200w, machs-einfach-md.webp 400w" sizes="140px" alt="Buchcover Mach's einfach: gelbes Cover mit Spielknopf-Symbol" class="book-cover" width="100" height="160" loading="lazy" decoding="async">
-          <div class="book-info">
-            <span class="book-info-label">Gewohnheiten &amp; Alltag</span>
-            <h3 id="book1-title">Mach's einfach</h3>
-            <p>Mikro-Gewohnheiten die auch am Dienstagabend nach einem beschissenen Tag funktionieren. Kein Selbsthilfe-Kitsch.</p>
-            <div class="book-buttons">
-              <a href="/machs-einfach.html" class="btn-outline-small">Mehr erfahren →</a>
-              <a href="https://amzn.to/478dH7C" class="btn-red-small" target="_blank" rel="noopener noreferrer sponsored" aria-label="Mach's einfach bei Amazon kaufen, Affiliate-Link, öffnet neues Fenster">Bei Amazon *</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="book-card" aria-labelledby="book2-title">
-          <img src="friss-nicht-weniger-sm.webp" srcset="friss-nicht-weniger-sm.webp 200w, friss-nicht-weniger-md.webp 400w" sizes="140px" alt="Buchcover Friss nicht weniger: schwarzes Cover mit Gabel-Illustration" class="book-cover" width="100" height="160" loading="lazy" decoding="async">
-          <div class="book-info">
-            <span class="book-info-label">Ernährung &amp; Abnehmen</span>
-            <h3 id="book2-title">Friss nicht weniger</h3>
-            <p>Abnehmen ohne die nächste Diät die du in vier Wochen abbrichst. Warum weniger essen das falsche Ziel ist.</p>
-            <div class="book-buttons">
-              <a href="/friss-nicht-weniger.html" class="btn-outline-small">Mehr erfahren →</a>
-              <a href="https://amzn.to/3YYWdHz" class="btn-red-small" target="_blank" rel="noopener noreferrer sponsored" aria-label="Friss nicht weniger bei Amazon kaufen, Affiliate-Link, öffnet neues Fenster">Bei Amazon *</a>
-            </div>
-          </div>
-        </article>
-
       </div>
     </section>
 
