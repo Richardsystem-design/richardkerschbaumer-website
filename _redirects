@@ -1,29 +1,66 @@
-/alltagssystem.html /zero-edition.html 301
+# ==============================================
+# _redirects – Cloudflare Pages
+# ==============================================
 
-# Strukturseiten (alte Website)
-/meine-geschichte                                                                                               /ueber-mich.html                                                                301
-/buecher                                                                                                        /bucher.html                                                                    301
-/buecher/machs-einfach                                                                                          /machs-einfach.html                                                             301
-/buecher/friss-nicht-weniger                                                                                    /friss-nicht-weniger.html                                                       301
-/datenschutzerklaerung                                                                                          /datenschutz.html                                                               301
-/downloads                                                                                                      /alltagssystem.html                                                             301
-/downloads/whatsapp-kanal                                                                                       https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D                          301
-/_downloads/001ed5a40c383887126eaa1c065f0c08                                                                    /alltagssystem.html                                                             301
+# Aktuelle Site-Struktur
+/alltagssystem.html  /zero-edition.html  301
 
-# Blog-Artikel (alte CMS-URLs)
-/blog/2929098_biohacking-kritik-warum-du-kein-dna-kit-brauchst-wenn-du-nicht-mal-spazieren-gehst              /blog.html                                                                      301
-/blog/2909351_erfolgsporno-warum-dein-gehirn-dich-beluegt-waehrend-du-scrollst                                 /blog.html                                                                      301
-/blog/2725429_minimalismus-fuer-den-kopf-wie-weniger-ziele-dich-weiterbringt                                   /blog.html                                                                      301
-/blog/2918403_schlaf-als-fettverbrenner-warum-5-stunden-dein-system-sabotieren                                 /blog.html                                                                      301
-/blog/2929167_light-produkte-die-lizenz-zum-fettwerden                                                         /blog.html                                                                      301
-/blog/2928985_die-supplement-abzocke-warum-dein-urin-teurer-ist-als-dein-lebensstil                            /blog.html                                                                      301
-/blog/2746544_diaet-falle-warum-verzicht-dich-dicker-macht                                                     /blog.html                                                                      301
-/blog/2713218_5-micro-habits-die-mehr-bringen-als-jede-30-tage-challenge                                       /blog.html                                                                      301
-/blog/die-protein-pflicht-warum-eiweiss-kein-pumper-ding-ist-sondern-dein-ueberleben-sichert                   /blog.html                                                                      301
-/blog/2719365_abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst           /blog.html                                                                      301
-/blog/die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst                                           /blog.html                                                                      301
-/blog/2713218_5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge                   /blog.html                                                                      301
-/blog/2912833_5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge                   /blog.html                                                                      301
-/blog/2607607_15-gesunde-ernaehrung-tipps-die-jeder-kennen-sollte-2025-guide                                   /blog.html                                                                      301
-/blog/2618312_12-bewaehrte-ernaehrungsumstellung-tipps-zum-abnehmen-2025                                       /blog.html                                                                      301
-/blog/2719365_abnehmen-ohne-bullshit-was-wirklich-funktioniert-und-was-nicht                                   /blog.html                                                                      301
+# === Strukturseiten (alte Website) ===
+/meine-geschichte         /ueber-mich.html      301
+/buecher                  /bucher.html          301
+/buecher/machs-einfach    /machs-einfach.html   301
+/buecher/friss-nicht-weniger  /friss-nicht-weniger.html  301
+/datenschutzerklaerung    /datenschutz.html     301
+
+# Downloads (alte URLs)
+/downloads                /zero-edition.html    301
+/downloads/whatsapp-kanal https://whatsapp.com/channel/0029Vb6zMTG1NCrYVC1lLb0D  301
+/_downloads/001ed5a40c383887126eaa1c065f0c08  /zero-edition.html  301
+
+# === Blog-Artikel mit Nummer-Präfix → direkt zum Artikel ===
+
+# Ernährung & Diät
+/blog/2719365_abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst  /abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst.html  301
+/blog/2719365_abnehmen-ohne-bullshit-was-wirklich-funktioniert-und-was-nicht  /abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst.html  301
+/blog/2746544_die-diaet-falle-warum-verzicht-dich-dicker-macht-und-wie-du-ausbrichst  /die-diaet-falle-warum-verzicht-dich-dicker-macht-und-wie-du-ausbrichst.html  301
+/blog/2746544_diaet-falle-warum-verzicht-dich-dicker-macht  /die-diaet-falle-warum-verzicht-dich-dicker-macht-und-wie-du-ausbrichst.html  301
+/blog/2726128_die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst  /die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst.html  301
+/blog/2726128_die-wahrheit-ueber-cheat-days-wer-verarscht-hier-eigentlich-wen  /die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst.html  301
+/blog/2914675_die-protein-pflicht-warum-eiweiss-kein-pumper-ding-ist-sondern-dein-ueberleben-sichert  /die-protein-pflicht-warum-eiweiss-kein-pumper-ding-ist-sondern-dein-ueberleben-sichert.html  301
+/blog/2914773_meal-prep-fuer-leute-die-kochen-hassen-das-ueberlebens-system  /meal-prep-fuer-leute-die-kochen-hassen-das-ueberlebens-system.html  301
+/blog/2929167_light-produkte-die-lizenz-zum-fettwerden  /light-produkte-die-lizenz-zum-fettwerden.html  301
+/blog/2914856_das-stress-essen-protokoll-warum-du-frisst-wenn-der-chef-nervt  /das-stress-essen-protokoll-warum-du-frisst-wenn-der-chef-nervt.html  301
+/blog/3016358_fastenzeit-system-wartung-statt-verzicht-drama  /fastenzeit-system-wartung-statt-verzicht-drama.html  301
+
+# Alte Generic-Ernährungs-Artikel → Übersicht
+/blog/2607607_15-gesunde-ernaehrung-tipps-die-jeder-kennen-sollte-2025-guide  /blog.html  301
+/blog/2618312_12-bewaehrte-ernaehrungsumstellung-tipps-zum-abnehmen-2025      /blog.html  301
+
+# Training & Bewegung
+/blog/2912958_das-cardio-hamsterrad-warum-eisen-fressen-schlank-macht-und-laufen-nicht  /das-cardio-hamsterrad-warum-eisen-fressen-schlank-macht-und-laufen-nicht.html  301
+/blog/2912882_neat-die-unterschaetzte-waffe-gegen-fett-warum-du-nicht-joggen-musst  /neat-die-unterschaetzte-waffe-gegen-fett-warum-du-nicht-joggen-musst.html  301
+/blog/2913091_die-ich-hab-keine-zeit-luege-wie-du-mit-2-stunden-pro-woche-fit-wirst  /die-ich-hab-keine-zeit-luege-wie-du-mit-2-stunden-pro-woche-fit-wirts.html  301
+
+# Mindset & Gewohnheiten
+/blog/2912833_5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge  /5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge.html  301
+/blog/2713218_5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge  /5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge.html  301
+/blog/2713218_5-micro-habits-die-mehr-bringen-als-jede-30-tage-challenge  /5-mikro-gewohnheiten-die-dein-leben-mehr-veraendern-als-jede-30-tage-challenge.html  301
+/blog/2912831_das-disziplin-maerchen-warum-du-keine-willenskraft-brauchst-und-was-stattdessen-funktioniert  /das-disziplin-maerchen-warum-du-keine-willenskraft-brauchst-und-was-stattdessen-funktioniert.html  301
+/blog/2912837_ziele-messie-warum-du-weniger-wollen-musst-um-mehr-zu-erreichen  /ziele-messie-warum-du-weniger-wollen-musst-um-mehr-zu-erreichen.html  301
+/blog/2725429_minimalismus-fuer-den-kopf-wie-weniger-ziele-dich-weiterbringt  /ziele-messie-warum-du-weniger-wollen-musst-um-mehr-zu-erreichen.html  301
+/blog/2912872_neujahrsvorsaetze-warum-du-am-1-januar-eigentlich-schon-verloren-hast  /neujahrsvorsaetze-warum-du-am-1-januar-eigentlich-schon-verloren-hast.html  301
+/blog/2745681_neujahrsvorsaetze-warum-sie-scheitern-und-wie-du-es-diesmal-wirklich-schaffst  /neujahrsvorsaetze-warum-du-am-1-januar-eigentlich-schon-verloren-hast.html  301
+/blog/2918554_umgebungs-design-warum-du-gegen-deine-kueche-immer-verlierst  /umgebungs-design-warum-du-gegen-deine-kueche-immer-verlierst.html  301
+/blog/2918304_sozialer-druck-wie-du-feierst-und-trinkst-ohne-dein-system-zu-killen  /sozialer-druck-wie-du-feierst-und-trinkst-ohne-dein-system-zu-killen.html  301
+/blog/2908950_tag-1-der-selbstverarsche-warum-du-heute-garantiert-scheitern-wirst  /tag-1-der-selbstverarsche-warum-du-heute-garantiert-scheitern-wirst.html  301
+
+# Lifestyle / Schlaf / Biohacking
+/blog/2918403_schlaf-als-fettverbrenner-warum-5-stunden-dein-system-sabotieren  /schlaf-als-fettverbrenner-warum-5-stunden-dein-system-sabotieren.html  301
+/blog/2929098_biohacking-kritik-warum-du-kein-dna-kit-brauchst-wenn-du-nicht-mal-spazieren-gehst  /biohacking-kritik-warum-du-kein-dna-kit-brauchst-wenn-du-nicht-mal-spazieren-gehst.html  301
+/blog/2928985_die-supplement-abzocke-warum-dein-urin-teurer-ist-als-dein-lebensstil  /die-supplement-abzocke-warum-dein-urin-teurer-ist-als-dein-lebensstil.html  301
+/blog/2909351_erfolgsporno-warum-dein-gehirn-dich-beluegt-waehrend-du-scrollst  /erfolgsporno-warum-dein-gehirn-dich-beluegt-waehrend-du-scrollst.html  301
+
+# === Slug-Varianten ohne Nummer (Übergangs-Strukturen) ===
+/blog/abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst  /abnehmen-ohne-bullshit-warum-dein-wissen-dich-fett-haelt-und-was-du-dagegen-tun-kannst.html  301
+/blog/die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst  /die-cheat-day-luege-warum-du-dich-jede-woche-selbst-verarschst.html  301
+/blog/die-protein-pflicht-warum-eiweiss-kein-pumper-ding-ist-sondern-dein-ueberleben-sichert  /die-protein-pflicht-warum-eiweiss-kein-pumper-ding-ist-sondern-dein-ueberleben-sichert.html  301
