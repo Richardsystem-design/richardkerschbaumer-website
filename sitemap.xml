@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+url>
+
+
+  <url>?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Startseite -->
@@ -73,6 +76,11 @@
 
   <url>
     <loc>https://www.richardkerschbaumer.at/bad-day-training.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.richardkerschbaumer.at/bad-day-chaos.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -235,7 +243,6 @@
     <priority>0.2</priority>
   </url>
 
-
   <!-- Kern-Konzepte Artikel (Phase 1) -->
   <url>
     <loc>https://www.richardkerschbaumer.at/was-ist-ein-mindeststandard-und-warum-veraendert-er-alles.html</loc>
@@ -255,7 +262,6 @@
     <priority>0.7</priority>
   </url>
 
-
   <!-- Produktbrücken-Artikel (Phase 2) -->
   <url>
     <loc>https://www.richardkerschbaumer.at/gewohnheiten-aufbauen-ohne-sie-als-gewohnheiten-zu-denken.html</loc>
@@ -274,7 +280,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
 
   <!-- Positionierungs-Artikel (Phase 3) -->
   <url>

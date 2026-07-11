@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bad Day Chaos-Edition – 25 Systeme für chaotische Tage | Richard Kerschbaumer</title>
+  <meta name="description" content="25 konkrete Systeme für Stillstand, Kopfchaos, Überwältigung, Entscheidungen und Übergänge. Für den Tag an dem alles gleichzeitig ist.">
+  <meta name="author" content="Richard Kerschbaumer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.richardkerschbaumer.at/bad-day-chaos.html">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://www.richardkerschbaumer.at/bad-day-chaos.html">
+  <meta property="og:title" content="Bad Day Chaos-Edition – Richard Kerschbaumer">
+  <meta property="og:description" content="25 konkrete Systeme für chaotische Tage. Kein Motivations-Bla. Direkt anwendbar.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "@id": "https://www.richardkerschbaumer.at/bad-day-chaos.html#product",
+        "name": "Bad Day Chaos-Edition",
+        "description": "25 konkrete Systeme für chaotische Tage.",
+        "url": "https://www.richardkerschbaumer.at/bad-day-chaos.html",
+        "brand": { "@type": "Brand", "name": "Richard Kerschbaumer" },
+        "offers": {
+          "@type": "Offer",
+          "price": "9.90",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://payhip.com/b/96Qum"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/barlow-v13-latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/barlow-v13-latin-500.woff2') format('woff2')}
+    @font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/barlow-v13-latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-800.woff2') format('woff2')}
+    @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:swap;src:url('/fonts/barlow-condensed-v13-latin-900.woff2') format('woff2')}
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #0d0d0d; --white: #f5f3ef; --red: #c8102e; --red-dark: #a00d24; --section-pad: clamp(60px, 8vw, 120px); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
+    .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
+    /* NAV */
+    nav.main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px clamp(20px,5vw,80px); display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.95); backdrop-filter: blur(8px); }
+    .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--white); text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(245,243,239,0.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.25s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile { display: none; position: fixed; top: 62px; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(12px); z-index: 99; padding: 24px clamp(20px,5vw,80px) 32px; flex-direction: column; border-top: 1px solid rgba(245,243,239,0.08); }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { color: rgba(245,243,239,0.8); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 0; border-bottom: 1px solid rgba(245,243,239,0.07); transition: color 0.2s; }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--white); }
+    .nav-mobile-cta { margin-top: 16px; background: var(--red); color: var(--white) !important; padding: 14px 24px !important; border-radius: 2px; text-align: center; border: none !important; }
+
+    .red-rule { display: block; width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
+    .section-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: block; }
+
+    /* HERO */
+    .hero { background: var(--black); padding: 130px clamp(20px,5vw,80px) 0; overflow: hidden; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: end; }
+    .hero-content { padding-bottom: 80px; }
+    .hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-series { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,243,239,0.4); }
+    .hero-edition { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--red); padding: 6px 16px; border-radius: 2px; }
+    h1.hero-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(4rem,8vw,8rem); line-height: 0.88; color: var(--white); text-transform: uppercase; margin-bottom: 32px; }
+    h1.hero-title em { color: var(--red); font-style: normal; }
+    .hero-lead { color: rgba(245,243,239,0.6); font-size: clamp(1rem,1.4vw,1.2rem); line-height: 1.8; max-width: 520px; margin-bottom: 48px; }
+    .hero-cta-group { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .btn-buy { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 18px 36px; border-radius: 2px; transition: background 0.2s; }
+    .btn-buy:hover { background: var(--red-dark); }
+    .hero-visual { display: flex; align-items: flex-end; justify-content: center; }
+    .hero-cover-img { width: 100%; max-width: 320px; height: auto; box-shadow: -24px 24px 60px rgba(0,0,0,0.6); display: block; }
+
+    /* STATS BAR */
+    .stats-bar { background: var(--red); padding: 0 clamp(20px,5vw,80px); }
+    .stats-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; }
+    .stat-item { flex: 1; padding: 28px 0; border-right: 1px solid rgba(245,243,239,0.15); display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--white); line-height: 1; }
+    .stat-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,239,0.6); }
+
+    /* PROBLEM */
+    .problem-section { padding: var(--section-pad) clamp(20px,5vw,80px); background: var(--black); }
+    .problem-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .problem-content h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 28px; }
+    .problem-content p { color: rgba(245,243,239,0.55); font-size: 1.05rem; line-height: 1.85; margin-bottom: 20px; }
+    .problem-content p:last-child { margin-bottom: 0; }
+    .problem-list { list-style: none; display: flex; flex-direction: column; }
+    .problem-list li { border-bottom: 1px solid rgba(245,243,239,0.07); padding: 18px 0; color: rgba(245,243,239,0.78); font-size: 1rem; line-height: 1.5; display: flex; align-items: flex-start; gap: 16px; }
+    .problem-list li::before { content: '—'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    /* SYSTEMS OVERVIEW */
+    .systems-section { padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .systems-inner { max-width: 1200px; margin: 0 auto; }
+    .systems-header { margin-bottom: 56px; }
+    .systems-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .systems-header p { color: #666; font-size: 1.05rem; max-width: 540px; }
+    .systems-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+    .system-cat { background: var(--black); padding: 32px 24px; }
+    .system-cat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; color: rgba(245,243,239,0.25); line-height: 1; margin-bottom: 16px; }
+    .system-cat-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; line-height: 1.15; }
+    .system-cat-items { list-style: none; display: flex; flex-direction: column; }
+    .system-cat-items li { font-size: 0.82rem; color: rgba(245,243,239,0.78); padding: 7px 0; border-bottom: 1px solid rgba(245,243,239,0.12); line-height: 1.4; }
+    .system-cat-items li:last-child { border-bottom: none; }
+    .system-cat-accent { border-top: 3px solid var(--red); }
+
+    /* ── SCHNELL-FINDER TOOL ── */
+    .tool-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .tool-inner { max-width: 720px; margin: 0 auto; }
+    .tool-header { margin-bottom: 48px; }
+    .tool-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+    .tool-header h2 em { color: var(--red); font-style: normal; }
+    .tool-header p { color: rgba(245,243,239,0.5); font-size: 1rem; max-width: 540px; }
+
+    .finder-screen { display: none; }
+    .finder-screen.active { display: block; animation: finderFade 0.35s ease-out; }
+    @keyframes finderFade { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+
+    .finder-question { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); margin-bottom: 24px; }
+    .finder-choices { display: flex; flex-direction: column; gap: 2px; }
+    .finder-btn { display: flex; align-items: center; gap: 16px; width: 100%; padding: 20px 24px; background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.08); border-radius: 2px; color: var(--white); cursor: pointer; text-align: left; font-family: 'Barlow', sans-serif; transition: all 0.15s; }
+    .finder-btn:hover { background: rgba(200,16,46,0.1); border-color: rgba(200,16,46,0.3); }
+    .finder-btn:active { background: rgba(200,16,46,0.18); }
+    .finder-icon { font-size: 1.5rem; flex-shrink: 0; width: 36px; text-align: center; }
+    .finder-text { flex: 1; }
+    .finder-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px; }
+    .finder-desc { font-size: 0.82rem; color: rgba(245,243,239,0.45); line-height: 1.4; }
+    .finder-arrow { color: rgba(245,243,239,0.15); font-size: 1.1rem; flex-shrink: 0; transition: color 0.15s, transform 0.15s; }
+    .finder-btn:hover .finder-arrow { color: var(--red); transform: translateX(3px); }
+
+    /* RESULT */
+    .finder-back { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,243,239,0.4); background: none; border: none; cursor: pointer; padding: 0; transition: color 0.15s; margin-bottom: 24px; }
+    .finder-back:hover { color: var(--white); }
+    .finder-rule { width: 48px; height: 3px; background: var(--red); margin-bottom: 24px; }
+    .finder-topic { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .finder-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,5vw,3.4rem); text-transform: uppercase; line-height: 1; color: var(--white); margin-bottom: 8px; }
+    .finder-for { color: rgba(245,243,239,0.5); font-size: 0.9rem; margin-bottom: 32px; font-style: italic; }
+
+    .finder-steps { background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.08); border-radius: 2px; padding: 28px 24px; margin-bottom: 20px; }
+    .finder-steps-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.4); margin-bottom: 20px; }
+    .finder-step { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid rgba(245,243,239,0.06); font-size: 0.92rem; color: rgba(245,243,239,0.8); line-height: 1.55; }
+    .finder-step:last-child { border-bottom: none; }
+    .finder-sn { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.8rem; color: var(--red); flex-shrink: 0; width: 20px; text-align: right; }
+
+    .finder-min { background: var(--red); padding: 20px 24px; border-radius: 2px; margin-bottom: 40px; display: flex; align-items: center; gap: 14px; }
+    .finder-min-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); white-space: nowrap; }
+    .finder-min-text { font-weight: 600; font-size: 0.95rem; color: var(--white); }
+
+    .finder-locked { position: relative; margin-bottom: 40px; }
+    .finder-locked-items { display: flex; flex-direction: column; gap: 2px; }
+    .finder-locked-row { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; }
+    .finder-locked-icon { color: rgba(245,243,239,0.15); font-size: 0.9rem; flex-shrink: 0; }
+    .finder-locked-text { font-size: 0.85rem; color: rgba(245,243,239,0.25); }
+    .finder-locked-blur { position: relative; }
+    .finder-locked-blur::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100%; background: linear-gradient(to bottom, transparent 0%, var(--black) 90%); pointer-events: none; }
+
+    .finder-upsell { background: rgba(245,243,239,0.03); border: 1px solid rgba(245,243,239,0.1); border-radius: 2px; padding: 32px 28px; text-align: center; margin-bottom: 32px; }
+    .finder-upsell-hook { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.3rem; text-transform: uppercase; line-height: 1.2; color: var(--white); margin-bottom: 12px; }
+    .finder-upsell-detail { font-size: 0.88rem; color: rgba(245,243,239,0.5); line-height: 1.6; margin-bottom: 20px; }
+    .finder-remaining { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 24px; }
+    .finder-rem-item { padding: 12px 16px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; text-align: left; }
+    .finder-rem-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; color: rgba(245,243,239,0.35); margin-bottom: 2px; }
+    .finder-rem-trigger { font-size: 0.75rem; color: rgba(245,243,239,0.2); }
+    .finder-upsell-sub { font-size: 0.85rem; color: rgba(245,243,239,0.4); line-height: 1.6; margin-bottom: 24px; }
+    .finder-cta { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s; }
+    .finder-cta:hover { background: var(--red-dark); }
+
+    @media (max-width: 540px) {
+      .finder-min { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .finder-remaining { grid-template-columns: 1fr; }
+    }
+
+    /* HOW */
+    .how-section { background: #f0ede7; padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .how-inner { max-width: 1200px; margin: 0 auto; }
+    .how-header { margin-bottom: 56px; }
+    .how-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.2rem,4vw,3.8rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .how-step { background: var(--white); padding: 36px 28px; }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 4rem; color: rgba(13,13,13,0.2); line-height: 1; margin-bottom: 16px; }
+    .step-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; color: var(--black); margin-bottom: 12px; line-height: 1.2; }
+    .step-desc { font-size: 0.92rem; color: #555; line-height: 1.75; }
+
+    /* NOT NOT */
+    .notnot-section { padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .notnot-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .notnot-col { padding: 56px 48px; }
+    .notnot-col.dark { background: var(--black); }
+    .notnot-col.light { background: #f0ede7; }
+    .notnot-col h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.8rem; text-transform: uppercase; margin-bottom: 32px; line-height: 1; }
+    .notnot-col.dark h3 { color: var(--white); }
+    .notnot-col.light h3 { color: var(--black); }
+    .notnot-list { list-style: none; display: flex; flex-direction: column; }
+    .notnot-list li { padding: 14px 0; font-size: 1rem; line-height: 1.5; display: flex; gap: 14px; align-items: flex-start; }
+    .notnot-col.dark .notnot-list li { color: rgba(245,243,239,0.78); border-bottom: 1px solid rgba(245,243,239,0.1); }
+    .notnot-col.light .notnot-list li { color: #444; border-bottom: 1px solid rgba(13,13,13,0.08); }
+    .notnot-list li:last-child { border-bottom: none; }
+    .cross { color: #c44; flex-shrink: 0; font-weight: 700; }
+    .check { color: #4a9a4a; flex-shrink: 0; font-weight: 700; }
+
+    /* CROSSLINK */
+    .crosslink-section { background: #f0ede7; padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .crosslink-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .crosslink-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.8rem,3vw,2.5rem); line-height: 1.05; text-transform: uppercase; color: var(--black); margin-bottom: 16px; }
+    .crosslink-inner p { color: #666; font-size: 1rem; line-height: 1.75; margin-bottom: 32px; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); text-decoration: none; padding: 16px 32px; border-radius: 2px; border: 2px solid var(--black); transition: all 0.2s; }
+    .btn-outline:hover { background: var(--black); color: var(--white); }
+
+    /* PURCHASE */
+    .purchase-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
+    .purchase-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .purchase-inner h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.5rem,5vw,4.5rem); line-height: 0.95; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .purchase-inner > p { color: rgba(245,243,239,0.5); font-size: 1.05rem; line-height: 1.8; margin-bottom: 48px; }
+    .purchase-box { background: rgba(245,243,239,0.03); border: 1px solid rgba(245,243,239,0.1); padding: 48px; border-radius: 2px; }
+    .purchase-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 5rem; color: var(--white); line-height: 1; margin-bottom: 8px; }
+    .purchase-price-note { font-size: 0.9rem; color: rgba(245,243,239,0.5); margin-bottom: 36px; }
+    .purchase-includes { list-style: none; text-align: left; margin-bottom: 40px; display: flex; flex-direction: column; }
+    .purchase-includes li { padding: 12px 0; color: rgba(245,243,239,0.78); font-size: 0.95rem; border-bottom: 1px solid rgba(245,243,239,0.07); display: flex; gap: 14px; align-items: center; }
+    .purchase-includes li:last-child { border-bottom: none; }
+    .purchase-includes li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; }
+    .btn-buy-large { display: block; width: 100%; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; letter-spacing: 0.12em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 22px 36px; border-radius: 2px; transition: background 0.2s; text-align: center; }
+    .btn-buy-large:hover { background: var(--red-dark); }
+
+    /* FOOTER */
+    footer { background: #080808; padding: 0; }
+    .footer-top { padding: 32px clamp(20px, 5vw, 80px) 28px; border-bottom: 1px solid rgba(245,243,239,0.08); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .footer-brand-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--white); letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 5px; }
+    .footer-tagline { font-size: 0.8rem; color: rgba(245,243,239,0.32); }
+    .footer-social-heading { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; text-align: right; }
+    .footer-social-icons { display: flex; gap: 8px; justify-content: flex-end; }
+    .social-btn { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid rgba(245,243,239,0.12); border-radius: 2px; color: rgba(245,243,239,0.5); text-decoration: none; transition: all 0.2s; background: transparent; flex-shrink: 0; }
+    .social-btn:hover { border-color: var(--red); color: var(--white); background: rgba(200,16,46,0.1); }
+    .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .footer-bottom { padding: 18px clamp(20px, 5vw, 80px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: rgba(245,243,239,0.35); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.03em; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(245,243,239,0.75); }
+    .footer-copy { color: rgba(245,243,239,0.2); font-size: 0.75rem; }
+    .footer-affiliate-bar { padding: 12px clamp(20px, 5vw, 80px); border-top: 1px solid rgba(245,243,239,0.05); }
+    .footer-affiliate { color: rgba(245,243,239,0.18); font-size: 0.73rem; line-height: 1.5; }
+
+    @media (max-width: 900px) {
+      nav.main-nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; gap: 0; }
+      .hero-visual { order: -1; padding-top: 20px; }
+      .hero-cover-img { max-width: 200px; }
+      .hero-content { padding-bottom: 60px; }
+      .stats-bar-inner { flex-wrap: wrap; }
+      .stat-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(245,243,239,0.1); }
+      .problem-inner { grid-template-columns: 1fr; gap: 48px; }
+      .systems-grid { grid-template-columns: 1fr 1fr; }
+      .how-steps { grid-template-columns: 1fr 1fr; }
+      .notnot-inner { grid-template-columns: 1fr; }
+      .notnot-col { padding: 40px 28px; }
+      .purchase-box { padding: 36px 24px; }
+      .footer-top { grid-template-columns: 1fr; gap: 24px; }
+      .footer-social-heading { text-align: left; }
+      .footer-social-icons { justify-content: flex-start; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .footer-links { flex-wrap: wrap; }
+    }
+    @media (max-width: 540px) {
+      .systems-grid { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr; }
+    }
+  
+    /* Zero-Edition CTA Banner */
+    .wa-cta-banner {
+      background: var(--black);
+      padding: 48px clamp(20px, 5vw, 80px);
+      border-top: 2px solid var(--red);
+    }
+    .wa-cta-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .wa-cta-text h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .wa-cta-text p {
+      color: rgba(245,243,239,0.55);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .wa-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .wa-cta-btn:hover { background: #1da851; transform: translateY(-1px); }
+    @media (max-width: 640px) {
+      .wa-cta-inner { flex-direction: column; text-align: center; }
+      .wa-cta-btn { width: 100%; justify-content: center; }
+    }
+
+
+    /* Bundle Upsell Strip */
+    .bundle-upsell { background: var(--black); border-top: 3px solid var(--red); padding: 56px clamp(20px,5vw,80px); }
+    .bundle-upsell-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .bundle-upsell-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+    .bundle-upsell-text h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 14px; }
+    .bundle-upsell-text h2 span { color: var(--red); }
+    .bundle-upsell-text p { color: rgba(245,243,239,0.55); font-size: 0.95rem; line-height: 1.7; max-width: 480px; }
+    .bundle-upsell-action { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; flex-shrink: 0; }
+    .bundle-upsell-price { display: flex; align-items: baseline; gap: 12px; }
+    .bundle-price-old { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; color: rgba(245,243,239,0.3); text-decoration: line-through; }
+    .bundle-price-new { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.4rem; color: var(--white); line-height: 1; }
+    .bundle-price-save { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; background: var(--red); color: var(--white); padding: 3px 8px; border-radius: 2px; letter-spacing: 0.05em; }
+    .bundle-upsell-btn { display: inline-block; background: var(--red); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 28px; border-radius: 2px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .bundle-upsell-btn:hover { background: var(--red-dark); }
+    @media (max-width: 640px) { .bundle-upsell-inner { flex-direction: column; align-items: flex-start; } .bundle-upsell-action { align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <nav class="main-nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="/" class="nav-logo">Richard Kerschbaumer</a>
+    <ul class="nav-links" role="list">
+      <li><a href="/bucher.html">Bücher</a></li>
+      <li><a href="/systeme.html">Systeme</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/ueber-mich.html">Über mich</a></li>
+      <li><a href="/kontakt.html">Kontakt</a></li>
+      <li><a href="/zero-edition.html#kaufen" class="nav-cta">Gratis Zero-Edition</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="mobile-menu">
+    <a href="/bucher.html">Bücher</a>
+    <a href="/systeme.html">Systeme</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/ueber-mich.html">Über mich</a>
+    <a href="/kontakt.html">Kontakt</a>
+    <a href="/zero-edition.html#kaufen" class="nav-mobile-cta">Gratis Zero-Edition</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="hero-series">Bad Day · Reihe</span>
+            <span class="hero-edition">Chaos-Edition</span>
+          </div>
+          <h1 class="hero-title">Bad<br><em>Day.</em></h1>
+          <p class="hero-lead">25 Systeme für den Tag an dem alles gleichzeitig ist. Kein Motivationstext. Kein Coaching-Bla. Nur konkrete Handgriffe – geordnet nach dem, was gerade blockiert.</p>
+          <div class="hero-cta-group">
+            <a href="https://payhip.com/b/96Qum" class="btn-buy" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="bad-day-chaos-cover.webp" alt="Bad Day Chaos-Edition – 25 Systeme für chaotische Tage von Richard Kerschbaumer" class="hero-cover-img" width="360" height="360" fetchpriority="high" decoding="async">
+        </div>
+      </div>
+    </header>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar" role="region" aria-label="Kennzahlen">
+      <div class="stats-bar-inner">
+        <div class="stat-item"><span class="stat-num">25</span><span class="stat-label">Systeme</span></div>
+        <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Kategorien</span></div>
+        <div class="stat-item"><span class="stat-num">34</span><span class="stat-label">Seiten</span></div>
+        <div class="stat-item"><span class="stat-num">PDF</span><span class="stat-label">Sofort-Download</span></div>
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section class="problem-section" aria-labelledby="problem-heading">
+      <div class="problem-inner">
+        <div class="problem-content">
+          <span class="red-rule"></span>
+          <span class="section-label">Das Problem</span>
+          <h2 id="problem-heading">Chaos ist kein<br>Charakterfehler.</h2>
+          <p>An einem geordneten Tag läuft es. Du stehst auf, machst deine Sachen, wechselst von einem ins nächste ohne nachzudenken. Kein Problem.</p>
+          <p>Dann kommt der Tag an dem alles gleichzeitig ist. Du kommst nicht hoch, der Kopf loopt, es ist zu viel, du hängst vor jeder Entscheidung und kriegst keinen Übergang hin.</p>
+          <p>Da hilft kein &bdquo;reiß dich zusammen&ldquo;. Chaos ist kein Charakterfehler – es ist ein Zustand. Und Zustände wechselt man mit kleinen Handgriffen, nicht mit Willenskraft.</p>
+        </div>
+        <ul class="problem-list" role="list">
+          <li>Du liegst oder sitzt und kommst einfach nicht hoch</li>
+          <li>Ein Gedanke dreht sich im Loop und hört nicht auf</li>
+          <li>Hundert Sachen gleichzeitig – und du greifst keine</li>
+          <li>Du pendelst zwischen zwei Optionen ohne Ende</li>
+          <li>Du bist zuhause, aber im Kopf noch unterwegs</li>
+          <li>Geparkt, angekommen – und steigst trotzdem nicht aus</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SYSTEMS OVERVIEW -->
+    <section class="systems-section" aria-labelledby="systems-heading">
+      <div class="systems-inner">
+        <div class="systems-header">
+          <span class="red-rule"></span>
+          <span class="section-label">Was drin ist</span>
+          <h2 id="systems-heading">25 Systeme.<br>5 Kategorien.</h2>
+          <p>Jedes System hat einen Mindeststandard – das Minimum das zählt. Alles darüber ist Bonus.</p>
+        </div>
+        <div class="systems-grid">
+          <div class="system-cat system-cat-accent">
+            <div class="system-cat-num">01</div>
+            <div class="system-cat-title">Stillstand</div>
+            <ul class="system-cat-items" role="list">
+              <li>Beine-Kipper</li><li>Vor-Schub</li><li>Letzt-Schub</li><li>Eins-weg</li><li>Klatsch-Cut</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">02</div>
+            <div class="system-cat-title">Kopfchaos</div>
+            <ul class="system-cat-items" role="list">
+              <li>Loop-Aus</li><li>Arm-Halt</li><li>Boden-Tritt</li><li>Kopf-Schüttel</li><li>Zahn-Lauf</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">03</div>
+            <div class="system-cat-title">Überwältigung</div>
+            <ul class="system-cat-items" role="list">
+              <li>Schmal-Stand</li><li>Ohren-Druck</li><li>Augen-Hoch</li><li>Zehen-Krall</li><li>Puls-Anker</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">04</div>
+            <div class="system-cat-title">Entscheidungen</div>
+            <ul class="system-cat-items" role="list">
+              <li>Mund-Erst</li><li>Heute-Schritt</li><li>Sitz-Schub</li><li>Klapp-Zu</li><li>Frier-Test</li>
+            </ul>
+          </div>
+          <div class="system-cat">
+            <div class="system-cat-num">05</div>
+            <div class="system-cat-title">Übergänge</div>
+            <ul class="system-cat-items" role="list">
+              <li>Tasche-Klopf</li><li>Schloss-Klacks</li><li>Greif-Mit</li><li>Sitz-Kante</li><li>Fuß-Aus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHNELL-FINDER TOOL -->
+    <section class="tool-section" id="schnell-finder" aria-labelledby="tool-heading">
+      <div class="tool-inner">
+        <div class="tool-header">
+          <span class="red-rule"></span>
+          <span class="section-label">Bad Day · Schnell-Finder</span>
+          <h2 id="tool-heading">Was blockiert dich <em>gerade?</em></h2>
+          <p>Wähle deinen Zustand. Bekomm ein System. Mach den Mindeststandard. Fertig.</p>
+        </div>
+
+        <!-- Screen 1: Zustandswahl -->
+        <div class="finder-screen active" id="finder-question">
+          <div class="finder-question">Wo hängst du gerade fest?</div>
+          <div class="finder-choices">
+            <button class="finder-btn" onclick="finderShow('stillstand')">
+              <span class="finder-icon">🧊</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich komm nicht in Gang</div>
+                <div class="finder-desc">Ich lieg, sitz oder steh – und rühr mich einfach nicht.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('kopfchaos')">
+              <span class="finder-icon">🌀</span>
+              <div class="finder-text">
+                <div class="finder-label">Kopf dreht durch</div>
+                <div class="finder-desc">Ein Gedanke loopt, springt oder redet mich innerlich runter.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('ueberwaeltigung')">
+              <span class="finder-icon">🌊</span>
+              <div class="finder-text">
+                <div class="finder-label">Alles zu viel auf einmal</div>
+                <div class="finder-desc">100 Sachen, zu laut, Bildschirm-Flut, Gefühls-Welle.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('entscheidungen')">
+              <span class="finder-icon">⚖️</span>
+              <div class="finder-text">
+                <div class="finder-label">Ich häng vor einer Wahl</div>
+                <div class="finder-desc">Pendeln, aufschieben, zweifeln – kein Ende in Sicht.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+            <button class="finder-btn" onclick="finderShow('uebergaenge')">
+              <span class="finder-icon">🚪</span>
+              <div class="finder-text">
+                <div class="finder-label">Der Wechsel klappt nicht</div>
+                <div class="finder-desc">Rauskommen, ankommen, aufstehen, aussteigen – ich häng fest.</div>
+              </div>
+              <span class="finder-arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Screen 2: Ergebnis -->
+        <div class="finder-screen" id="finder-result">
+          <button class="finder-back" onclick="finderBack()">← Anderer Zustand</button>
+          <div class="finder-rule"></div>
+          <div id="finder-content"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" aria-labelledby="how-heading">
+      <div class="how-inner">
+        <div class="how-header">
+          <span class="red-rule"></span>
+          <span class="section-label">So funktioniert's</span>
+          <h2 id="how-heading">Kein Nachdenken.<br>Nur wählen und machen.</h2>
+        </div>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="step-num">1</div>
+            <div class="step-title">Thema wählen</div>
+            <p class="step-desc">Stillstand, Kopfchaos, Überwältigung, Entscheidungen oder Übergänge. Du merkst selbst, was gerade los ist.</p>
+          </div>
+          <div class="how-step">
+            <div class="step-num">2</div>
+            <div class="step-title">System nehmen</div>
+            <p class="step-desc">Wenn du nicht weißt welches: nimm das erste im Thema. Kein langes Abwägen.</p>
+          </div>
+          <div class="how-step">
+            <div class="step-num">3</div>
+            <div class="step-title">Mindeststandard</div>
+            <p class="step-desc">Nur das Minimum machen. Kein Bonus, kein Perfektionismus. Was zählt steht fett da.</p>
+          </div>
+          <div class="how-step">
+            <div class="step-num">4</div>
+            <div class="step-title">Neu entscheiden</div>
+            <p class="step-desc">Danach entscheidest du: noch eins. Oder Schluss. Beides ist richtig.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IT IS NOT -->
+    <section class="notnot-section" aria-labelledby="notnot-heading">
+      <div class="notnot-inner">
+        <div class="notnot-col dark">
+          <h3 id="notnot-heading">Was es<br>nicht ist.</h3>
+          <ul class="notnot-list" role="list">
+            <li><span class="cross">✗</span> Kein Ordnungs-Coaching</li>
+            <li><span class="cross">✗</span> Kein Zeitmanagement-System mit 12 Schritten</li>
+            <li><span class="cross">✗</span> Keine Achtsamkeits-Meditation gegen Stress</li>
+            <li><span class="cross">✗</span> Keine Morgenroutine die du erst lernen musst</li>
+            <li><span class="cross">✗</span> Kein Versprechen dass dein Kopf nie wieder chaotisch wird</li>
+          </ul>
+        </div>
+        <div class="notnot-col light">
+          <h3>Was es<br>ist.</h3>
+          <ul class="notnot-list" role="list">
+            <li><span class="check">✓</span> 25 konkrete Handgriffe – im Chaos sofort anwendbar</li>
+            <li><span class="check">✓</span> Klarer Mindeststandard pro System</li>
+            <li><span class="check">✓</span> Schnellauswahl nach Zustand – nicht nach Stimmung</li>
+            <li><span class="check">✓</span> Dafür / Nicht dafür – damit du weißt wann welches passt</li>
+            <li><span class="check">✓</span> Upgrade und Stolperfalle pro System</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CROSSLINK TO STARTER -->
+    <section class="crosslink-section">
+      <div class="crosslink-inner">
+        <span class="red-rule" style="margin: 0 auto 20px;"></span>
+        <h2>Nicht nur Chaos?</h2>
+        <p>Die Starter-Edition hat 25 Systeme für schlechte Tage allgemein – Alltag, Haushalt, Wochenende. Andere Kategorien, andere Systeme.</p>
+        <a href="/bad-day.html" class="btn-outline">Zur Starter-Edition →</a>
+      </div>
+    </section>
+
+    <!-- PURCHASE -->
+    <section class="purchase-section" id="kaufen" aria-labelledby="purchase-heading">
+      <div class="purchase-inner">
+        <span class="red-rule" style="margin: 0 auto 20px;"></span>
+        <h2 id="purchase-heading">Hol dir<br>das System.</h2>
+        <p>9,90 Euro. Einmalig. Kein Abo, kein Newsletter-Zwang. Du lädst die PDF runter und kannst sie sofort nutzen.</p>
+        <div class="purchase-box">
+          <div class="purchase-price">9,90 €</div>
+          <p class="purchase-price-note">Einmaliger Kauf · Sofort-Download · PDF</p>
+          <ul class="purchase-includes" role="list">
+            <li>34 Seiten PDF</li>
+            <li>25 Systeme in 5 Kategorien</li>
+            <li>Schnellauswahl nach Zustand</li>
+            <li>Mindeststandard pro System</li>
+            <li>Nur für den persönlichen Gebrauch</li>
+          </ul>
+          <a href="https://payhip.com/b/96Qum" class="btn-buy-large" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 9,90 €</a>
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- WhatsApp CTA Banner -->
+    <section class="wa-cta-banner" aria-labelledby="wa-cta-heading">
+      <div class="wa-cta-inner">
+        <div class="wa-cta-text">
+          <h2 id="wa-cta-heading">3 Systeme. 0 Ausreden. Gratis.</h2>
+          <p>4 Mini-Systeme zum Ausprobieren. Du behältst das eine das funktioniert. PDF kommt sofort per E-Mail.</p>
+        </div>
+        <a href="/zero-edition.html#kaufen" class="wa-cta-btn" target="_blank" rel="noopener noreferrer" aria-label="Gratis Zero-Edition holen" style="background:#C8102E;">
+            → Zero-Edition gratis holen
+          </a>
+      </div>
+    </section>
+
+    <!-- Bundle Upsell -->
+    <section class="bundle-upsell" aria-labelledby="bundle-upsell-heading">
+      <div class="bundle-upsell-inner">
+        <div class="bundle-upsell-text">
+          <p class="bundle-upsell-eyebrow">Noch mehr Systeme</p>
+          <h2 id="bundle-upsell-heading">Starter + Work + Training.<br><span>19,90&nbsp;€</span> statt 29,70&nbsp;€.</h2>
+          <p>75 weitere Systeme für Alltag, Job und Training. Ein Kauf – fertig. Kein Abo, kein Upsell danach.</p>
+        </div>
+        <div class="bundle-upsell-action">
+          <div class="bundle-upsell-price">
+            <span class="bundle-price-old">29,70&nbsp;€</span>
+            <span class="bundle-price-new">19,90&nbsp;€</span>
+            <span class="bundle-price-save">–9,80&nbsp;€</span>
+          </div>
+          <a href="/bad-day-bundle.html" class="bundle-upsell-btn">Bundle ansehen →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Richard Kerschbaumer</div>
+        <div class="footer-tagline">Systeme statt Motivation.</div>
+      </div>
+      <div>
+        <div class="footer-social-heading">Folge mir</div>
+        <div class="footer-social-icons">
+          <a href="https://instagram.com/richardkerschbaumer.autor/" class="social-btn" title="Instagram" aria-label="Instagram, öffnet neues Fenster" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://linkedin.com/in/richard-kerschbaumer" class="social-btn" title="LinkedIn" aria-label="LinkedIn, öffnet neues Fenster" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.youtube.com/@RichardKerschbaumer" class="social-btn" title="YouTube" aria-label="YouTube, öffnet neues Fenster" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <nav aria-label="Footer-Navigation">
+        <ul class="footer-links" role="list">
+          <li><a href="/impressum.html">Impressum</a></li>
+          <li><a href="/datenschutz.html">Datenschutz</a></li>
+          <li><a href="/mythen-klartext.html">Mythen &amp; Klartext</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/ueber-mich.html">Über mich</a></li>
+        </ul>
+      </nav>
+      <span class="footer-copy">&copy; 2026 Richard Kerschbaumer</span>
+    </div>
+    <div class="footer-affiliate-bar">
+      <p class="footer-affiliate">Links mit * sind Affiliate-Links. Wenn du darüber etwas kaufst, verdiene ich eine kleine Provision.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Nav
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', function() {
+      const isOpen = menu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+
+    // Schnell-Finder
+    const FINDER = {
+      stillstand: {
+        system: {
+          topic: "Stillstand \u00B7 1/5",
+          name: "Beine-Kipper",
+          forText: "Wenn du liegst und nicht hochkommst. Bett oder Couch.",
+          steps: [
+            "Dreh dich auf die Seite, Richtung Kante.",
+            "Schwing beide Beine \u00FCber die Kante. St\u00FCtz dich auf den Arm.",
+            "Du sitzt jetzt. F\u00FC\u00DFe am Boden.",
+            "Sitzen bleiben oder weiter zur n\u00E4chsten Sache."
+          ],
+          min: "Beide F\u00FC\u00DFe am Boden."
+        },
+        remaining: [
+          { name: "Vor-Schub", trigger: "Ich sitze und komm nicht hoch" },
+          { name: "Letzt-Schub", trigger: "Mitten drin, wei\u00DF nicht weiter" },
+          { name: "Eins-weg", trigger: "Ein Berg vor mir, ich r\u00FChr mich nicht" },
+          { name: "Klatsch-Cut", trigger: "Ich steh im Raum und starr ins Leere" }
+        ],
+        category: "Stillstand"
+      },
+      kopfchaos: {
+        system: {
+          topic: "Kopfchaos \u00B7 1/5",
+          name: "Loop-Aus",
+          forText: "Wenn derselbe Gedanke immer wiederkommt. Mail, Streit, Fehler.",
+          steps: [
+            "Sag den Gedanken laut. Genau so, wie er im Kopf l\u00E4uft.",
+            "Wiederhole 10\u00D7 \u2013 schnell, \u00FCbertrieben, fast komisch laut.",
+            "Beim letzten Mal: bewusst lauter und unsinnig schnell.",
+            "L\u00F6sen. Der Loop ist abgenutzt \u2013 oder noch eine Runde."
+          ],
+          min: "Gedanken 10\u00D7 laut sagen."
+        },
+        remaining: [
+          { name: "Arm-Halt", trigger: "Kopf springt von Thema zu Thema" },
+          { name: "Boden-Tritt", trigger: "Sorgen drehen sich in einer Spirale" },
+          { name: "Kopf-Sch\u00FCttel", trigger: "Alte Peinlichkeit springt mich an" },
+          { name: "Zahn-Lauf", trigger: "Ich rede mich innerlich runter" }
+        ],
+        category: "Kopfchaos"
+      },
+      ueberwaeltigung: {
+        system: {
+          topic: "\u00DCberw\u00E4ltigung \u00B7 1/5",
+          name: "Schmal-Stand",
+          forText: "Wenn du gef\u00FChlt 100 Sachen gleichzeitig im Kopf hast.",
+          steps: [
+            "Stell dich aufrecht hin. Brauchst kaum Platz.",
+            "F\u00FC\u00DFe zusammenr\u00FCcken. Kn\u00F6chel ber\u00FChren sich.",
+            "30 Sek. so stehen. Arme locker, Blick geradeaus.",
+            "L\u00F6sen. Weiter zur ersten Sache \u2013 oder noch 30 Sek."
+          ],
+          min: "Kn\u00F6chel zusammen, 30 Sek."
+        },
+        remaining: [
+          { name: "Ohren-Druck", trigger: "Alles ist zu laut um mich rum" },
+          { name: "Augen-Hoch", trigger: "Bildschirm-Flut, Mails, Chats" },
+          { name: "Zehen-Krall", trigger: "Ich steh unter sozialem Druck" },
+          { name: "Puls-Anker", trigger: "Gef\u00FChls-Flut, alles auf einmal" }
+        ],
+        category: "\u00DCberw\u00E4ltigung"
+      },
+      entscheidungen: {
+        system: {
+          topic: "Entscheidungen \u00B7 1/5",
+          name: "Mund-Erst",
+          forText: "Wenn du zwischen zwei Optionen pendelst. Kein Ende in Sicht.",
+          steps: [
+            "Pendeln l\u00E4uft. Sag laut: \u201EIch nehme jetzt \u2026\u201C",
+            "Sprich aus, was zuerst kommt. Kein zweites Wort.",
+            "Sofort den ersten Mini-Schritt zu dieser Option machen.",
+            "Festgelegt. Jetzt machen, nicht nochmal abw\u00E4gen."
+          ],
+          min: "Wort aussprechen + 1 Schritt machen."
+        },
+        remaining: [
+          { name: "Heute-Schritt", trigger: "Morgen entscheide ich, gestern auch" },
+          { name: "Sitz-Schub", trigger: "Vertrag dr\u00E4ngt, ich steh unter Druck" },
+          { name: "Klapp-Zu", trigger: "Noch eine Info, dann wei\u00DF ich's" },
+          { name: "Frier-Test", trigger: "Schon dabei, aber jetzt zweifle ich" }
+        ],
+        category: "Entscheidungen"
+      },
+      uebergaenge: {
+        system: {
+          topic: "\u00DCberg\u00E4nge \u00B7 1/5",
+          name: "Tasche-Klopf",
+          forText: "Wenn du vor der T\u00FCr stehst und nicht rauskommst.",
+          steps: [
+            "Halt. Hand auf die linke Tasche. Klopf 1\u00D7 \u2013 Schl\u00FCssel?",
+            "Rechte Tasche. Klopf 1\u00D7 \u2013 Handy?",
+            "Brust/Rucksack. Klopf 1\u00D7 \u2013 drittes Ding?",
+            "Drei Treffer? T\u00FCr auf, raus. Fehlt was: Schnapp's, dann raus."
+          ],
+          min: "3\u00D7 Klopf-Check + raus."
+        },
+        remaining: [
+          { name: "Schloss-Klacks", trigger: "Zuhause da, noch unterwegs im Kopf" },
+          { name: "Greif-Mit", trigger: "Signal kam, ich sitze noch" },
+          { name: "Sitz-Kante", trigger: "Pause zieht sich, finde nicht zur\u00FCck" },
+          { name: "Fu\u00DF-Aus", trigger: "Geparkt, steig nicht aus" }
+        ],
+        category: "\u00DCberg\u00E4nge"
+      }
+    };
+
+    function finderShow(key) {
+      const d = FINDER[key];
+      const s = d.system;
+      const stepsHTML = s.steps.map(function(step, i) {
+        return '<div class="finder-step"><span class="finder-sn">' + (i+1) + '</span><span>' + step + '</span></div>';
+      }).join('');
+      const remHTML = d.remaining.map(function(r) {
+        return '<div class="finder-rem-item"><div class="finder-rem-name">🔒 ' + r.name + '</div><div class="finder-rem-trigger">' + r.trigger + '</div></div>';
+      }).join('');
+
+      document.getElementById('finder-content').innerHTML =
+        '<div class="finder-topic">' + s.topic + '</div>' +
+        '<h3 class="finder-name">' + s.name + '</h3>' +
+        '<p class="finder-for">' + s.forText + '</p>' +
+        '<div class="finder-steps"><div class="finder-steps-label">So machst du\'s</div>' + stepsHTML + '</div>' +
+        '<div class="finder-min"><span class="finder-min-label">Mindeststandard</span><span class="finder-min-text">' + s.min + '</span></div>' +
+        '<div class="finder-locked"><div class="finder-locked-blur"><div class="finder-locked-items">' +
+          '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Upgrade – was du an guten Tagen draufpacken kannst</span></div>' +
+          '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Stolperfalle – der Fehler der das System killt</span></div>' +
+          '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Warum es wirkt – die Mechanik dahinter</span></div>' +
+        '</div></div></div>' +
+        '<div class="finder-upsell">' +
+          '<div class="finder-upsell-hook">Das war 1 von 5 Systemen<br>f\u00FCr \u201E' + d.category + '\u201C.</div>' +
+          '<p class="finder-upsell-detail">Die anderen 4 für genau diese Kategorie:</p>' +
+          '<div class="finder-remaining">' + remHTML + '</div>' +
+          '<p class="finder-upsell-sub">Insgesamt 25 Systeme. 5 Kategorien. Jedes mit Upgrade, Stolperfalle und Erklärung.</p>' +
+          '<a href="https://payhip.com/b/96Qum" target="_blank" rel="noopener noreferrer" class="finder-cta">Alle 25 holen – 9,90 €</a>' +
+        '</div>' +
+        '<button class="finder-back" onclick="finderBack()" style="margin-top:8px;">← Anderer Zustand wählen</button>';
+
+      document.getElementById('finder-question').classList.remove('active');
+      document.getElementById('finder-result').classList.add('active');
+      setTimeout(function() {
+        document.getElementById('schnell-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+
+    function finderBack() {
+      document.getElementById('finder-result').classList.remove('active');
+      document.getElementById('finder-question').classList.add('active');
+      setTimeout(function() {
+        document.getElementById('schnell-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 80);
+    }
+  </script>
+</body>
+</html>
