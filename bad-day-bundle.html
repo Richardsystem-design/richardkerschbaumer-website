@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bad Day Bundle – Alle 3 Editionen | Richard Kerschbaumer</title>
-  <meta name="description" content="Starter, Work und Training in einem Paket. 75 Systeme für schlechte Tage – statt 29,70€ nur 19,90€. Einmal kaufen, sofort nutzen.">
+  <title>Bad Day Bundle – Alle 4 Editionen | Richard Kerschbaumer</title>
+  <meta name="description" content="Starter, Work, Training und Chaos in einem Paket. 100 Systeme für schlechte Tage – statt 39,60€ nur 24,90€. Einmal kaufen, sofort nutzen.">
   <meta name="author" content="Richard Kerschbaumer">
   <link rel="canonical" href="https://www.richardkerschbaumer.at/bad-day-bundle.html">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.richardkerschbaumer.at/bad-day-bundle.html">
-  <meta property="og:title" content="Bad Day Bundle – Alle 3 Editionen | Richard Kerschbaumer">
-  <meta property="og:description" content="75 Systeme für schlechte Tage. Starter + Work + Training. 19,90€ statt 29,70€.">
-  <meta property="og:image" content="https://www.richardkerschbaumer.at/bad-day-cover.webp">
+  <meta property="og:title" content="Bad Day Bundle – Alle 4 Editionen | Richard Kerschbaumer">
+  <meta property="og:description" content="100 Systeme für schlechte Tage. Starter + Work + Training + Chaos. 24,90€ statt 39,60€.">
+  <meta property="og:image" content="https://www.richardkerschbaumer.at/bad-day-bundle-hero.webp">
   <meta property="og:locale" content="de_AT">
 
   <script type="application/ld+json">
@@ -23,15 +23,15 @@
       {
         "@type": "Product",
         "@id": "https://www.richardkerschbaumer.at/bad-day-bundle.html#product",
-        "name": "Bad Day Bundle – Alle 3 Editionen",
-        "description": "75 konkrete Systeme für schlechte Tage. Starter-Edition, Work-Edition und Training-Edition als Komplettpaket. 3 PDFs, sofort nutzbar.",
-        "image": "https://www.richardkerschbaumer.at/bad-day-cover.webp",
+        "name": "Bad Day Bundle – Alle 4 Editionen",
+        "description": "100 konkrete Systeme für schlechte Tage. Starter-Edition, Work-Edition, Training-Edition und Chaos-Edition als Komplettpaket. 4 PDFs, sofort nutzbar.",
+        "image": "https://www.richardkerschbaumer.at/bad-day-bundle-hero.webp",
         "url": "https://www.richardkerschbaumer.at/bad-day-bundle.html",
         "brand": { "@type": "Brand", "name": "Richard Kerschbaumer" },
         "author": { "@type": "Person", "name": "Richard Kerschbaumer", "url": "https://www.richardkerschbaumer.at" },
         "offers": {
           "@type": "Offer",
-          "price": "19.90",
+          "price": "24.90",
           "priceCurrency": "EUR",
           "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
@@ -104,6 +104,10 @@
     .price-new { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; color: var(--white); }
     .price-badge { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); padding: 6px 14px; border-radius: 2px; }
 
+    /* HERO VISUAL */
+    .hero-visual { max-width: 900px; margin: 40px auto 0; }
+    .hero-visual img { width: 100%; height: auto; display: block; border-radius: 2px; }
+
     /* EDITIONS */
     .editions-section { background: var(--white); padding: var(--section-pad) clamp(20px,5vw,80px); }
     .editions-inner { max-width: 1000px; margin: 0 auto; }
@@ -111,7 +115,7 @@
     .editions-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem,4vw,3rem); text-transform: uppercase; color: var(--black); line-height: 1; margin-bottom: 12px; }
     .editions-header p { color: #666; font-size: 1rem; }
 
-    .editions-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+    .editions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .edition-card { background: var(--black); border-radius: 2px; padding: 36px 28px; text-align: center; }
     .edition-cover { width: 100%; max-width: 180px; margin: 0 auto 24px; border-radius: 2px; }
     .edition-cover img { width: 100%; height: auto; display: block; border-radius: 2px; }
@@ -179,7 +183,10 @@
       nav.main-nav { padding: 16px 20px; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-      .editions-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; }
+      .editions-grid { grid-template-columns: 1fr 1fr; max-width: 500px; margin: 0 auto; }
+    }
+    @media (max-width: 560px) {
+      .editions-grid { grid-template-columns: 1fr; max-width: 340px; }
       .purchase-box { padding: 36px 24px; }
       .why-item { grid-template-columns: 1fr; gap: 8px; }
       .footer-top { grid-template-columns: 1fr; gap: 24px; }
@@ -222,11 +229,14 @@
         <span class="red-rule"></span>
         <span class="section-label">Bad Day · Komplettpaket</span>
         <h1>Alle Systeme.<br><em>Ein Preis.</em></h1>
-        <p class="hero-lead">75 Systeme für schlechte Tage – Alltag, Arbeit und Training. Statt einzeln kaufen: alles auf einmal, günstiger, sofort einsatzbereit.</p>
+        <p class="hero-lead">100 Systeme für schlechte Tage – Alltag, Arbeit, Training und Chaos. Statt einzeln kaufen: alles auf einmal, günstiger, sofort einsatzbereit.</p>
         <div class="hero-price-row">
-          <span class="price-old">29,70 €</span>
-          <span class="price-new">19,90 €</span>
-          <span class="price-badge">Spare 9,80 €</span>
+          <span class="price-old">39,60 €</span>
+          <span class="price-new">24,90 €</span>
+          <span class="price-badge">Spare 14,70 €</span>
+        </div>
+        <div class="hero-visual">
+          <img src="/bad-day-bundle-hero.webp" alt="Bad Day Bundle – Starter-, Work-, Training- und Chaos-Edition von Richard Kerschbaumer" width="2400" height="1300" loading="eager" fetchpriority="high">
         </div>
       </div>
     </header>
@@ -236,7 +246,7 @@
       <div class="editions-inner">
         <div class="editions-header">
           <h2 id="editions-heading">Was im Bundle steckt</h2>
-          <p>Drei Editionen. 75 Systeme. 15 Kategorien.</p>
+          <p>Vier Editionen. 100 Systeme. 20 Kategorien.</p>
         </div>
         <div class="editions-grid">
 
@@ -285,6 +295,21 @@
             <a href="/bad-day-training.html" class="edition-link">Details →</a>
           </div>
 
+          <div class="edition-card">
+            <div class="edition-cover">
+              <img src="/bad-day-chaos-cover.webp" alt="Bad Day Chaos-Edition Cover" width="180" height="255" loading="lazy">
+            </div>
+            <span class="edition-label">Edition 04</span>
+            <h3 class="edition-title">Chaos-Edition</h3>
+            <p class="edition-desc">25 Systeme für Stillstand, Kopfchaos, Überwältigung, Entscheidungen und Übergänge. Für den Tag an dem alles gleichzeitig ist.</p>
+            <div class="edition-tags">
+              <span class="edition-tag">25 Systeme</span>
+              <span class="edition-tag">5 Kategorien</span>
+              <span class="edition-tag">34 Seiten</span>
+            </div>
+            <a href="/bad-day-chaos.html" class="edition-link">Details →</a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -292,21 +317,21 @@
     <!-- WARUM BUNDLE -->
     <section class="why-section" aria-labelledby="why-heading">
       <div class="why-inner">
-        <h2 id="why-heading">Warum alle drei?</h2>
+        <h2 id="why-heading">Warum alle vier?</h2>
 
         <div class="why-item">
           <span class="why-number">01</span>
           <div class="why-text">
             <h3>Schlechte Tage halten sich nicht an Kategorien</h3>
-            <p>Manchmal ist der Arbeitstag die Hölle und du schaffst es trotzdem ins Training. Manchmal klappt morgens nichts und abends geht alles. Mit allen drei Editionen hast du für jede Situation das passende System griffbereit.</p>
+            <p>Manchmal ist der Arbeitstag die Hölle und du schaffst es trotzdem ins Training. Manchmal klappt morgens nichts und abends geht alles. Mit allen vier Editionen hast du für jede Situation das passende System griffbereit.</p>
           </div>
         </div>
 
         <div class="why-item">
           <span class="why-number">02</span>
           <div class="why-text">
-            <h3>75 statt 25 Optionen</h3>
-            <p>Jede Edition hat 25 Systeme in 5 Kategorien. Zusammen sind das 75 Werkzeuge und 15 Kategorien. Irgendwas davon passt immer – egal wie beschissen der Tag ist.</p>
+            <h3>100 statt 25 Optionen</h3>
+            <p>Jede Edition hat 25 Systeme in 5 Kategorien. Zusammen sind das 100 Werkzeuge und 20 Kategorien. Irgendwas davon passt immer – egal wie beschissen der Tag ist.</p>
           </div>
         </div>
 
@@ -314,7 +339,7 @@
           <span class="why-number">03</span>
           <div class="why-text">
             <h3>Einmal kaufen, fertig</h3>
-            <p>Kein „erst mal die Starter-Edition testen und dann überlegen." Du hast alles. Drei PDFs, sofort runtergeladen, sofort einsatzbereit. Kein Abo, kein Upsell, kein „für nur 49€ mehr bekommst du auch noch..."</p>
+            <p>Kein „erst mal die Starter-Edition testen und dann überlegen." Du hast alles. Vier PDFs, sofort runtergeladen, sofort einsatzbereit. Kein Abo, kein Upsell, kein „für nur 49€ mehr bekommst du auch noch..."</p>
           </div>
         </div>
 
@@ -326,23 +351,23 @@
       <div class="purchase-inner">
         <span class="red-rule"></span>
         <h2 id="purchase-heading">Alles.<br>Auf einmal.</h2>
-        <p>3 Editionen. 75 Systeme. 102 Seiten. Ein Preis.</p>
+        <p>4 Editionen. 100 Systeme. 136 Seiten. Ein Preis.</p>
         <div class="purchase-box">
           <div class="purchase-price-row">
-            <span class="purchase-price-old">29,70 €</span>
-            <span class="purchase-price">19,90 €</span>
+            <span class="purchase-price-old">39,60 €</span>
+            <span class="purchase-price">24,90 €</span>
           </div>
-          <p class="purchase-price-note">Einmaliger Kauf · Sofort-Download · 3 PDFs</p>
+          <p class="purchase-price-note">Einmaliger Kauf · Sofort-Download · 4 PDFs</p>
           <ul class="purchase-includes" role="list">
             <li>Bad Day Starter-Edition (34 Seiten, 25 Systeme)</li>
             <li>Bad Day Work-Edition (34 Seiten, 25 Systeme)</li>
             <li>Bad Day Training-Edition (34 Seiten, 25 Systeme)</li>
-            <li>75 Systeme in 15 Kategorien</li>
+            <li>Bad Day Chaos-Edition (34 Seiten, 25 Systeme)</li>
+            <li>100 Systeme in 20 Kategorien</li>
             <li>Schnellauswahl nach Zustand in jeder Edition</li>
-            <li>9,80 € günstiger als Einzelkauf</li>
+            <li>14,70 € günstiger als Einzelkauf</li>
           </ul>
-          <!-- PLATZHALTER: Payhip-Bundle-Link hier einfügen -->
-          <a href="https://payhip.com/b/AtXuR" class="btn-buy-large" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 19,90 €</a>
+          <a href="https://payhip.com/b/AtXuR" class="btn-buy-large" target="_blank" rel="noopener noreferrer">Jetzt kaufen – 24,90 €</a>
           <p class="purchase-note">Kein Abo. Kein Account nötig. PDF-Download sofort nach Bezahlung.</p>
         </div>
       </div>
