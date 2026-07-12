@@ -185,19 +185,9 @@
     .btn-small-red:hover { background: var(--red-dark); }
 
     /* FOOTER */
-    footer {
-      background: #080808;
-      padding: 0;
-    }
+    footer { background: var(--black); padding: 0; }
 
-    .footer-top {
-      padding: 32px clamp(20px, 5vw, 80px) 28px;
-      border-bottom: 1px solid rgba(245,243,239,0.08);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: center;
-    }
+    .footer-top { padding: 32px clamp(20px, 5vw, 80px) 28px; border-bottom: 1px solid rgba(245,243,239,0.14); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
 
     .footer-brand-name {
       font-family: 'Barlow Condensed', sans-serif;
@@ -209,10 +199,7 @@
       margin-bottom: 5px;
     }
 
-    .footer-tagline {
-      font-size: 0.8rem;
-      color: rgba(245,243,239,0.32);
-    }
+    .footer-tagline { font-size: 0.8rem; color: rgba(245,243,239,0.45); }
 
     .footer-social-heading {
       font-family: 'Barlow Condensed', sans-serif;
@@ -227,20 +214,7 @@
 
     .footer-social-icons { display: flex; gap: 8px; justify-content: flex-end; }
 
-    .social-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border: 1px solid rgba(245,243,239,0.12);
-      border-radius: 2px;
-      color: rgba(245,243,239,0.5);
-      text-decoration: none;
-      transition: all 0.2s;
-      background: transparent;
-      flex-shrink: 0;
-    }
+    .social-btn { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid rgba(245,243,239,0.18); border-radius: 2px; color: rgba(245,243,239,0.6); text-decoration: none; transition: all 0.2s; background: transparent; flex-shrink: 0; }
 
     .social-btn:hover { border-color: var(--red); color: var(--white); background: rgba(200,16,46,0.1); }
     .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
@@ -255,24 +229,14 @@
     }
 
     .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
-    .footer-links a { color: rgba(245,243,239,0.35); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.03em; transition: color 0.2s; }
+    .footer-links a { color: rgba(245,243,239,0.5); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.03em; transition: color 0.2s; }
     .footer-links a:hover { color: rgba(245,243,239,0.75); }
 
-    .footer-copy {
-      color: rgba(245,243,239,0.2);
-      font-size: 0.75rem;
-    }
+    .footer-copy { color: rgba(245,243,239,0.35); font-size: 0.75rem; }
 
-    .footer-affiliate-bar {
-      padding: 12px clamp(20px, 5vw, 80px);
-      border-top: 1px solid rgba(245,243,239,0.05);
-    }
+    .footer-affiliate-bar { padding: 12px clamp(20px, 5vw, 80px); border-top: 1px solid rgba(245,243,239,0.08); }
 
-    .footer-affiliate {
-      color: rgba(245,243,239,0.18);
-      font-size: 0.73rem;
-      line-height: 1.5;
-    }
+    .footer-affiliate { color: rgba(245,243,239,0.3); font-size: 0.73rem; line-height: 1.5; }
 
     @media (prefers-reduced-motion: no-preference) {
       @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
