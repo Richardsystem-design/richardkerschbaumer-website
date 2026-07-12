@@ -141,6 +141,12 @@ url>
   </url>
 
   <url>
+    <loc>https://www.richardkerschbaumer.at/was-hilft-sofort-gegen-stress.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.richardkerschbaumer.at/meal-prep-fuer-leute-die-kochen-hassen-das-ueberlebens-system.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
