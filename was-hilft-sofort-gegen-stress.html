@@ -34,6 +34,7 @@
       --gray: #888; --section-pad: clamp(60px, 8vw, 120px);
     }
     html { scroll-behavior: smooth; }
+    [id] { scroll-margin-top: 100px; }
     body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--black); font-size: 18px; line-height: 1.6; overflow-x: hidden; }
     :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 2px; }
     .skip-link { position: absolute; top: -100%; left: 16px; background: var(--red); color: var(--white); padding: 12px 20px; font-weight: 600; text-decoration: none; border-radius: 2px; z-index: 9999; transition: top 0.2s; }
@@ -82,6 +83,9 @@
     .callout { background: var(--black); color: var(--white); padding: 36px 40px; margin: 0 0 48px; border-radius: 2px; border-left: 4px solid var(--red); }
     .callout-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; display: block; }
     .callout p { color: rgba(245,243,239,0.9) !important; font-size: 1.1rem !important; line-height: 1.7; margin-bottom: 0 !important; }
+    .quick-jump { display: flex; gap: 28px; flex-wrap: wrap; margin-bottom: 44px; padding-bottom: 22px; border-bottom: 1px solid rgba(13,13,13,0.08); }
+    .quick-jump a { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 3px; transition: border-color 0.2s, color 0.2s; }
+    .quick-jump a:hover { border-color: var(--red); color: var(--red); }
 
     /* ── SCHNELL-FINDER TOOL (Stress) ── */
     .tool-section { background: var(--black); padding: var(--section-pad) clamp(20px,5vw,80px); }
@@ -118,6 +122,10 @@
     .finder-min { background: var(--red); padding: 20px 24px; border-radius: 2px; margin-bottom: 40px; display: flex; align-items: center; gap: 14px; }
     .finder-min-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); white-space: nowrap; }
     .finder-min-text { font-weight: 600; font-size: 0.95rem; color: var(--white); }
+    .finder-nudge { text-align: center; margin-bottom: 32px; }
+    .finder-nudge p { color: rgba(245,243,239,0.45); font-size: 0.85rem; margin-bottom: 12px; line-height: 1.5; }
+    .finder-nudge-btn { background: none; border: 1px solid rgba(245,243,239,0.15); color: rgba(245,243,239,0.7); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 10px 22px; border-radius: 2px; cursor: pointer; transition: all 0.15s; }
+    .finder-nudge-btn:hover { border-color: var(--red); color: var(--white); background: rgba(200,16,46,0.1); }
     .finder-locked { position: relative; margin-bottom: 40px; }
     .finder-locked-items { display: flex; flex-direction: column; gap: 2px; }
     .finder-locked-row { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; }
@@ -228,7 +236,13 @@
     <section class="article-body">
       <div class="article-content">
 
-        <div class="callout">
+        <nav class="quick-jump" aria-label="Auf dieser Seite">
+          <a href="#kurzantwort">Kurzantwort</a>
+          <a href="#stress-finder">Systemfinder</a>
+          <a href="#faq-heading">FAQ</a>
+        </nav>
+
+        <div class="callout" id="kurzantwort">
           <span class="callout-label">Kurzantwort</span>
           <p>Ein Handgriff, keine Gedankenübung. Zweimal kurz durch die Nase einatmen, einmal lang durch den Mund ausatmen. Zweimal wiederholen. Senkt die Anspannung in unter einer Minute — ohne App, ohne Meditation, ohne dich hinzusetzen. Danach: weitermachen.</p>
         </div>
@@ -237,10 +251,11 @@
         <p>Meditations-App runterladen. Journaling anfangen. Erstmal tief durchatmen und in dich reinhorchen. Klingt gut – wenn du gerade nicht mitten im Stress steckst.</p>
         <p>Genau dann bringt es aber nichts. Wer kurz vorm Explodieren ist, öffnet keine App und schreibt kein Tagebuch. Er braucht einen Handgriff. Jetzt.</p>
         <p>Deshalb funktionieren die Systeme hier anders: kein Kurs, keine Vorbereitung, keine gute Stimmung nötig. Nur ein Zustand – und die passende Reaktion darauf.</p>
+        <p>Isst du dich eher durch den Stress, statt zu explodieren? Dafür gibt's einen eigenen Artikel: <a href="/das-stress-essen-protokoll-warum-du-frisst-wenn-der-chef-nervt.html">Das Stress-Essen-Protokoll</a>.</p>
 
         <h2>Zustand schlägt Ziel</h2>
         <p>Du willst nicht „weniger gestresst sein“. Das ist ein Ziel, und Ziele helfen an schlechten Tagen nicht. Du bist gerade in einem Zustand: kurz vorm Explodieren, Kopf zu laut, hektisch, reizüberflutet oder im Gedankenkarussell.</p>
-        <p>Für jeden Zustand gibt's unten ein System. Nicht zum Nachdenken. Zum Machen.</p>
+        <p>Für jeden Zustand gibt's unten ein System. Nicht zum Nachdenken. Zum Machen – bis zu deinem <a href="/was-ist-ein-mindeststandard-und-warum-veraendert-er-alles.html">Mindeststandard</a>, mehr nicht.</p>
 
       </div>
     </section>
@@ -463,6 +478,7 @@
         '<p class="finder-for">' + s.forText + '</p>' +
         '<div class="finder-steps"><div class="finder-steps-label">So machst du\'s</div>' + stepsHTML + '</div>' +
         '<div class="finder-min"><span class="finder-min-label">Mindeststandard</span><span class="finder-min-text">' + s.min + '</span></div>' +
+        '<div class="finder-nudge"><p>Nur einer von 5 Zuständen bei „Stress &amp; Überforderung“. Trifft heute vielleicht ein anderer zu?</p><button class="finder-nudge-btn" onclick="finderBack()">← Anderen Zustand probieren</button></div>' +
         '<div class="finder-locked"><div class="finder-locked-items">' +
           '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Upgrade – was du an guten Tagen draufpacken kannst</span></div>' +
           '<div class="finder-locked-row"><span class="finder-locked-icon">🔒</span><span class="finder-locked-text">Stolperfalle – der Fehler der das System killt</span></div>' +
