@@ -142,6 +142,22 @@
     .finder-cta { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--red); color: var(--white); text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s; }
     .finder-cta:hover { background: var(--red-dark); }
 
+    /* ── 3 GRIFFE OHNE SYSTEM ── */
+    .grips-section { background: var(--white); padding: var(--section-pad) clamp(20px,5vw,80px) calc(var(--section-pad) - 20px); }
+    .grips-inner { max-width: 900px; margin: 0 auto; }
+    .grips-header { margin-bottom: 44px; max-width: 640px; }
+    .grips-header h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2rem,3.5vw,3rem); line-height: 1; text-transform: uppercase; color: var(--black); margin-bottom: 14px; }
+    .grips-header p { color: #555; font-size: 1rem; line-height: 1.7; }
+    .grips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(13,13,13,0.08); }
+    .grip-card { background: var(--white); padding: 32px 28px; display: flex; flex-direction: column; }
+    .grip-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--red); margin-bottom: 14px; }
+    .grip-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.3rem; text-transform: uppercase; line-height: 1.1; color: var(--black); margin-bottom: 14px; }
+    .grip-steps { list-style: none; margin-bottom: 16px; flex: 1; }
+    .grip-steps li { position: relative; padding-left: 20px; font-size: 0.92rem; color: #444; line-height: 1.6; margin-bottom: 8px; }
+    .grip-steps li::before { content: '–'; position: absolute; left: 0; color: rgba(13,13,13,0.3); }
+    .grip-note { font-size: 0.82rem; color: #777; line-height: 1.55; padding-top: 14px; border-top: 1px solid rgba(13,13,13,0.08); }
+    @media (max-width: 720px) { .grips-grid { grid-template-columns: 1fr; } }
+
     .article-faq { background: #111; padding: var(--section-pad) clamp(20px,5vw,80px); }
     .article-faq-inner { max-width: 720px; }
     .faq-header { margin-bottom: 48px; }
@@ -239,6 +255,7 @@
         <nav class="quick-jump" aria-label="Auf dieser Seite">
           <a href="#kurzantwort">Kurzantwort</a>
           <a href="#stress-finder">Systemfinder</a>
+          <a href="#grips-heading">3 Griffe</a>
           <a href="#faq-heading">FAQ</a>
         </nav>
 
@@ -268,6 +285,7 @@
           <span class="section-label">Stress-Systemfinder</span>
           <h2 id="tool-heading">Was ist gerade <em>los?</em></h2>
           <p>Wähle deinen Zustand. Bekomm dein System. Mach den Mindeststandard.</p>
+          <p style="margin-top:10px; font-size:0.85rem;">Nicht nur Stress, sondern der ganze Alltag? <a href="/system-finder.html" style="color:rgba(245,243,239,0.75); border-bottom:1px solid var(--red);">Kompletter System-Finder, 4 Fragen →</a></p>
         </div>
 
         <div class="finder-screen active" id="finder-question">
@@ -322,6 +340,50 @@
           <div id="finder-content"></div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- 3 GRIFFE OHNE SYSTEM -->
+    <section class="grips-section" aria-labelledby="grips-heading">
+      <div class="grips-inner">
+        <div class="grips-header">
+          <span class="red-rule"></span>
+          <span class="section-label">Ohne Zustand wählen</span>
+          <h2 id="grips-heading">3 Griffe.<br>Kein System nötig.</h2>
+          <p>Kein Bad-Day-System, kein Mindeststandard – nur drei bekannte Techniken, kurz erklärt. Für wenn du gar nicht erst auswählen willst.</p>
+        </div>
+        <div class="grips-grid">
+          <div class="grip-card">
+            <span class="grip-num">Griff 1</span>
+            <h3 class="grip-name">Physiologischer Seufzer</h3>
+            <ul class="grip-steps">
+              <li>Zweimal kurz hintereinander durch die Nase einatmen.</li>
+              <li>Einmal lang und kontrolliert durch den Mund ausatmen.</li>
+              <li>Die ganze Sequenz ein zweites Mal durchführen.</li>
+            </ul>
+            <p class="grip-note">Stanford-Forscher zeigten 2023: baut Anspannung schneller ab als klassische Meditation. Kein Kurs, keine App.</p>
+          </div>
+          <div class="grip-card">
+            <span class="grip-num">Griff 2</span>
+            <h3 class="grip-name">5-4-3-2-1-Methode</h3>
+            <ul class="grip-steps">
+              <li>5 Dinge suchen, die du siehst.</li>
+              <li>4 Dinge, die du hörst. 3, die du fühlst.</li>
+              <li>2, die du riechst. 1, das du schmeckst.</li>
+            </ul>
+            <p class="grip-note">Grounding-Trick gegen Gedankenkarussell. Zieht den Kopf aus der Schleife zurück in den Raum.</p>
+          </div>
+          <div class="grip-card">
+            <span class="grip-num">Griff 3</span>
+            <h3 class="grip-name">Kalt-Bremse</h3>
+            <ul class="grip-steps">
+              <li>Kaltes Wasser auf Handgelenke oder Gesicht.</li>
+              <li>Zehn Sekunden reichen.</li>
+              <li>Waschbecken, Büro-WC, egal wo.</li>
+            </ul>
+            <p class="grip-note">Kein Wundermittel, aber der schnellste Griff wenn keine Zeit für irgendeine Übung ist.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -380,7 +442,7 @@
       <div class="zero-cta-inner">
         <div class="zero-cta-text">
           <h2 id="zero-cta-heading">3 Systeme. 0 Ausreden. Gratis.</h2>
-          <p>4 Mini-Systeme zum Ausprobieren. Du behältst das eine das funktioniert. PDF kommt sofort per E-Mail.</p>
+          <p>3 Systeme zum Ausprobieren. Du behältst das eine das funktioniert. PDF kommt sofort per E-Mail.</p>
         </div>
         <a href="/zero-edition.html#kaufen" class="zero-cta-btn" aria-label="Gratis Zero-Edition holen">
           → Zero-Edition gratis holen
@@ -495,6 +557,7 @@
 
       document.getElementById('finder-question').classList.remove('active');
       document.getElementById('finder-result').classList.add('active');
+      history.replaceState(null, '', '#zustand=' + key);
       setTimeout(function() {
         document.getElementById('stress-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 80);
@@ -503,10 +566,22 @@
     function finderBack() {
       document.getElementById('finder-result').classList.remove('active');
       document.getElementById('finder-question').classList.add('active');
+      history.replaceState(null, '', location.pathname + location.search);
       setTimeout(function() {
         document.getElementById('stress-finder').scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 80);
     }
+
+    // Deep-Link beim Laden prüfen (#zustand=laut etc.)
+    (function initFinderFromHash() {
+      var m = location.hash.match(/zustand=([a-z]+)/);
+      if (m && FINDER[m[1]]) {
+        finderShow(m[1]);
+        setTimeout(function() {
+          document.getElementById('stress-finder').scrollIntoView({ behavior: 'auto', block: 'start' });
+        }, 0);
+      }
+    })();
   </script>
 
   <script type="application/ld+json">

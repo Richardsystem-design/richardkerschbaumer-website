@@ -310,6 +310,35 @@
     }
     .alt-link:hover { color: var(--white); }
 
+    /* EXAMPLE SYSTEM (echtes System aus der empfohlenen Edition) */
+    .example-section { margin: 44px 0 40px; padding-top: 40px; border-top: 1px solid rgba(245,243,239,0.08); }
+    .example-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,243,239,0.3); margin-bottom: 20px; }
+    .example-label strong { color: var(--red); }
+    .finder-rule { width: 48px; height: 3px; background: var(--red); margin-bottom: 20px; }
+    .finder-topic { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .finder-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.8rem,4vw,2.6rem); text-transform: uppercase; line-height: 1; color: var(--white); margin-bottom: 8px; }
+    .finder-for { color: rgba(245,243,239,0.5); font-size: 0.9rem; margin-bottom: 28px; font-style: italic; }
+    .finder-steps { background: rgba(245,243,239,0.04); border: 1px solid rgba(245,243,239,0.08); border-radius: 2px; padding: 28px 24px; margin-bottom: 20px; }
+    .finder-steps-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,243,239,0.4); margin-bottom: 20px; }
+    .finder-step { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid rgba(245,243,239,0.06); font-size: 0.92rem; color: rgba(245,243,239,0.8); line-height: 1.55; }
+    .finder-step:last-child { border-bottom: none; }
+    .finder-sn { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.8rem; color: var(--red); flex-shrink: 0; width: 20px; text-align: right; }
+    .finder-min { background: var(--red); padding: 20px 24px; border-radius: 2px; margin-bottom: 32px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    .finder-min-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); white-space: nowrap; }
+    .finder-min-text { font-weight: 600; font-size: 0.95rem; color: var(--white); }
+    .finder-locked-items { display: flex; flex-direction: column; gap: 2px; margin-bottom: 28px; }
+    .finder-locked-row { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; }
+    .finder-locked-icon { color: rgba(245,243,239,0.15); font-size: 0.9rem; flex-shrink: 0; }
+    .finder-locked-text { font-size: 0.85rem; color: rgba(245,243,239,0.25); }
+    .finder-remaining-label { font-size: 0.85rem; color: rgba(245,243,239,0.4); margin-bottom: 16px; line-height: 1.6; }
+    .finder-remaining { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .finder-rem-item { padding: 12px 16px; background: rgba(245,243,239,0.02); border: 1px solid rgba(245,243,239,0.05); border-radius: 2px; text-align: left; }
+    .finder-rem-item.unlocked { border-color: rgba(200,16,46,0.15); }
+    .finder-rem-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; color: rgba(245,243,239,0.35); margin-bottom: 2px; }
+    .finder-rem-item.unlocked .finder-rem-name { color: rgba(245,243,239,0.7); }
+    .finder-rem-trigger { font-size: 0.75rem; color: rgba(245,243,239,0.2); }
+    @media (max-width: 640px) { .finder-remaining { grid-template-columns: 1fr; } .finder-min { flex-direction: column; align-items: flex-start; gap: 6px; } }
+
     /* FOOTER */
     footer { background: var(--black); padding: 0; }
     .footer-top { padding: 32px clamp(20px, 5vw, 80px) 28px; border-bottom: 1px solid rgba(245,243,239,0.14); display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
@@ -378,6 +407,7 @@
       <p class="hero-eyebrow">Schnell-Check · 4 Fragen · 30 Sekunden</p>
       <h1>Welches System<br>passt zu <em>dir?</em></h1>
       <p class="hero-lead">Kein Funnel. Keine E-Mail. Kein Bullshit. Du beantwortest vier Fragen und bekommst eine ehrliche Empfehlung. Das wars.</p>
+      <p class="hero-lead" style="margin-top:14px; font-size:0.92rem;">Nur akuter Stress gerade? <a href="/was-hilft-sofort-gegen-stress.html" style="color:var(--white); border-bottom:1px solid var(--red);">Direkter Stress-Check, kein Quiz nötig →</a></p>
     </header>
 
     <!-- QUIZ -->
@@ -461,19 +491,23 @@
       <!-- FRAGE 4 -->
       <div class="question-block" id="q4">
         <p class="question-num">Frage 4 / 4</p>
-        <h2 class="question-text">Was bist du bereit zu investieren?</h2>
+        <h2 class="question-text">Wie viele Baustellen hast du gerade gleichzeitig?</h2>
         <div class="answers">
           <button class="answer-btn" data-scores="zero:4">
-            <span class="answer-label">Erstmal nichts &ndash; ich will testen</span>
-            <span class="answer-sub">Gratis anfangen, schauen obs was bringt.</span>
+            <span class="answer-label">Ich will erstmal nur testen</span>
+            <span class="answer-sub">Bevor ich zahle, will ich sehen obs passt.</span>
           </button>
-          <button class="answer-btn" data-scores="starter:2,work:2,training:2,chaos:2">
-            <span class="answer-label">9,90 &euro; für eine Edition</span>
-            <span class="answer-sub">Eine Sache, aber die richtig.</span>
+          <button class="answer-btn" data-scores="starter:1,work:1,training:1,chaos:1">
+            <span class="answer-label">Eigentlich nur die eine aus Frage 1</span>
+            <span class="answer-sub">Eine Baustelle. Fertig.</span>
+          </button>
+          <button class="answer-btn" data-scores="bundle:2,starter:1,work:1,training:1,chaos:1">
+            <span class="answer-label">Zwei, drei laufen parallel</span>
+            <span class="answer-sub">Alltag und Job zum Beispiel.</span>
           </button>
           <button class="answer-btn" data-scores="bundle:4">
-            <span class="answer-label">Alle vier &ndash; Bundle</span>
-            <span class="answer-sub">100 Systeme, vier Bereiche. Einmal zahlen, fertig.</span>
+            <span class="answer-label">Eigentlich läuft überall gleichzeitig was schief</span>
+            <span class="answer-sub">Alles hängt irgendwie zusammen.</span>
           </button>
         </div>
       </div>
@@ -559,7 +593,27 @@
           { name: 'Work-Edition \u2192', href: '/bad-day-work.html' },
           { name: 'Training-Edition \u2192', href: '/bad-day-training.html' },
           { name: 'Chaos-Edition \u2192', href: '/bad-day-chaos.html' }
-        ]
+        ],
+        example: {
+          topic: 'Loskommen \u00b7 1/3 \u00b7 Zero-Edition',
+          name: 'Der Erste Griff',
+          forText: 'Wenn du weißt was zu tun wäre, aber nicht startest.',
+          steps: [
+            'Fass den ersten Gegenstand an: Schwamm, Ordner, Laptop.',
+            'Nicht anfangen. Nur anfassen.',
+            'Der Körper startet, der Kopf zieht nach.'
+          ],
+          min: '1 Gegenstand berühren. Nicht anfangen.',
+          locked: false
+        },
+        remaining: {
+          heading: 'Auch in der Zero-Edition dabei \u2013 beide gratis:',
+          unlocked: true,
+          items: [
+            { name: 'Der Schlussstrich', trigger: 'Abend \u2013 Dein Abend hört nicht auf' },
+            { name: 'Der Mini-Reset', trigger: 'Rettung \u2013 Tag war Müll, alles egal' }
+          ]
+        }
       },
       starter: {
         title: 'Bad Day<br>Starter-Edition',
@@ -574,7 +628,30 @@
         alts: [
           { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
           { name: 'Bundle: alle 4 Editionen \u2192', href: '/bad-day-bundle.html' }
-        ]
+        ],
+        example: {
+          topic: 'Start & Motivation \u00b7 1/5',
+          name: 'Klopfcode',
+          forText: 'Wenn du festhängst und nicht in die Aufgabe reinkommst.',
+          steps: [
+            'Klopf 3\u00d7 kurz irgendwohin: Tisch / Brustbein / Oberschenkel \u2013 egal.',
+            'Sag leise oder im Kopf: Start.',
+            'Mach den kleinsten Einstieg: Datei öffnen / Stift nehmen / Schuhe an.',
+            'Optional: Mini-Serie: 3 Übungen / 3 Sätze / 3 Handgriffe.'
+          ],
+          min: '3\u00d7 klopfen + 1 Sache starten.',
+          locked: true
+        },
+        remaining: {
+          heading: '4 weitere Kategorien mit je 5 Systemen \u2013 in der vollen Starter-Edition:',
+          unlocked: false,
+          items: [
+            { name: 'Nächste Ecke', trigger: 'Fokus & Aufschieben \u2013 Es ist zu groß, ich schiebe' },
+            { name: 'WC-Reset', trigger: 'Stress & Überforderung \u2013 Kurz vorm Explodieren' },
+            { name: 'Ein-Hand-essen', trigger: 'Essen & Impulse \u2013 Ich snacke automatisch' },
+            { name: 'Wadenpumpe', trigger: 'Energie & Müdigkeit \u2013 Kreislauf tot, Körper parkt' }
+          ]
+        }
       },
       work: {
         title: 'Bad Day<br>Work-Edition',
@@ -589,7 +666,30 @@
         alts: [
           { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
           { name: 'Bundle: alle 4 Editionen \u2192', href: '/bad-day-bundle.html' }
-        ]
+        ],
+        example: {
+          topic: 'Start \u00b7 1/5',
+          name: 'Erst-Kontakt',
+          forText: 'Wenn du vor der Aufgabe sitzt und nicht reinkommst.',
+          steps: [
+            'Nimm die Aufgabe in die Hand. Zettel, Ordner, Werkzeug, Maus.',
+            'Halte Kontakt. 5 Sekunden. Nur halten.',
+            'Leg es wieder hin.',
+            'Entscheide: anfangen oder nächstes System.'
+          ],
+          min: 'Aufgabe berühren. 5 Sekunden.',
+          locked: true
+        },
+        remaining: {
+          heading: '4 weitere Kategorien mit je 5 Systemen \u2013 in der vollen Work-Edition:',
+          unlocked: false,
+          items: [
+            { name: 'Kommentator', trigger: 'Fokus \u2013 Ich drifte ab, merk es zu spät' },
+            { name: 'Gegen-Auftrag', trigger: 'Druck \u2013 Alles dringend, ich bin erstarrt' },
+            { name: 'Körper-Anker', trigger: 'Energie \u2013 Platt, brauch einen Reset' },
+            { name: 'Letzt-Satz', trigger: 'Feierabend \u2013 Mitten im Gedanken aufgehört' }
+          ]
+        }
       },
       training: {
         title: 'Bad Day<br>Training-Edition',
@@ -604,7 +704,30 @@
         alts: [
           { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
           { name: 'Bundle: alle 4 Editionen \u2192', href: '/bad-day-bundle.html' }
-        ]
+        ],
+        example: {
+          topic: 'Losgehen \u00b7 1/5',
+          name: 'Startschuss-Fake',
+          forText: 'Wenn du seit einer Stunde mit dir diskutierst.',
+          steps: [
+            'Klatsch einmal laut in die Hände.',
+            'Steh auf. Sofort. Kein Nachdenken.',
+            'Mach irgendeine Bewegung: Kniebeuge, Hampelmann, egal.',
+            'Danach entscheidest du: mehr oder Schluss.'
+          ],
+          min: '1\u00d7 klatschen + aufstehen.',
+          locked: true
+        },
+        remaining: {
+          heading: '4 weitere Kategorien mit je 5 Systemen \u2013 in der vollen Training-Edition:',
+          unlocked: false,
+          items: [
+            { name: 'Witz-Einheit', trigger: 'Kleinmachen \u2013 Alles klingt nach zu viel' },
+            { name: 'Partner-Phantasie', trigger: 'Dranbleiben \u2013 Ich zieh allein nicht durch' },
+            { name: 'Fester-Tag-Anker', trigger: 'Weitermachen \u2013 Ich trainiere nur, wenn es passt' },
+            { name: 'Schlecht-Erlaubnis', trigger: 'Kopfsache \u2013 Heute wird sowieso schlecht' }
+          ]
+        }
       },
       chaos: {
         title: 'Bad Day<br>Chaos-Edition',
@@ -619,7 +742,30 @@
         alts: [
           { name: 'Zero-Edition (gratis) \u2192', href: '/zero-edition.html' },
           { name: 'Bundle: alle 4 Editionen \u2192', href: '/bad-day-bundle.html' }
-        ]
+        ],
+        example: {
+          topic: 'Stillstand \u00b7 1/5',
+          name: 'Beine-Kipper',
+          forText: 'Wenn du liegst und nicht hochkommst. Bett oder Couch.',
+          steps: [
+            'Dreh dich auf die Seite, Richtung Kante.',
+            'Schwing beide Beine über die Kante. Stütz dich auf den Arm.',
+            'Du sitzt jetzt. Füße am Boden.',
+            'Sitzen bleiben oder weiter zur nächsten Sache.'
+          ],
+          min: 'Beide Füße am Boden.',
+          locked: true
+        },
+        remaining: {
+          heading: '4 weitere Kategorien mit je 5 Systemen \u2013 in der vollen Chaos-Edition:',
+          unlocked: false,
+          items: [
+            { name: 'Loop-Aus', trigger: 'Kopfchaos \u2013 Ein Gedanke kommt immer wieder' },
+            { name: 'Schmal-Stand', trigger: 'Überwältigung \u2013 100 Sachen gleichzeitig im Kopf' },
+            { name: 'Mund-Erst', trigger: 'Entscheidungen \u2013 Ich pendle zwischen zwei Optionen' },
+            { name: 'Tasche-Klopf', trigger: 'Übergänge \u2013 Hab ich alles dabei? Trödel' }
+          ]
+        }
       },
       bundle: {
         title: 'Bad Day<br>Bundle',
@@ -636,7 +782,29 @@
           { name: 'Work-Edition \u2192', href: '/bad-day-work.html' },
           { name: 'Training-Edition \u2192', href: '/bad-day-training.html' },
           { name: 'Chaos-Edition \u2192', href: '/bad-day-chaos.html' }
-        ]
+        ],
+        example: {
+          topic: 'Start & Motivation \u00b7 1/5 \u00b7 aus der Starter-Edition',
+          name: 'Klopfcode',
+          forText: '1 von 100 Systemen im Bundle \u2013 wenn du festhängst und nicht in die Aufgabe reinkommst.',
+          steps: [
+            'Klopf 3\u00d7 kurz irgendwohin: Tisch / Brustbein / Oberschenkel \u2013 egal.',
+            'Sag leise oder im Kopf: Start.',
+            'Mach den kleinsten Einstieg: Datei öffnen / Stift nehmen / Schuhe an.',
+            'Optional: Mini-Serie: 3 Übungen / 3 Sätze / 3 Handgriffe.'
+          ],
+          min: '3\u00d7 klopfen + 1 Sache starten.',
+          locked: true
+        },
+        remaining: {
+          heading: 'So sieht je 1 System aus den anderen 3 Editionen aus \u2013 alle im Bundle:',
+          unlocked: false,
+          items: [
+            { name: 'Erst-Kontakt', trigger: 'Work-Edition \u2013 Alles zu groß, komm nicht rein' },
+            { name: 'Startschuss-Fake', trigger: 'Training-Edition \u2013 Ich diskutiere seit Ewigkeiten' },
+            { name: 'Beine-Kipper', trigger: 'Chaos-Edition \u2013 Ich lieg und komm nicht hoch' }
+          ]
+        }
       }
     };
 
@@ -669,8 +837,51 @@
       return maxKey;
     }
 
-    function showResult() {
-      var winner = getWinner();
+    function buildExampleHtml(p) {
+      if (!p.example) return '';
+      var ex = p.example;
+      var stepsHtml = ex.steps.map(function(step, i) {
+        return '<div class="finder-step"><span class="finder-sn">' + (i + 1) + '</span><span>' + step + '</span></div>';
+      }).join('');
+
+      var lockedHtml = '';
+      if (ex.locked) {
+        lockedHtml =
+          '<div class="finder-locked-items">' +
+            '<div class="finder-locked-row"><span class="finder-locked-icon">\uD83D\uDD12</span><span class="finder-locked-text">Warum es wirkt \u2013 die Mechanik dahinter</span></div>' +
+            '<div class="finder-locked-row"><span class="finder-locked-icon">\uD83D\uDD12</span><span class="finder-locked-text">Upgrade \u2013 was du an guten Tagen draufpackst</span></div>' +
+            '<div class="finder-locked-row"><span class="finder-locked-icon">\uD83D\uDD12</span><span class="finder-locked-text">Stolperfalle \u2013 der Fehler der das System killt</span></div>' +
+          '</div>';
+      }
+
+      var remHtml = '';
+      if (p.remaining) {
+        var remItemsHtml = p.remaining.items.map(function(r) {
+          return '<div class="finder-rem-item' + (p.remaining.unlocked ? ' unlocked' : '') + '">' +
+            '<div class="finder-rem-name">' + (p.remaining.unlocked ? '' : '\uD83D\uDD12 ') + r.name + '</div>' +
+            '<div class="finder-rem-trigger">' + r.trigger + '</div></div>';
+        }).join('');
+        remHtml =
+          '<p class="finder-remaining-label">' + p.remaining.heading + '</p>' +
+          '<div class="finder-remaining">' + remItemsHtml + '</div>';
+      }
+
+      return (
+        '<div class="example-section">' +
+          '<p class="example-label">Kein Marketing-Text \u2013 <strong>ein echtes System</strong> aus der Edition, komplett:</p>' +
+          '<span class="finder-rule"></span>' +
+          '<div class="finder-topic">' + ex.topic + '</div>' +
+          '<h3 class="finder-name">' + ex.name + '</h3>' +
+          '<p class="finder-for">' + ex.forText + '</p>' +
+          '<div class="finder-steps"><div class="finder-steps-label">So machst du\u2019s</div>' + stepsHtml + '</div>' +
+          '<div class="finder-min"><span class="finder-min-label">Mindeststandard</span><span class="finder-min-text">' + ex.min + '</span></div>' +
+          lockedHtml +
+          remHtml +
+        '</div>'
+      );
+    }
+
+    function renderResult(winner) {
       var p = products[winner];
 
       var priceHtml = p.oldPrice
@@ -695,6 +906,7 @@
             '<a href="' + p.detailLink + '" class="btn-result-outline">Mehr erfahren</a>' +
           '</div>' +
         '</div>' +
+        buildExampleHtml(p) +
         '<div class="alt-section">' +
           '<p class="alt-label">' + p.altText + '</p>' +
           altsHtml +
@@ -708,6 +920,18 @@
       for (var i = 1; i <= totalQ; i++) {
         document.getElementById('prog-' + i).className = 'progress-step done';
       }
+
+      history.replaceState(null, '', '#ergebnis=' + winner);
+    }
+
+    function showResult() {
+      renderResult(getWinner());
+    }
+
+    // Direkter Aufruf über Deep-Link (#ergebnis=starter), überspringt den Quiz
+    function showResultDirect(key) {
+      renderResult(key);
+      window.scrollTo({ top: 0, behavior: 'auto' });
     }
 
     function restartQuiz() {
@@ -715,6 +939,7 @@
       document.getElementById('result').classList.remove('active');
       document.getElementById('result').innerHTML = '';
       showQuestion(1);
+      history.replaceState(null, '', location.pathname + location.search);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -736,8 +961,15 @@
       });
     });
 
-    // Init
-    updateProgress();
+    // Init – Deep-Link prüfen (#ergebnis=starter etc.)
+    (function initFromHash() {
+      var m = location.hash.match(/ergebnis=([a-z]+)/);
+      if (m && products[m[1]]) {
+        showResultDirect(m[1]);
+        return;
+      }
+      updateProgress();
+    })();
   </script>
 </body>
 </html>
